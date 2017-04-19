@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAEE.AX.Libro.ConsumoSrvDoc", "JAEE.AX.Libro.ConsumoSrvDoc\JAEE.AX.Libro.ConsumoSrvDoc.csproj", "{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAEE.AX.Libro.ConsumoSrvPers", "JAEE.AX.Libro.ConsumoSrvPers\JAEE.AX.Libro.ConsumoSrvPers.csproj", "{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAEE.AX.Libro.WSRef", "JAEE.AX.Libro.WSRef\JAEE.AX.Libro.WSRef.csproj", "{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jaestevan.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JAEE.AX.Libro.ConsumoSrvDoc\\JAEE.AX.Libro.ConsumoSrvDoc.csproj
+		SccProjectName1 = JAEE.AX.Libro.ConsumoSrvDoc
+		SccLocalPath1 = JAEE.AX.Libro.ConsumoSrvDoc
+		SccProjectUniqueName2 = JAEE.AX.Libro.ConsumoSrvPers\\JAEE.AX.Libro.ConsumoSrvPers.csproj
+		SccProjectName2 = JAEE.AX.Libro.ConsumoSrvPers
+		SccLocalPath2 = JAEE.AX.Libro.ConsumoSrvPers
+		SccProjectUniqueName3 = JAEE.AX.Libro.WSRef\\JAEE.AX.Libro.WSRef.csproj
+		SccProjectName3 = JAEE.AX.Libro.WSRef
+		SccLocalPath3 = JAEE.AX.Libro.WSRef
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Debug|x86.ActiveCfg = Debug|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Debug|x86.Build.0 = Debug|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Release|Any CPU.ActiveCfg = Release|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Release|x86.ActiveCfg = Release|x86
+		{CD2A17B9-7FC0-4E52-A2F1-B8476F2E2B90}.Release|x86.Build.0 = Release|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Debug|x86.ActiveCfg = Debug|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Debug|x86.Build.0 = Debug|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Release|Any CPU.ActiveCfg = Release|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Release|x86.ActiveCfg = Release|x86
+		{3E470FB3-72C0-41C9-8823-E40FD9FB0DC3}.Release|x86.Build.0 = Release|x86
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BD7C9DFE-BCEF-4536-BA7D-D24FCE56A7CF}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

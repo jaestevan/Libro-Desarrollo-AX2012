@@ -1,0 +1,44 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEUnitOfWorkExample unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEUnitOfWorkExample
+    PROPERTIES
+      Name                #JAEEUnitOfWorkExample
+      Origin              #{C63DDAB3-97F8-4E32-8901-58540C28AD01}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class JAEEUnitOfWorkExample
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #main
+        #public static server void main(Args args)
+        #{
+        #    JAEECamiones        camion;
+        #    JAEEMantenimiento   mantenimiento;
+        #
+        #    UnitofWork          unitOfWork = new unitOfWork();
+        #
+        #    camion.Matricula = '0123 ABC';
+        #    camion.Modelo    = 'ACTROS 4000';
+        #    unitOfWork.insertonSaveChanges(camion);
+        #
+        #    mantenimiento.JAEECamiones(camion);
+        #    mantenimiento.Kilometros = 1350658;
+        #    unitOfWork.insertonSaveChanges(mantenimiento);
+        #
+        #    unitOfWork.saveChanges();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

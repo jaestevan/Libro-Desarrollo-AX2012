@@ -1,0 +1,75 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesoClientesDataContract descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesoClientesDataContract
+    PROPERTIES
+      Name                #JAEEProcesoClientesDataContract
+      Origin              #{A31D136D-E199-4F5C-AF18-8295EF5D478C}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[DataContractAttribute,
+        # SysOperationGroupAttribute('Fechas', 'Rango de fechas', '1'),
+        # SysOperationGroupAttribute('Enteros', 'Valores numéricos', '2')]
+        #public class JAEEProcesoClientesDataContract
+        #{
+        #    FromDate        desdeFecha;
+        #    ToDate          hastaFecha;
+        #
+        #    int             entero;
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #protected void new()
+        #{
+        #
+        #}
+      ENDSOURCE
+      SOURCE #parmDesdeFecha
+        #[DataMemberAttribute,
+        # SysOperationGroupMemberAttribute('Fechas')]
+        #public FromDate parmDesdeFecha(FromDate _desdeFecha = desdeFecha)
+        #{
+        #    desdeFecha = _desdeFecha;
+        #    return desdeFecha;
+        #}
+      ENDSOURCE
+      SOURCE #parmEntero
+        #[DataMemberAttribute,
+        # SysOperationLabelAttribute('Número'),
+        # SysOperationHelpTextAttribute('Escriba un número'),
+        # SysOperationGroupMemberAttribute('Enteros'),
+        # SysOperationDisplayOrderAttribute('1')]
+        #public int parmEntero(int _entero = entero)
+        #{
+        #    entero = _entero;
+        #    return entero;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #parmHastaFecha
+        #[DataMemberAttribute,
+        # SysOperationGroupMemberAttribute('Fechas')]
+        #public ToDate parmHastaFecha(ToDate _hastaFecha = hastaFecha)
+        #{
+        #    hastaFecha = _hastaFecha;
+        #    return hastaFecha;
+        #}
+      ENDSOURCE
+      SOURCE #construct
+        #public static JAEEProcesoClientesDataContract construct()
+        #{
+        #    return new JAEEProcesoClientesDataContract();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

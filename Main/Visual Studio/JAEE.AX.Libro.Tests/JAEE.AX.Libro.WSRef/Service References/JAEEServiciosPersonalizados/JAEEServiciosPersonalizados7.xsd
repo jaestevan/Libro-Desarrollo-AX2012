@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="JAEERegistrarAlbaranService" elementFormDefault="qualified" targetNamespace="JAEERegistrarAlbaranService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+  <xs:element name="JAEERegistrarAlbaranServiceRegistrarRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_contract" nillable="true" type="q1:RegistrarAlbaran" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JAEERegistrarAlbaranServiceRegistrarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q2:RegistrarAlbaran" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,442 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FRM
+
+; Microsoft Dynamics AX Forms unloaded
+; --------------------------------------------------------------------------------
+FRMVERSION 12
+
+FORM #JAEEListPagePlantilla
+  PROPERTIES
+    Name                #JAEEListPagePlantilla
+    FormTemplate        #ListPage
+    InteractionClass    #ListPageInteraction
+    Origin              #{6D4D0EAA-FAB0-4DD0-921A-D5431FD473A5}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #public class FormRun extends ObjectRun
+      #{
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  OBJECTBANK
+    PROPERTIES
+      Query               #JAEECamionesQuery
+      Version             #2
+    ENDPROPERTIES
+    
+    DATASOURCE
+      OBJECTPOOL
+        PROPERTIES
+          Name                #JAEECamiones
+          Table               #JAEECamiones
+          AllowEdit           #No
+          AllowCreate         #No
+        ENDPROPERTIES
+        
+        FIELDLIST
+        ENDFIELDLIST
+      ENDOBJECTPOOL
+      METHODS
+      ENDMETHODS
+      LINKTYPES
+      ENDLINKTYPES
+    ENDDATASOURCE
+  ENDOBJECTBANK
+  
+  REFERENCEDATASOURCES
+  ENDREFERENCEDATASOURCES
+  
+  JOINS
+  ENDJOINS
+  
+  PARTREFERENCES
+    PARTREFERENCE #PreviewPane
+      PROPERTIES
+        Name                #PreviewPane
+        PartLocation        #PreviewPane
+        ElementPosition     #1073741823
+      ENDPROPERTIES
+      
+    ENDPARTREFERENCE
+    
+  ENDPARTREFERENCES
+  
+  DESIGN
+    PROPERTIES
+      UseCaptionFromMenuItem  #Yes
+      TitleDatasource     #JAEECamiones
+      WindowType          #ContentPage
+      DataSource          #JAEECamiones
+      Style               #ListPage
+    ENDPROPERTIES
+    
+    CONTAINER
+      CONTROL ACTIONPANE
+        PROPERTIES
+          Name                #ActionPane
+          VerticalSpacing     #0
+          ElementPosition     #536870911
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL ACTIONPANETAB
+        PROPERTIES
+          Name                #HomeTab
+          ElementPosition     #1431655764
+          HierarchyParent     #ActionPane
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #AttachmentsGroup
+          ElementPosition     #1789569705
+          HierarchyParent     #HomeTab
+          Caption             #@SYS316708
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #ListGroup
+          ElementPosition     #1431655764
+          HierarchyParent     #HomeTab
+          Caption             #@SYS118440
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #MaintainGroup
+          ElementPosition     #1073741823
+          HierarchyParent     #HomeTab
+          Caption             #@SYS316703
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #NewGroup
+          ElementPosition     #715827882
+          HierarchyParent     #HomeTab
+          Caption             #@SYS2055
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GRID
+        PROPERTIES
+          Name                #ListPageGrid
+          AllowEdit           #No
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1610612734
+          DefaultAction       #ViewButton
+          DefaultActionLabel  #@SYS122402
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #Filter
+          Visible             #No
+          ElementPosition     #1073741822
+          Style               #CustomFilter
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #AttachCommandButton
+          DisplayTarget       #Client
+          ElementPosition     #1431655764
+          HierarchyParent     #AttachmentsGroup
+          Text                #@SYS316708
+          NormalImage         #10442
+          ImageLocation       #EmbeddedResource
+          Big                 #Yes
+          Command             #2853
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #DeleteCommandButton
+          ElementPosition     #1789569705
+          HierarchyParent     #MaintainGroup
+          Text                #@SYS14425
+          NormalImage         #10121
+          ImageLocation       #EmbeddedResource
+          SaveRecord          #No
+          MultiSelect         #Yes
+          Primary             #Yes
+          Command             #2832
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #ExportCommandButton
+          ElementPosition     #1610612733
+          HierarchyParent     #ListGroup
+          NormalImage         #10156
+          ImageLocation       #EmbeddedResource
+          Big                 #Yes
+          Command             #4436
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #RefreshCommandButton
+          HelpText            #@SYS315818
+          ElementPosition     #1073741822
+          HierarchyParent     #ListGroup
+          NormalImage         #11437
+          ImageLocation       #EmbeddedResource
+          Big                 #Yes
+          Command             #2875
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL DATEEDIT
+        PROPERTIES
+          Name                #JAEECamiones_FechaCompra
+          ElementPosition     #1879048189
+          HierarchyParent     #ListPageGrid
+          DataSource          #JAEECamiones
+          DataField           #FechaCompra
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #EditButton
+          ElementPosition     #715827882
+          HierarchyParent     #MaintainGroup
+          Text                #@SYS317438
+          NormalImage         #10040
+          ImageLocation       #EmbeddedResource
+          Big                 #Yes
+          Primary             #Yes
+          OpenMode            #Edit
+          CopyCallerQuery     #Yes
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #EditInGridButton
+          ElementPosition     #1431655764
+          HierarchyParent     #MaintainGroup
+          Text                #@SYS319303
+          NormalImage         #10011
+          ImageLocation       #EmbeddedResource
+          Primary             #Yes
+          OpenMode            #Edit
+          CopyCallerQuery     #Yes
+          FormViewOption      #Grid
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #NewButton
+          ElementPosition     #1431655764
+          HierarchyParent     #NewGroup
+          Big                 #Yes
+          Primary             #Yes
+          OpenMode            #New
+          CopyCallerQuery     #Yes
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #ViewButton
+          Visible             #No
+          ElementPosition     #1073741823
+          HierarchyParent     #MaintainGroup
+          CopyCallerQuery     #Yes
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #JAEECamiones_1_Matricula
+          ElementPosition     #1073741822
+          HierarchyParent     #ListPageGrid
+          DataSource          #JAEECamiones
+          DataField           #Matricula
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #JAEECamiones_1_Modelo
+          ElementPosition     #1610612733
+          HierarchyParent     #ListPageGrid
+          DataSource          #JAEECamiones
+          DataField           #Modelo
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #JAEECamiones_Marca
+          ElementPosition     #1342177277
+          HierarchyParent     #ListPageGrid
+          DataSource          #JAEECamiones
+          DataField           #Marca
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+    ENDCONTAINER
+    
+  ENDDESIGN
+  
+  PERMISSIONS #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    PERMISSIONSET #Read
+      PROPERTIES
+      ENDPROPERTIES
+      
+      FORM #Controls
+      ENDFORM
+      
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Update
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Create
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Delete
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+ENDPERMISSIONS
+
+ENDFORM
+
+
+***Element: END

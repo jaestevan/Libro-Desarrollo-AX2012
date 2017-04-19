@@ -1,0 +1,183 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : JAEECamiones unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #JAEECamiones
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #JAEECamiones
+      Label               #Camiones
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #SurrogateKey
+      ClusterIndex        #MatriculaIdx
+      ReplacementKey      #MatriculaIdx
+      Origin              #{9BCF7860-A72A-421C-8B0C-865C5141D9CC}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #Bastidor
+        STRING
+        PROPERTIES
+          Name                #Bastidor
+          Table               #JAEECamiones
+          Origin              #{79317F94-817B-4D77-9619-5B4EFD6AB0FE}
+          StringSize          #30
+        ENDPROPERTIES
+        
+      FIELD #FechaCompra
+        DATE
+        PROPERTIES
+          Name                #FechaCompra
+          Table               #JAEECamiones
+          Origin              #{61948BD5-787F-43C3-8241-B6DB9B0E0606}
+          ExtendedDataType    #AssetAcquisitionDate
+        ENDPROPERTIES
+        
+      FIELD #Kilometros
+        REAL
+        PROPERTIES
+          Name                #Kilometros
+          Label               #Kilómetros
+          Table               #JAEECamiones
+          Origin              #{942331C8-F841-4A97-8E10-FC0EF0BDBAAE}
+        ENDPROPERTIES
+        
+      FIELD #Marca
+        STRING
+        PROPERTIES
+          Name                #Marca
+          Table               #JAEECamiones
+          Origin              #{DDC99AF3-9414-4AB6-B023-21C85DDDE56F}
+          StringSize          #20
+        ENDPROPERTIES
+        
+      FIELD #Matricula
+        STRING
+        PROPERTIES
+          Name                #Matricula
+          Table               #JAEECamiones
+          Origin              #{048D5FF1-5C10-4139-981C-1AD3A719A1D5}
+        ENDPROPERTIES
+        
+      FIELD #Modelo
+        STRING
+        PROPERTIES
+          Name                #Modelo
+          Table               #JAEECamiones
+          Origin              #{1430E978-34F6-4454-A875-461E039A6174}
+          ExtendedDataType    #Description
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #PrecioCompra
+        REAL
+        PROPERTIES
+          Name                #PrecioCompra
+          Table               #JAEECamiones
+          Origin              #{6B329450-936B-425A-BC62-E35C6E6A0895}
+          ExtendedDataType    #AssetAcquisitionPrice
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+      GROUP #AutoLookup
+        PROPERTIES
+          Name                #AutoLookup
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Matricula
+          #Marca
+          #Modelo
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Matricula
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Compra
+        PROPERTIES
+          Name                #Compra
+          Label               #Compra
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #FechaCompra
+          #PrecioCompra
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Identification
+        PROPERTIES
+          Name                #Identification
+          Label               #@SYS318403
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Matricula
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Tecnica
+        PROPERTIES
+          Name                #Tecnica
+          Label               #Ficha técnica
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Marca
+          #Modelo
+          #Bastidor
+        ENDGROUPFIELDS
+      ENDGROUP
+    ENDGROUPS
+    
+    INDICES
+      #MatriculaIdx
+      PROPERTIES
+        Name                #MatriculaIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{750C4D9C-823C-4B98-A163-C223E0A01A73}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #Matricula
+      ENDINDEXFIELDS
+      
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+    ENDREFERENCES
+    
+    DELETEACTIONS
+      #JAEEMantenimiento(JAEECamiones)
+      PROPERTIES
+        Table               #JAEEMantenimiento
+        DeleteAction        #Cascade
+        Relation            #JAEECamiones
+      ENDPROPERTIES
+      
+    ENDDELETEACTIONS
+    
+    METHODS
+      SOURCE #description
+        #display Description description()
+        #{
+        #    return strFmt("%1 %2 (%3)", this.Marca, this.Modelo, this.Matricula);
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: END

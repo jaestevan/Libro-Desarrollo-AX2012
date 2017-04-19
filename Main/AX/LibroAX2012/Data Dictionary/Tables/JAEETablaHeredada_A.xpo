@@ -1,0 +1,70 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : JAEETablaHeredada_A unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #JAEETablaHeredada_A
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #JAEETablaHeredada_A
+      Label               #Tabla heredada A
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #SurrogateKey
+      ClusterIndex        #SurrogateKey
+      Extends             #JAEETablaHeredableAbstracta
+      SupportInheritance  #Yes
+      Origin              #{A507F0D5-A53A-48C9-8E39-37A7134367C6}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #CampoTablaHeredada_A
+        STRING
+        PROPERTIES
+          Name                #CampoTablaHeredada_A
+          Table               #JAEETablaHeredada_A
+          Origin              #{A12FEF19-516D-4E92-AC3D-23CC23EE1647}
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+    ENDGROUPS
+    
+    INDICES
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+      REFERENCE #JAEETablaHeredableAbstracta
+        PROPERTIES
+          Name                #JAEETablaHeredableAbstracta
+          Table               #JAEETablaHeredableAbstracta
+          RelatedTableCardinality   #ExactlyOne
+          Cardinality         #ZeroOne
+          RelationshipType    #Specialization
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE PKPK
+          PROPERTIES
+            Field               #RecId
+            RelatedField        #RecId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
+    ENDREFERENCES
+    
+    DELETEACTIONS
+    ENDDELETEACTIONS
+    
+    METHODS
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: END

@@ -1,0 +1,35 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_InfoLog descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_InfoLog
+    #static void JAEE_Libro_4_InfoLog(Args _args)
+    #{
+    #    CustTable   custTable  = custTable::find('US-001');
+    #    boolean     ok;
+    #
+    #    setPrefix("Ejemplos");
+    #
+    #    info("Información");
+    #    warning("Cuidado");
+    #    error("Error");
+    #
+    #    setPrefix(#preFixField(custTable, AccountNum));
+    #
+    #    ok = checkFailed("Validación fallida");
+    #
+    #
+    #    error("Function SubStr called with wrong parameters", 'KernDoc:\\\\Functions\\substr');
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{5154F336-B33A-401A-AC79-CA96969E2C57}
+  ENDPROPERTIES
+  
+
+***Element: END

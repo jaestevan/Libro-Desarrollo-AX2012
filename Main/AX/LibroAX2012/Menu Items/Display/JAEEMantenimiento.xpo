@@ -1,0 +1,22 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : JAEEMantenimiento unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #JAEEMantenimiento
+    Type: 1
+    PROPERTIES
+      Name                #JAEEMantenimiento
+      Label               #Mantenimiento
+      Object              #JAEEMantenimiento
+      Origin              #{E63A7F10-4324-45F8-BC98-7A728BE52A11}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

@@ -1,0 +1,38 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEEjemploSrsController unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEEjemploSrsController
+    PROPERTIES
+      Name                #JAEEEjemploSrsController
+      Extends             #SrsReportRunController
+      Origin              #{515EACF7-31DC-47CD-824B-9960E229679E}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class JAEEEjemploSrsController
+        #extends SrsReportRunController
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #main
+        #public static client void main(Args _args)
+        #{
+        #    JAEEEjemploSrsController controller;
+        #
+        #    controller = new JAEEEjemploSrsController();
+        #    controller.parmArgs(_args);
+        #    controller.parmReportName(ssrsReportStr(JAEEEjemploQuery, AutoDesign));
+        #    controller.startOperation();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

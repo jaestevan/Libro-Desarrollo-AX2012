@@ -1,0 +1,101 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_4_EjemplosManejoDatosXpp unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_4_EjemplosManejoDatosXpp
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_4_EjemplosManejoDatosXpp
+    Origin              #{8C7F151D-1C96-4DAB-ABF5-9A0FAF9D00EB}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #Tables
+      PROPERTIES
+        Name                #Tables
+        ProjectGroupType    #Tables
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 44
+        NODETYPE 204
+        NAME #JAEETablaEjemploXpp
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Jobs
+      PROPERTIES
+        Name                #Jobs
+        ProjectGroupType    #Jobs
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_Select
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_Insert
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_Update
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_Delete
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_InsertRecordset
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_DeleteRecordset
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_UpdateRecordset
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Datos_RecordInsertList
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_Excepciones
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

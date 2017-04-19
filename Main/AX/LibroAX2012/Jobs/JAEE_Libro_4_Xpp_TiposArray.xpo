@@ -1,0 +1,34 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Xpp_TiposArray descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Xpp_TiposArray
+    #static void JAEE_Libro_4_Xpp_TiposArray(Args _args)
+    #{
+    #    // Array de enteros de longitud fija (10 elementos)
+    #    int arrayEnteros[10];
+    #
+    #    // Array de cadenas de texto de longitud variable
+    #    str arrayStrings[];
+    #
+    #    // Array de variables del enumerado NoYes
+    #    // Longitud variable aunque sólo 5 se guardan en memoria
+    #    NoYes arrayEnums[, 5];
+    #    // Se cargará en memoria de forma dinámica
+    #    arrayEnums[12] = NoYes::Yes;
+    #
+    #    // El índice 0 resetea los valores del array
+    #    arrayEnteros[0] = 0;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{F3CBF037-A7F6-40F6-853F-BB41AF21F7E0}
+  ENDPROPERTIES
+  
+
+***Element: END

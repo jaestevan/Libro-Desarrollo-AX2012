@@ -1,0 +1,39 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_ValidTimeState_SELECT descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_ValidTimeState_SELECT
+    #static void JAEE_Libro_5_ValidTimeState_SELECT(Args _args)
+    #{
+    #    FromDate    fromDate   = dateNull();       // 0
+    #    ToDate      toDate     = dateMax();        // 31/12/2154
+    #    date        validoEn   = systemDateGet();  // HOY
+    #
+    #    JAEETablaEjemploValidTimeState  tablaEjemplo;
+    #
+    #    // Válido "a fecha"
+    #    while select validTimeState(validoEn) tablaEjemplo
+    #        //where tablaEjemplo...
+    #    {
+    #        // ...
+    #    }
+    #
+    #    // Válido en un rango de fechas
+    #    while select validTimeState(fromDate, toDate) tablaEjemplo
+    #        //where tablaEjemplo...
+    #    {
+    #        // ...
+    #    }
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{19B501E3-F393-4F58-864D-6526AF81A7C0}
+  ENDPROPERTIES
+  
+
+***Element: END

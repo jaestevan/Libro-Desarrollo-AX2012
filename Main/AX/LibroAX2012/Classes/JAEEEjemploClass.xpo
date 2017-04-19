@@ -1,0 +1,37 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEEjemploClass descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEEjemploClass
+    PROPERTIES
+      Name                #JAEEEjemploClass
+      Extends             #JAEEEjemploAbstractClass
+      Origin              #{D6A939DB-EB2A-4B60-A5E6-AC2732EE6BFA}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #public class JAEEEjemploClass extends JAEEEjemploAbstractClass implements JAEEIEjemplo
+        #{
+        #
+        #}
+      ENDSOURCE
+      SOURCE #name
+        #public Name name()
+        #{
+        #    Name ret;
+        #
+        #    ret = super();
+        #
+        #    return ret;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

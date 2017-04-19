@@ -1,0 +1,39 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Xpp_TiposContenedor descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Xpp_TiposContenedor
+    #static void JAEE_Libro_4_Xpp_TiposContenedor(Args _args)
+    #{
+    #    RecId       recId; // int64
+    #    str         texto, empresa;
+    #    real        pi;
+    #    date        fecha;
+    #    container   con1, con2, con3;
+    #
+    #    // Se pueden asignar valores directamente ...
+    #    con1 = ["Primero", recId, 3.1416];
+    #
+    #    // ... y también añadirlos.
+    #    con2 += curext();
+    #
+    #    // Se pueden sumar arrays
+    #    con3 = con1 + con2 + systemDateGet();
+    #
+    #    // Y utilizarlos como destino de una asignación
+    #    [texto, RecId, pi, empresa, fecha] = con3;
+    #
+    #    conView(con3);
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{F9B75F32-A375-45D2-AF7F-BB1D72BDFE67}
+  ENDPROPERTIES
+  
+
+***Element: END

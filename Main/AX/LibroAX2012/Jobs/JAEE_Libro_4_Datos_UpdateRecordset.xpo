@@ -1,0 +1,25 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_UpdateRecordset descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_UpdateRecordset
+    #static void JAEE_Libro_4_Datos_UpdateRecordset(Args _args)
+    #{
+    #    JAEETablaEjemploXpp     tablaEjemplo;
+    #
+    #    update_recordSet tablaEjemplo
+    #      setting Num = tablaEjemplo.Num + '+'
+    #      where tablaEjemplo.Name like 'C*';
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{294E6FF2-B8B0-4CF4-9EF2-4BF377BA901C}
+  ENDPROPERTIES
+  
+
+***Element: END

@@ -1,0 +1,34 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesarLineaCompras_Purch descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesarLineaCompras_Purch
+    PROPERTIES
+      Name                #JAEEProcesarLineaCompras_Purch
+      Extends             #JAEEProcesarLineaCompras
+      Origin              #{DB275F5D-372C-4376-8643-E01EDA944018}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[JAEETipoCompraAttribute('Purch')]
+        #class JAEEProcesarLineaCompras_Purch
+        #extends JAEEProcesarLineaCompras
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #run
+        #public void run()
+        #{
+        #    info("Línea de tipo Pedido");
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

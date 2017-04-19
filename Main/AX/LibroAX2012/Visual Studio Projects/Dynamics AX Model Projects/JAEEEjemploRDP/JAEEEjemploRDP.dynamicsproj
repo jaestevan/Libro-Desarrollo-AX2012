@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>6.2.158.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2749d890-d2d1-40d5-b662-a8049cfca774}</ProjectGuid>
+    <ProjectTypeGuids>{BF6F8E12-879D-49E7-ADF0-5503146B24B8};{aa631830-3ad7-4631-8cf6-443a09bf983b}</ProjectTypeGuids>
+    <Name>JAEEEjemploRDP</Name>
+    <BaseAssemblyName>JAEEEjemploRDP</BaseAssemblyName>
+    <!-- Application property page properties -->
+    <OutputType>Dynamics Reporting Library</OutputType>
+    <!-- AssemblyInfo properties -->
+    <AssemblyTitle>JAEEEjemploRDP</AssemblyTitle>
+    <AssemblyCompany>
+    </AssemblyCompany>
+    <AssemblyProduct>JAEEEjemploRDP</AssemblyProduct>
+    <AssemblyCopyright>Copyright ©  2014</AssemblyCopyright>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DeployToServer>No</DeployToServer>
+    <DeployToClient>No</DeployToClient>
+    <DeployToEP>No</DeployToEP>
+    <RootNamespace>JAEEEjemploRDP</RootNamespace>
+    <StartupElement />
+    <DebugTarget>None</DebugTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="\SSRS Reports\Reports\JAEEEjemploRDP">
+      <Virtual>True</Virtual>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\DynamicsTools\Microsoft.Dynamics.Framework.Design.Reporting.Modeling.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\DynamicsTools\Microsoft.Dynamics.Framework.Design.InteractionProject.targets" />
+</Project>

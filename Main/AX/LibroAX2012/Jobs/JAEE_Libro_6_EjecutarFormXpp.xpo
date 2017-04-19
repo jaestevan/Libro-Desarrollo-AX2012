@@ -1,0 +1,49 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_6_EjecutarFormXpp descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_6_EjecutarFormXpp
+    #static void JAEE_Libro_6_EjecutarFormXpp(Args _args)
+    #{
+    #    /*MainAccount mainAccount; // Cuentas contables
+    #    Args        args;
+    #
+    #    args = new Args();
+    #    args.record(mainAccount);
+    #    args.parm("Parámetro Texto");
+    #
+    #    // Ejecutamos el MenuItem (Display): MainAccountListPage
+    #    new MenuFunction(
+    #                menuitemDisplayStr(MainAccountListPage),
+    #                MenuItemType::Display
+    #            ).run(args);*/
+    #
+    #
+    #    MainAccount     mainAccount; // Cuentas contables
+    #    FormRun         formRun;
+    #    Args            args;
+    #
+    #    args = new Args();
+    #    args.name(formStr(MainAccountListPage));
+    #    args.record(mainAccount);
+    #    args.parm("Parámetro Texto");
+    #
+    #    // Ejecutamos el FORM: MainAccountListPage
+    #    // Esta vez no es un MenuItem, aunque se llamen igual
+    #    formRun = ClassFactory.formRunClass(args);
+    #    formRun.init();
+    #    formRun.run();
+    #    formRun.wait();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{22D85D19-FA53-49A5-B9ED-8F82691CE5A0}
+  ENDPROPERTIES
+  
+
+***Element: END

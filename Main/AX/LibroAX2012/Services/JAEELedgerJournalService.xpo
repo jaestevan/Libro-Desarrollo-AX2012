@@ -1,0 +1,95 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: SVC
+
+; Microsoft Dynamics AX SERVICE : JAEELedgerJournalService unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  SERVICE #JAEELedgerJournalService
+    PROPERTIES
+      Name                #JAEELedgerJournalService
+      ExternalName        #JAEELedgerJournalService
+      Class               #JAEELedgerJournalService
+      Origin              #{07E3E8BC-22AA-4CD9-9815-2EE5A596A697}
+    ENDPROPERTIES
+    
+    OPERATIONS
+      OPERATION #create
+        PROPERTIES
+          Name                #create
+          Method              #create
+        ENDPROPERTIES
+        
+        PERMISSIONSET #Permissions
+          PROPERTIES
+          ENDPROPERTIES
+          
+          TABLES #Tables
+          ENDTABLES
+          
+        SERVERMETHODS #Server Methods
+        ENDSERVERMETHODS
+        
+      ASSOCIATEDCODEPERMISSIONS #Associated Code Permissions
+      ENDASSOCIATEDCODEPERMISSIONS
+      
+  ENDPERMISSIONSET
+  
+ENDOPERATION
+
+OPERATION #find
+  PROPERTIES
+    Name                #find
+    Method              #find
+    EnableIdempotence   #No
+  ENDPROPERTIES
+  
+  PERMISSIONSET #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDCODEPERMISSIONS #Associated Code Permissions
+ENDASSOCIATEDCODEPERMISSIONS
+
+ENDPERMISSIONSET
+
+ENDOPERATION
+
+OPERATION #read
+  PROPERTIES
+    Name                #read
+    Method              #read
+    EnableIdempotence   #No
+  ENDPROPERTIES
+  
+  PERMISSIONSET #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDCODEPERMISSIONS #Associated Code Permissions
+ENDASSOCIATEDCODEPERMISSIONS
+
+ENDPERMISSIONSET
+
+ENDOPERATION
+
+ENDOPERATIONS
+
+ENDSERVICE
+
+
+***Element: END

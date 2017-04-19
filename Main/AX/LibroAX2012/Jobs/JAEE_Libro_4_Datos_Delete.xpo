@@ -1,0 +1,32 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_Delete descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_Delete
+    #static void JAEE_Libro_4_Datos_Delete(Args _args)
+    #{
+    #    JAEETablaEjemploXpp ejemplo;
+    #
+    #    ttsBegin;
+    #
+    #    ejemplo = JAEETablaEjemploXpp::find('E101', true); // forUpdate
+    #
+    #    if (ejemplo.validateDelete())
+    #        ejemplo.delete();
+    #    else
+    #        throw Exception::Error;
+    #
+    #    ttsCommit;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{28968C21-CF49-4857-AAB6-ED06D4DE1789}
+  ENDPROPERTIES
+  
+
+***Element: END

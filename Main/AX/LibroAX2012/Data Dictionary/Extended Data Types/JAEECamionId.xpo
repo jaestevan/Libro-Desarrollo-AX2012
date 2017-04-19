@@ -1,0 +1,31 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTW
+
+; Microsoft Dynamics AX Int64: JAEECamionId descargados
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #JAEECamionId
+  INT64
+    PROPERTIES
+      Name                #JAEECamionId
+      Label               #ID Camion
+      Origin              #{AF4998F0-07CC-4336-9FC9-D1F33801D8A3}
+      ReferenceTable      #JAEECamiones
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

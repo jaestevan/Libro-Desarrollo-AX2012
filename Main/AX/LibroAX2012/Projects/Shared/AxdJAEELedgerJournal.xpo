@@ -1,0 +1,105 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : AxdJAEELedgerJournal unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #AxdJAEELedgerJournal
+  SHARED
+  PROPERTIES
+    Name                #AxdJAEELedgerJournal
+    Origin              #{B3B62B30-70AD-4B98-A9D5-EFB43B06B4C7}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 137
+      NODETYPE 1325
+      NAME #JAEEServicios
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #AxLedgerJournalTable
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #AxLedgerJournalTrans
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 20
+      NODETYPE 330
+      NAME #JAEELedgerJournal
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #AxdJAEELedgerJournal
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEELedgerJournal
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEELedgerJournalService
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEELedgerJournal_LedgerJournalTable
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEELedgerJournal_LedgerJournalTrans
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 76
+      NODETYPE 1321
+      NAME #JAEELedgerJournalService
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 4
+      NODETYPE 218
+      NAME #AxdJAEELedgerJournalDCT
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 4
+      NODETYPE 218
+      NAME #DataContainerTypes
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 4
+      NODETYPE 218
+      NAME #AifTableNaturalKeyDataContainerTypes
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #GenerateXSDSchema_AxdJAEELedgerJournal
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

@@ -1,0 +1,27 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_InsertRecordset descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_InsertRecordset
+    #static void JAEE_Libro_4_Datos_InsertRecordset(Args _args)
+    #{
+    #    JAEETablaEjemploXpp     tablaEjemplo;
+    #    InventTable             inventTable; // Artículos
+    #
+    #    insert_recordset tablaEjemplo (Num, Name)
+    #      select ItemId, NameAlias
+    #      from inventTable
+    #      where inventTable.ItemId like "D*";
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{F05A18E8-A086-46DE-9413-E34FF92986CF}
+  ENDPROPERTIES
+  
+
+***Element: END

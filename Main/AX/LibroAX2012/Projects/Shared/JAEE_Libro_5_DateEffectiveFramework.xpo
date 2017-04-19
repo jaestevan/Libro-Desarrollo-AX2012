@@ -1,0 +1,83 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_5_DateEffectiveFramework unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_5_DateEffectiveFramework
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_5_DateEffectiveFramework
+    Origin              #{2DF73DCB-C7EA-4E9E-BFDE-4ED90447EE11}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #Jobs de prueba
+      PROPERTIES
+        Name                #Jobs de prueba
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_5_ValidTimeState
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_5_ValidTimeState_RESET
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_5_ValidTimeState_SELECT
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_5_ValidTimeState_QUERY
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Nuevos objetos
+      PROPERTIES
+        Name                #Nuevos objetos
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 44
+        NODETYPE 204
+        NAME #JAEETablaEjemploValidTimeState
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEETablaEjemploValidTimeState
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 20
+        NODETYPE 330
+        NAME #JAEEEjemploValidTimeStateQuery
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

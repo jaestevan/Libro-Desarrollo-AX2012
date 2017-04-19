@@ -1,0 +1,22 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : JAEEProcesoClientesQueryController unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #JAEEProcesoClientesQueryController
+    Type: 2
+    PROPERTIES
+      Name                #JAEEProcesoClientesQueryController
+      ObjectType          #Class
+      Object              #JAEEProcesoClientesQueryController
+      Origin              #{4CB873B6-ADCE-407E-B103-26D71B834966}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

@@ -1,0 +1,38 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Xpp_TiposListas descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Xpp_TiposListas
+    #static void JAEE_Libro_4_Xpp_TiposListas(Args _args)
+    #{
+    #    List            list = new List(Types::Integer);
+    #    ListEnumerator  lenum;
+    #    int             element;
+    #
+    #    // Añadir elementos
+    #    list.addEnd(7);
+    #    list.addEnd(5);
+    #    list.addStart(82);
+    #
+    #    // Es necesario un iterador para recorrerla
+    #    lenum = list.getEnumerator();
+    #    while (lenum.moveNext())
+    #    {
+    #        // Obtiene el elemento actual
+    #        element = lenum.current();
+    #
+    #        info(int2str(element));
+    #    }
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{43F5A946-DDE2-4985-B4A3-CE4371B6796D}
+  ENDPROPERTIES
+  
+
+***Element: END

@@ -1,0 +1,76 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEERegistrarAlbaranDataContract unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEERegistrarAlbaranDataContract
+    PROPERTIES
+      Name                #JAEERegistrarAlbaranDataContract
+      Origin              #{45A0C513-01F5-439E-B71E-47BCE4605357}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[DataContractAttribute('RegistrarAlbaran')]
+        #public class JAEERegistrarAlbaranDataContract
+        #{
+        #    // Entrada
+        #    PurchId         purchId;
+        #    PackingSlipId   packingSlipId;
+        #    TransDate       transDate;
+        #
+        #    // Salida
+        #    RefRecId        packingSlipRecId;
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #protected void new()
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #parmPackingSlipId
+        #[DataMemberAttribute('Albaran')]
+        #public PackingSlipId parmPackingSlipId(PackingSlipId _pkSlipId = packingSlipId)
+        #{
+        #    packingSlipId = _pkSlipId;
+        #    return packingSlipId;
+        #}
+      ENDSOURCE
+      SOURCE #parmPackingSlipRecId
+        #[DataMemberAttribute('Albaran_RecId')]
+        #public RefRecId parmPackingSlipRecId(RefRecId _packingSlipRecId = packingSlipRecId)
+        #{
+        #    packingSlipRecId = _packingSlipRecId;
+        #    return packingSlipRecId;
+        #}
+      ENDSOURCE
+      SOURCE #parmPurchId
+        #[DataMemberAttribute('Pedido')]
+        #public PurchId parmPurchId(PurchId _purchId = purchId)
+        #{
+        #    purchId = _purchId;
+        #    return purchId;
+        #}
+      ENDSOURCE
+      SOURCE #parmTransDate
+        #[DataMemberAttribute('Fecha')]
+        #public TransDate parmTransDate(TransDate _transDate = transDate)
+        #{
+        #    transDate = _transDate;
+        #    return transDate;
+        #}
+      ENDSOURCE
+      SOURCE #construct
+        #public static JAEERegistrarAlbaranDataContract construct()
+        #{
+        #    return new JAEERegistrarAlbaranDataContract();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

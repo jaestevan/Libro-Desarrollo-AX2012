@@ -1,0 +1,45 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_8_ServicioPersonalizado unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_8_ServicioPersonalizado
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_8_ServicioPersonalizado
+    Origin              #{0A672B2D-D65F-4DF5-96F9-A410142129B2}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 137
+      NODETYPE 1325
+      NAME #JAEEServiciosPersonalizados
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 76
+      NODETYPE 1321
+      NAME #JAEERegistrarAlbaranService
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEERegistrarAlbaranService
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEERegistrarAlbaranDataContract
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

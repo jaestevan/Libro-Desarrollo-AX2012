@@ -1,0 +1,91 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_5_UnitOfWork unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_5_UnitOfWork
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_5_UnitOfWork
+    Origin              #{A8F0CFC1-099B-46E1-89DB-1E8935D30F29}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #ExtendedDataTypes
+      PROPERTIES
+        Name                #ExtendedDataTypes
+        ProjectGroupType    #ExtendedDataTypes
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 41
+        NODETYPE 235
+        NAME #JAEECamionId
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Tables
+      PROPERTIES
+        Name                #Tables
+        ProjectGroupType    #Tables
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 44
+        NODETYPE 204
+        NAME #JAEECamiones
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 44
+        NODETYPE 204
+        NAME #JAEEMantenimiento
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Forms
+      PROPERTIES
+        Name                #Forms
+        ProjectGroupType    #Forms
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEEMantenimiento
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Classes
+      PROPERTIES
+        Name                #Classes
+        ProjectGroupType    #Classes
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEUnitOfWorkExample
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

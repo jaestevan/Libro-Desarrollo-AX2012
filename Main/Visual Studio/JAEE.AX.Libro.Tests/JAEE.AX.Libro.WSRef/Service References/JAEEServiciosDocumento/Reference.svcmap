@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="597bae0d-d7a8-4471-b6f5-b7266b33f899" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AX2012R2A:8101/DynamicsAx/Services/JAEEServicios" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JAEEServicios.xsd" MetadataType="Schema" ID="aaafef46-042b-4073-a603-a046ff61d7fa" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd11" />
+    <MetadataFile FileName="JAEEServicios1.xsd" MetadataType="Schema" ID="e9d972b5-31db-4459-a64c-db69eab57f22" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd10" />
+    <MetadataFile FileName="JAEEServicios2.xsd" MetadataType="Schema" ID="2e6dc8cd-a8de-45b5-8435-39793cf23379" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd0" />
+    <MetadataFile FileName="JAEEServicios3.xsd" MetadataType="Schema" ID="573bbfd1-e635-4bf0-a34a-d603c46bbb03" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd5" />
+    <MetadataFile FileName="JAEEServicios4.xsd" MetadataType="Schema" ID="9199aae4-9b39-430a-9f4d-f1cadb8c7933" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd7" />
+    <MetadataFile FileName="JAEEServicios5.xsd" MetadataType="Schema" ID="7fa955a7-9662-4f0a-a84f-1b295e772a53" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd9" />
+    <MetadataFile FileName="JAEEServicios.wsdl" MetadataType="Wsdl" ID="a471f57b-b228-43be-962d-347b2da4bb7e" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios" />
+    <MetadataFile FileName="JAEEServicios6.xsd" MetadataType="Schema" ID="c4c165e7-87e8-4fb6-b2dc-2fec8dc9ec19" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd3" />
+    <MetadataFile FileName="JAEEServicios7.xsd" MetadataType="Schema" ID="8d8be919-504f-4b70-a8d4-7d38af9e7d9e" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd1" />
+    <MetadataFile FileName="JAEEServicios8.xsd" MetadataType="Schema" ID="4e011d4d-b9e5-41a4-9240-70483bf63529" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd2" />
+    <MetadataFile FileName="JAEEServicios9.xsd" MetadataType="Schema" ID="56aab0a4-07e5-47ae-b39f-b5c9d4aa44bd" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd4" />
+    <MetadataFile FileName="JAEEServicios1.wsdl" MetadataType="Wsdl" ID="ad0ff430-c32a-4289-a278-e18cdc65f3d9" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?wsdl=wsdl0" />
+    <MetadataFile FileName="JAEEServicios10.xsd" MetadataType="Schema" ID="bfb362f4-1931-466c-9328-53e9c19af1de" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd6" />
+    <MetadataFile FileName="JAEEServicios11.xsd" MetadataType="Schema" ID="96348a9e-a6ac-43ca-b50a-96a3b13a0b94" SourceId="1" SourceUrl="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

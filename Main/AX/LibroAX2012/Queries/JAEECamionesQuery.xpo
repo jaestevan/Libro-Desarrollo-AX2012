@@ -1,0 +1,74 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: QUE
+
+; Microsoft Dynamics AX Query: JAEECamionesQuery descargados
+; --------------------------------------------------------------------------------
+VERSION 31
+
+QUERY #JAEECamionesQuery
+  PROPERTIES
+    Name                #JAEECamionesQuery
+    Version             #18
+    NextUniqueId        #1002
+    Origin              #{DC29F4DC-EE91-4BD8-BAAF-EE906E087729}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #public class QueryRun extends ObjectRun
+      #{
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  BLOCKS
+    BLOCK #JAEECamiones
+      PROPERTIES
+        Name                #JAEECamiones
+        Table               #JAEECamiones
+        UniqueId            #1000
+        FetchMode           #1:1
+      ENDPROPERTIES
+      
+      FIELDLIST
+        PROPERTIES
+          Dynamic             #No
+        ENDPROPERTIES
+        
+        FIELD #PrecioCompra
+        FIELD #Kilometros
+        FIELD #FechaCompra
+        FIELD #Bastidor
+        FIELD #Marca
+        FIELD #Matricula
+        FIELD #Modelo
+      ENDFIELDLIST
+      SORTING
+      ENDSORTING
+      LINES
+      ENDLINES
+      BLOCKS
+      ENDBLOCKS
+      GROUPBY
+      ENDGROUPBY
+      HAVING
+      ENDHAVING
+      ORDERBY
+      ENDORDERBY
+    ENDBLOCK
+  ENDBLOCKS
+  DEPENDENTS
+    DEPENDENT
+      PROPERTIES
+        Name                #JAEEListPagePlantilla
+        DependentType       #Form
+      ENDPROPERTIES
+      
+  ENDDEPENDENTS
+  COMPOSITEQUERIES
+  ENDCOMPOSITEQUERIES
+ENDQUERY
+
+
+***Element: END

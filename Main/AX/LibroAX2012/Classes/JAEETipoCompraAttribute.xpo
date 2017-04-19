@@ -1,0 +1,46 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEETipoCompraAttribute descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEETipoCompraAttribute
+    PROPERTIES
+      Name                #JAEETipoCompraAttribute
+      Extends             #SysAttribute
+      Origin              #{CE00A527-82E8-42BB-B0E4-509D04CD50D3}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class JAEETipoCompraAttribute
+        #extends SysAttribute
+        #{
+        #    str tipo;
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #public void new(str _tipo)
+        #{
+        #    super();
+        #
+        #    if (_tipo == '')
+        #        throw error(error::missingParameter(this));
+        #
+        #    tipo = _tipo;
+        #}
+      ENDSOURCE
+      SOURCE #parmTipo
+        #public str parmTipo(str _tipo = tipo)
+        #{
+        #    tipo = _tipo;
+        #    return tipo;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

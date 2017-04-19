@@ -1,0 +1,42 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Xpp_TiposTablas descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Xpp_TiposTablas
+    #static void JAEE_Libro_4_Xpp_TiposTablas(Args _args)
+    #{
+    #    SalesPool   table;
+    #    DictTable   dictTable;
+    #    int         i, id;
+    #    ;
+    #
+    #    // Obtenemos el primer registro de la tabla
+    #    select firstOnly table;
+    #
+    #    // Todas las tablas tienen un TableId único
+    #    dictTable = new DictTable(table.TableId);
+    #
+    #    // Se pueden recorrer los campos de la tabla
+    #    for(i = 1; i <= dictTable.fieldCnt(); i++)
+    #    {
+    #        // Obtenemos el ID del campo
+    #        id = dictTable.fieldCnt2Id(i);
+    #
+    #        // Podemos utilizar los campos por ID
+    #        print strFmt("%1 = %2", dictTable.fieldName(id), table.(id));
+    #    }
+    #
+    #    pause;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{61BFBFF1-DC83-455C-8DA0-3A95C4F3D86B}
+  ENDPROPERTIES
+  
+
+***Element: END

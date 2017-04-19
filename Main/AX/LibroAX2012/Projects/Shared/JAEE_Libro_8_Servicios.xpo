@@ -1,0 +1,27 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_8_Servicios unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_8_Servicios
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_8_Servicios
+    Origin              #{4766D392-7BB5-478D-81C8-B8DCA6AA4E77}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #AxdGenericDocument
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

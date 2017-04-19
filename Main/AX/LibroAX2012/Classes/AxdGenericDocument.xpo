@@ -1,0 +1,79 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: AxdGenericDocument descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #AxdGenericDocument
+    PROPERTIES
+      Name                #AxdGenericDocument
+      Extends             #AxdBase
+      RunOn               #Server
+      Origin              #{DED76893-C377-464A-9457-9803CC1A3CEE}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #getDimensionId
+        #// JAEE. Hotfix para deserializar dimensiones financieras y Segmentos.
+        #public RecId getDimensionId(AxdBaseProperty _axdBaseProperty, container _dimensionValue)
+        #{
+        #    ExtendedTypeId dimensionTypeId = _axdBaseProperty.parmExtendedTypeId();
+        #
+        #
+        #    switch (AxdDimensionUtil::getDimensionPattern(dimensionTypeId))
+        #    {
+        #        case AxdDimensionPattern::DefaultAccount:
+        #            return AxdDimensionUtil::getDefaultAccountId(_dimensionValue);
+        #
+        #        case AxdDimensionPattern::MultiTypeDefaultAccount:
+        #            // MultiTypeDefaultAccount requires an account type to be specified.
+        #            // This method must be overriden to specify the account type.
+        #            //return AxdDimensionUtil::getMultiTypeDefaultAccountId(_accountTypeEnumId, _accountType, _dimensionValue);
+        #            throw error(Error::missingOverride(funcName()));
+        #
+        #        case AxdDimensionPattern::DimensionAttributeSet:
+        #            return AxdDimensionUtil::getDimensionAttributeSetId(_dimensionValue);
+        #
+        #        case AxdDimensionPattern::LedgerAccount:
+        #            return AxdDimensionUtil::getLedgerAccountId(_dimensionValue);
+        #
+        #        case AxdDimensionPattern::BudgetAccount:
+        #            // JAEE.BEGIN.
+        #            //return AxdDimensionUtil::getBudgetAccountId(_dimensionValue);
+        #            return super(_axdBaseProperty, _dimensionValue);
+        #            // JAEE.END.
+        #
+        #        case AxdDimensionPattern::MultiTypeAccount:
+        #            // MultiTypeAccount requires an account type to be specified.
+        #            // This method must be overriden to specify the account type.
+        #            //return AxdDimensionUtil::getMultiTypeAccountId(_accountTypeEnumId, _accountType, _dimensionValue);
+        #            // JAEE.BEGIN.
+        #            //throw error(Error::missingOverride(funcName()));
+        #            if (_axdBaseProperty.parmImplementingTableId() == tableNum(LedgerJournalTrans) &&
+        #                _axdBaseProperty.parmImplementingFieldId() == fieldNum(LedgerJournalTrans, OffsetLedgerDimension))
+        #            {
+        #                return AxdDimensionUtil::getMultiTypeAccountId(enumName2Id('LedgerJournalACType'),
+        #                                                               LedgerJournalACType::Ledger,
+        #                                                               _dimensionValue);
+        #            }
+        #            return 0;
+        #            // JAEE.END.
+        #
+        #        case AxdDimensionPattern::DimensionAttributeValueSet:
+        #            return AxdDimensionUtil::getDimensionAttributeValueSetId(_dimensionValue);
+        #
+        #        case AxdDimensionPattern::BudgetPlanningAccount:
+        #            return AxdDimensionUtil::getBudgetPlanningAccountId(_dimensionValue);
+        #
+        #        default:
+        #            throw error("@SYS86990");
+        #    }
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

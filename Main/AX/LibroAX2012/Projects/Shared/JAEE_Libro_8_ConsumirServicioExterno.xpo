@@ -1,0 +1,33 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_8_ConsumirServicioExterno unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_8_ConsumirServicioExterno
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_8_ConsumirServicioExterno
+    Origin              #{E13BA82B-6937-42A2-B119-07F0651A0D02}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 128
+      NODETYPE 1531
+      NAME #JAEE.AX.Libro.Servicios
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_8_ConsumirServicioExterno
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

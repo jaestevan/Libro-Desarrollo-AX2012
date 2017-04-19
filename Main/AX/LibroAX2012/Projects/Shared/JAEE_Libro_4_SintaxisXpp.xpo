@@ -1,0 +1,63 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_4_SintaxisXpp unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_4_SintaxisXpp
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_4_SintaxisXpp
+    Origin              #{A248163B-41FE-4D49-9D42-E2A6D559796E}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_Xpp_Variables
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_Xpp_Modificadores
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_Xpp_TiposArray
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_Xpp_TiposContenedor
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_Xpp_TiposListas
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_Xpp_TiposTablas
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_TestAssertion
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

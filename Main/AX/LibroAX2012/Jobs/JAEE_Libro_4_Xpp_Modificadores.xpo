@@ -1,0 +1,46 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Xpp_Modificadores unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Xpp_Modificadores
+    #static void JAEE_Libro_4_Xpp_Modificadores(Args _args)
+    #{
+    #    int i;
+    #
+    #    // Break
+    #    for (i = 1; i <= 5; i++)
+    #    {
+    #        if (i == 3)
+    #            break;
+    #
+    #        print "Break: ", i;
+    #
+    #    }
+    #    // Salida: 1 2
+    #
+    #    // Continue
+    #    for (i = 1; i <= 5; i++)
+    #    {
+    #        if (i == 3)
+    #            continue;
+    #
+    #        print "Continue: ", i;
+    #    }
+    #    // Salida: 1 2 4 5
+    #
+    #    window 50,5 at 20,5;
+    #    print "Terminado";
+    #    pause;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{065C2136-D899-4F79-85DF-FBDD568D32CB}
+  ENDPROPERTIES
+  
+
+***Element: END

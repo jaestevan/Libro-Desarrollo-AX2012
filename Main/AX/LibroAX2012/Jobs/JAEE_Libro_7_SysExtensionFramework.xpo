@@ -1,0 +1,24 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_7_SysExtensionFramework descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_7_SysExtensionFramework
+    #static void JAEE_Libro_7_SysExtensionFramework(Args _args)
+    #{
+    #    JAEEProcesarLineaCompras    procLinCom;
+    #
+    #    procLinCom = JAEEProcesarLineaCompras::construct('Journal');
+    #    procLinCom.run();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{D5812B45-35F6-40A8-A166-4BA9DC63D7BF}
+  ENDPROPERTIES
+  
+
+***Element: END

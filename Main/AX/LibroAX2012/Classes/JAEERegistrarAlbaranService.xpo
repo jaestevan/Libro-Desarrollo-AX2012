@@ -1,0 +1,61 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEERegistrarAlbaranService unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEERegistrarAlbaranService
+    PROPERTIES
+      Name                #JAEERegistrarAlbaranService
+      RunOn               #Server
+      Origin              #{22DD1197-D006-4FB8-8997-0C2ADE9650A3}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #public class JAEERegistrarAlbaranService
+        #{
+        #    // RunOn: Server
+        #}
+      ENDSOURCE
+      SOURCE #registrar
+        #[SysEntryPointAttribute(true)]
+        #public JAEERegistrarAlbaranDataContract registrar(JAEERegistrarAlbaranDataContract _contract)
+        #{
+        #    PurchTable                      purchTable;
+        #    PurchFormLetter_PackingSlip     formLetter;
+        #    VendPackingSlipJour             newPackSlipJnl;
+        #
+        #    setPrefix(strFmt("Pedido: %1", _contract.parmPurchId()));
+        #
+        #    // Buscar pedido
+        #    purchTable = PurchTable::find(_contract.parmPurchId());
+        #    if (!purchTable)
+        #        throw error(strFmt(PurchTable::txtNotExist(), _contract.parmPurchId()));
+        #
+        #    // Registrar albarán
+        #    formLetter = PurchFormLetter::construct(DocumentStatus::PackingSlip);
+        #    formLetter.update(
+        #        purchTable,
+        #        _contract.parmPackingSlipId(),
+        #        _contract.parmTransDate(),
+        #        PurchUpdate::All,
+        #        AccountOrder::None,
+        #        NoYes::No,
+        #        NoYes::No);
+        #
+        #    // Actualizar datos para devolverlos
+        #    newPackSlipJnl = formLetter.parmJournalRecord();
+        #    if (newPackSlipJnl)
+        #        _contract.parmPackingSlipRecId(newPackSlipJnl.RecId);
+        #
+        #    return _contract;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

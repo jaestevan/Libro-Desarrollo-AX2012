@@ -1,0 +1,44 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : SalesTable unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #SalesTable
+    EnforceFKRelation 0
+    FIELDS
+    ENDFIELDS
+    GROUPS
+    ENDGROUPS
+    
+    INDICES
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+    ENDREFERENCES
+    
+    METHODS
+    ENDMETHODS
+    EVENTS
+      METHOD #insert
+        EVENTHANDLERS
+          EVENTHANDLER #printSalesOrder
+            PROPERTIES
+              CalledWhen          #Post
+              Class               #JAEESALEsTableEventHandler
+              Method              #printSalesOrder
+              AOTlink             #\Classes\JAEESALEsTableEventHandler\printSalesOrder
+            ENDPROPERTIES
+            
+          ENDEVENTHANDLER
+        ENDEVENTHANDLERS
+      ENDMETHOD
+    ENDEVENTS
+  ENDTABLE
+  
+
+***Element: END

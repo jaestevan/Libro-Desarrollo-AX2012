@@ -1,0 +1,40 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_Select descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_Select
+    #static void JAEE_Libro_4_Datos_Select(Args _args)
+    #{
+    #    CustTable    custTable; // variable buffer de tipo CustTable (tabla)
+    #
+    #    // No importa cuantos registros devuelva esta select ...
+    #    select custTable
+    #        where custTable.AccountNum like 'US-01*';
+    #
+    #    // ... en este momento la variable sólo contiene el primero de ellos.
+    #    print custTable.AccountNum;
+    #    pause;
+    #
+    #
+    #    // De esta manera podemos recorrerlos todos
+    #    while select custTable
+    #        where custTable.AccountNum like 'US-01*'
+    #    {
+    #        // En cada iteración la variable contiene el siguiente registro
+    #        print custTable.AccountNum;
+    #    }
+    #
+    #    pause;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{81B4347C-CFA3-49F8-8AF3-574CB04E1936}
+  ENDPROPERTIES
+  
+
+***Element: END

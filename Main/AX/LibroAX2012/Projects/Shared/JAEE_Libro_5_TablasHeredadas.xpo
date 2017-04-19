@@ -1,0 +1,51 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_5_TablasHeredadas unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_5_TablasHeredadas
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_5_TablasHeredadas
+    Origin              #{453B9D0E-7119-4204-A5F5-426D2D7F8CB8}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 44
+      NODETYPE 204
+      NAME #JAEETablaHeredableAbstracta
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 44
+      NODETYPE 204
+      NAME #JAEETablaHeredada_A
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 44
+      NODETYPE 204
+      NAME #JAEETablaHeredada_B
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 11
+      NODETYPE 201
+      NAME #JAEETablaHeredable
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_5_HerenciaTablas
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

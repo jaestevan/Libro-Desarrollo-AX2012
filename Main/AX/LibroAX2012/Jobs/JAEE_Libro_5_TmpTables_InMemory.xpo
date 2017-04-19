@@ -1,0 +1,42 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_TmpTables_InMemory descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_TmpTables_InMemory
+    #static void JAEE_Libro_5_TmpTables_InMemory(Args _args)
+    #{
+    #    Currency    currency;   // Es una tabla persistente
+    #
+    #    info(strFmt("%1", currency.isTmp()));   // False
+    #
+    #    currency.setTmp();      // Ahora es un buffer temporal
+    #
+    #    info(strFmt("%1", currency.isTmp()));   // True
+    #
+    #    // Este select no devuelve nada
+    #    while select currency
+    #        info(strFmt("%1", currency.CurrencyCode));
+    #
+    #    currency.clear();
+    #    currency.initValue();
+    #    currency.CurrencyCode = "TST";
+    #    currency.insert();
+    #
+    #    // Ahora devuelve sólo el registro temporal
+    #    while select currency
+    #        info(strFmt("%1", currency.CurrencyCode));
+    #
+    #    currency = null; // Los datos temporales se borran
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{97BD38C9-2056-40F4-9661-63B3D64A1EB2}
+  ENDPROPERTIES
+  
+
+***Element: END

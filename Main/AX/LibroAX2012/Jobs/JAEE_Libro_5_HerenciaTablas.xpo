@@ -1,0 +1,25 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_HerenciaTablas descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_HerenciaTablas
+    #static void JAEE_Libro_5_HerenciaTablas(Args _args)
+    #{
+    #    DirPerson   dirPerson;
+    #
+    #    select generateonly dirPerson;
+    #
+    #    info(dirPerson.getSQLStatement());
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{CB97BEA5-CBA9-43C4-A38B-21DCF43F3EB9}
+  ENDPROPERTIES
+  
+
+***Element: END

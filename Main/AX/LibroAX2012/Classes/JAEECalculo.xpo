@@ -1,0 +1,75 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEECalculo descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEECalculo
+    PROPERTIES
+      Name                #JAEECalculo
+      Origin              #{A16872AE-23BD-4F6A-AB3C-F9ABEE1C9625}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #/// <summary>
+        #/// Clase de cálculo de ejemplo
+        #/// </summary>
+        #/// <remarks>
+        #/// Creada para ilustrar el módulo de UnitTesting
+        #/// </remarks>
+        #class JAEECalculo
+        #{
+        #    real valor1, valor2;
+        #}
+      ENDSOURCE
+      SOURCE #dividir
+        #public real dividir()
+        #{
+        #    if (valor2 == 0)
+        #        throw error("No se puede dividir por 0");
+        #
+        #    return valor1 / valor2;
+        #}
+      ENDSOURCE
+      SOURCE #multiplicar
+        #public real multiplicar()
+        #{
+        #    return valor1 * valor2;
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #/// <summary>
+        #/// Instancia un nuevo objeto de la clase Calculo
+        #/// </summary>
+        #/// <param name="_valor1">
+        #/// Primer valor que se utilizará para calcular
+        #/// </param>
+        #/// <param name="_valor2">
+        #/// Segundo valor que se utilizará para calcular
+        #/// </param>
+        #public void new(real _valor1, real _valor2)
+        #{
+        #    valor1 = _valor1;
+        #    valor2 = _valor2;
+        #}
+      ENDSOURCE
+      SOURCE #restar
+        #public real restar()
+        #{
+        #    return valor1 - valor2;
+        #}
+      ENDSOURCE
+      SOURCE #sumar
+        #public real sumar()
+        #{
+        #    return valor1 + valor2;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

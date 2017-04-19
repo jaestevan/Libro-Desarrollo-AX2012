@@ -1,0 +1,34 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesarLineaCompras_Journal descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesarLineaCompras_Journal
+    PROPERTIES
+      Name                #JAEEProcesarLineaCompras_Journal
+      Extends             #JAEEProcesarLineaCompras
+      Origin              #{61585353-E2DF-46AA-B873-08A16BCA0C5B}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[JAEETipoCompraAttribute('Journal')]
+        #class JAEEProcesarLineaCompras_Journal
+        #extends JAEEProcesarLineaCompras
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #run
+        #public void run()
+        #{
+        #    info("Línea de tipo Diario");
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

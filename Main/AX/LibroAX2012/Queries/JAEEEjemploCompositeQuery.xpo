@@ -1,0 +1,49 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: QUE
+
+; Microsoft Dynamics AX Query: JAEEEjemploCompositeQuery descargados
+; --------------------------------------------------------------------------------
+VERSION 31
+
+QUERY #JAEEEjemploCompositeQuery
+  PROPERTIES
+    Name                #JAEEEjemploCompositeQuery
+    Version             #3
+    Origin              #{8F06CED8-47CD-4BF8-9788-6E0C07C2C834}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #public class QueryRun extends ObjectRun
+      #{
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  BLOCKS
+  ENDBLOCKS
+  DEPENDENTS
+  ENDDEPENDENTS
+  COMPOSITEQUERIES
+    COMPOSITEQUERY
+    InventSum
+    COMPOSITEQUERYRANGES
+    InventSum
+    LINES
+    ENDLINES
+    InventDim
+    LINES
+    ENDLINES
+    ENDCOMPOSITEQUERYRANGES
+    COMPOSITEQUERYHAVINGS
+    InventSum
+    HAVING
+    ENDHAVING
+    ENDCOMPOSITEQUERYHAVINGS
+    ENDCOMPOSITEQUERY
+  ENDCOMPOSITEQUERIES
+ENDQUERY
+
+
+***Element: END

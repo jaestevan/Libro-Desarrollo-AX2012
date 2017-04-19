@@ -1,0 +1,27 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_5_TmpTables_InMemory unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_5_TmpTables_InMemory
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_5_TmpTables_InMemory
+    Origin              #{63CD5167-9583-4F42-AE79-ACABF31A81A0}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_5_TmpTables_InMemory
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

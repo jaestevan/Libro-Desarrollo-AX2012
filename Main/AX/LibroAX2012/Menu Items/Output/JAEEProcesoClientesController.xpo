@@ -1,0 +1,26 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : JAEEProcesoClientesController unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #JAEEProcesoClientesController
+    Type: 2
+    PROPERTIES
+      Name                #JAEEProcesoClientesController
+      Label               #Procesar clientes
+      HelpText            #Ejemplo de procesado de clientes sencillo.
+      ObjectType          #Class
+      Object              #JAEEProcesoClientesController
+      EnumTypeParameter   #SysOperationExecutionMode
+      EnumParameter       #Asynchronous
+      Origin              #{7FD97C50-AF65-4E03-934C-8BC8D22DF69E}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

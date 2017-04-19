@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd7" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd8" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd10" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd2" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd3" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd5" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/JAEELedgerJournal" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd9" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServicios?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="JAEELedgerJournalServiceCreateRequest">
+    <wsdl:part name="parameters" element="tns:JAEELedgerJournalServiceCreateRequest" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceCreateRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceCreateResponse">
+    <wsdl:part name="parameters" element="tns:JAEELedgerJournalServiceCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalService_create_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceReadRequest">
+    <wsdl:part name="parameters" element="tns:JAEELedgerJournalServiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceReadRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceReadResponse">
+    <wsdl:part name="parameters" element="tns:JAEELedgerJournalServiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceFindRequest">
+    <wsdl:part name="parameters" element="tns:JAEELedgerJournalServiceFindRequest" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceFindRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalServiceFindResponse">
+    <wsdl:part name="parameters" element="tns:JAEELedgerJournalServiceFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="JAEELedgerJournalService_find_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="JAEELedgerJournalService">
+    <wsdl:operation name="create">
+      <wsdl:input wsaw:Action="http://tempuri.org/JAEELedgerJournalService/create" name="JAEELedgerJournalServiceCreateRequest" message="tns:JAEELedgerJournalServiceCreateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/JAEELedgerJournalService/createResponse" name="JAEELedgerJournalServiceCreateResponse" message="tns:JAEELedgerJournalServiceCreateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/JAEELedgerJournalService/createAifFaultFault" name="AifFaultFault" message="tns:JAEELedgerJournalService_create_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://tempuri.org/JAEELedgerJournalService/read" name="JAEELedgerJournalServiceReadRequest" message="tns:JAEELedgerJournalServiceReadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/JAEELedgerJournalService/readResponse" name="JAEELedgerJournalServiceReadResponse" message="tns:JAEELedgerJournalServiceReadResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/JAEELedgerJournalService/readAifFaultFault" name="AifFaultFault" message="tns:JAEELedgerJournalService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/JAEELedgerJournalService/find" name="JAEELedgerJournalServiceFindRequest" message="tns:JAEELedgerJournalServiceFindRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/JAEELedgerJournalService/findResponse" name="JAEELedgerJournalServiceFindResponse" message="tns:JAEELedgerJournalServiceFindResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/JAEELedgerJournalService/findAifFaultFault" name="AifFaultFault" message="tns:JAEELedgerJournalService_find_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="JAEERegistrarAlbaranService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="JAEERegistrarAlbaranService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="JAEERegistrarAlbaranService/Imports">
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd3" namespace="JAEERegistrarAlbaranService" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://ax2012r2a:8101/DynamicsAx/Services/JAEEServiciosPersonalizados?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="JAEERegistrarAlbaranServiceRegistrarRequest">
+    <wsdl:part name="parameters" element="tns:JAEERegistrarAlbaranServiceRegistrarRequest" />
+  </wsdl:message>
+  <wsdl:message name="JAEERegistrarAlbaranServiceRegistrarRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="JAEERegistrarAlbaranServiceRegistrarResponse">
+    <wsdl:part name="parameters" element="tns:JAEERegistrarAlbaranServiceRegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="JAEERegistrarAlbaranService_registrar_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="JAEERegistrarAlbaranService">
+    <wsdl:operation name="registrar">
+      <wsdl:input wsaw:Action="JAEERegistrarAlbaranService/JAEERegistrarAlbaranService/registrar" name="JAEERegistrarAlbaranServiceRegistrarRequest" message="tns:JAEERegistrarAlbaranServiceRegistrarRequest" />
+      <wsdl:output wsaw:Action="JAEERegistrarAlbaranService/JAEERegistrarAlbaranService/registrarResponse" name="JAEERegistrarAlbaranServiceRegistrarResponse" message="tns:JAEERegistrarAlbaranServiceRegistrarResponse" />
+      <wsdl:fault wsaw:Action="JAEERegistrarAlbaranService/JAEERegistrarAlbaranService/registrarAifFaultFault" name="AifFaultFault" message="tns:JAEERegistrarAlbaranService_registrar_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

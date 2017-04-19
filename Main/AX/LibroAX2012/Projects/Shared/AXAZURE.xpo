@@ -1,0 +1,33 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : AXAZURE unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #AXAZURE
+  SHARED
+  PROPERTIES
+    Name                #AXAZURE
+    Origin              #{7026573C-71F3-4E43-8C61-16A702904D20}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #AXAPruebaClase
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #AbatementCertificate_IN
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

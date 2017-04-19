@@ -1,0 +1,27 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Xpp_Variables descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Xpp_Variables
+    #static void JAEE_Libro_4_Xpp_Variables(Args _args)
+    #{
+    #    CustTable       custTable;
+    #    CustGroupId     custGroup   = "CG";
+    #
+    #    select custTable
+    #        where custTable.CustGroup == custGroup;
+    #
+    #    // ...
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{3C811610-5BD4-4461-92BF-F0871F937512}
+  ENDPROPERTIES
+  
+
+***Element: END

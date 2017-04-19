@@ -1,0 +1,186 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: MCR
+
+; Microsoft Dynamics AX Macro: DataContainerTypes descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #DataContainerTypes
+    ##AxdPurchReqImportDCT
+    ##AxdCatImpDCT
+    ##AxdcatvcDCT
+    ##MiscDataContainerTypes
+    ##MetadataServiceDataContainerTypes
+    ##AifDimensionDataContainerTypes
+    ##AifTableNaturalKeyDataContainerTypes
+    ##SyncServiceDataContainerTypes
+    ##AxdCustomerDCT
+    ##AxdASNDCT
+    ##AxdAddressDCT
+    ##AxdAssetConditionDCT
+    ##AxdAssetGroupDCT
+    ##AxdAssetLocationDCT
+    ##AxdAssetMajorTypeDCT
+    ##AxdBillsofMaterialsDCT
+    ##AxdCashDiscDCT
+    ##AxdChartOfAccountsDCT
+    ##AxdConfigTableDCT
+    ##AxdContactPersonsDCT
+    ##AxdCountingJournalDCT
+    ##AxdCustPaymJournalDCT
+    ##AxdDeliveryModesDCT
+    ##AxdDimensionsDCT
+    ##AxdExchangeRatesDCT
+    ##AxdFixedAssetDCT
+    ##AxdFreeTextInvoiceDCT
+    ##AxdHRMAbsenceReqDCT
+    ##AxdHcmJobApplicationDCT
+    ##AxdHcmJobPostingDCT
+    ##AxdInventColorDCT
+    ##AxdInventDimCombinationDCT
+    ##AxdInventItemGroupDCT
+    ##AxdInventLocationDCT
+    ##AxdInventoryOnHandDCT
+    ##AxdInventoryTransactionsDCT
+    ##AxdInventSizeDCT
+    ##AxdItemDCT
+    ##AxdEMSSimulatedFlowDCT
+    ##AxdPaymentTermsDCT
+    ##AxdPriceDiscountJournalDCT
+    ##AxdPriceListDCT
+    ##AxdProdPickingListDCT
+    ##AxdProfitLossJournalDCT
+    ##AxdPurchaseInvoiceDCT
+    ##AxdPurchaseRequisitionDCT
+    ##AxdRouteCardDCT
+    ##AxdSalesInvoiceDCT
+    ##AxdSalesOrderDCT
+    ##AxdSalesPackingSlipDCT
+    ##AxdSysImportBusSectorsDCT
+    ##AxdSysImportContactPersonsDCT
+    ##AxdSysImportLeadsDCT
+    ##AxdTransferJournalDCT
+    ##AxdTrvPBSDetailDCT
+    ##AxdTrvPBSMaindataDCT
+    ##AxdUnitDCT
+    ##AxdUnitConversionDCT
+    ##AxdLedgerGeneralJournalDCT
+    ##AxdVendGroupDCT
+    ##AxdVendTableDCT
+    ##AxdVendorPaymentDCT
+    ##AxdPickingListDCT
+    ##AxdProjectHourJournalDCT
+    ##AxdServiceAgreementDCT
+    ##AxdReturnOrderInDCT
+    ##AxdReturnOrderOutDCT
+    ##AxdSalesInvoice_EinvoiceDCT
+    ##AxdProjInvoiceDCT
+    ##AxdExpenseDCT
+    ##AxdServiceOrderDCT
+    ##AxdSalesConfirmationDCT
+    ##AxdCustomerQuotationDCT
+    ##AxdAttendanceOutDCT
+    ##AxdAttendanceInDCT
+    ##AxdRFQSendDCT
+    ##AxdRFQReplyDCT
+    ##AxdVendInvoiceDCT
+    ##AxdTransferOrderCreateDCT
+    ##AxdTransferOrderPostingDCT
+    ##AxdEcoResCategoryDocDCT
+    ##AxdEcoResProductMasterDimValueDCT
+    ##AxdEcoResProductDCT
+    ##AxdSalesQuotationDCT
+    ##AxdCustPaymentsDCT
+    ##AxdVendPaymentsDCT
+    ##AxdCustomerTransactionDCT
+    ##AxdAdvancedLedgerEntryDCT
+    ##AxdBankStmtISODCT
+    ##AxdsmmBusRelDCT
+    ##AxdsmmLeadsDCT
+    ##AxdBudgetTransactionDCT
+    ##AxdContactPersonsDCT
+    ##AxdLedgerExchangeRateTypeDCT
+    ##AxdLedgerExchangeRateDCT
+    ##AxdLedgerCurrencyDCT
+    ##AxdInventItemLocationDCT
+    ##AxdTransferOrderDCT
+    ##AxdEMSMeterReadingFlowDCT
+    ##AxdEMSSubstanceFlowDCT
+    ##AxdLogisticsAddressZipCodeSetupDCT
+    ##AxdDOCommerceShpDCT
+    ##AxdDOCommerceSalesTableDCT
+    ##AxdLineDiscountDCT
+    ##AxdDOCommerceDimensionDCT
+    ##AxdDOCommerceDimensionGroupDCT
+    ##AxdDOCommerceDlvModeDCT
+    ##AxdSalesMultilineDiscountDCT
+    ##AxdDOCommerceMarketplaceDCT
+    ##AxdDOCommerceOnlineStoreDCT
+    ##AxdSalesTotalDiscountDCT
+    ##AxdEUSLReportingDCT
+    ##AxdDOCommerceItemGroupDCT
+    ##AxdTaxItemGroupsDCT
+    ##AxdTaxGroupsDCT
+    ##AxdTaxCodesDCT
+    ##AxdCustCreditCardDCT
+    ##AxdInventItemBarcodeDCT
+    ##AxdPurchRFQSitesDCT
+    ##AxdDlvDlvTermDCT
+    ##AxdDlvDlvModeDCT
+    ##AxdMarkupMarkupTableDCT
+    ##AxdPurchRFQPaymTermsDCT
+    ##AxdPurchRFQUnitDCT
+    ##AxdDOCommerceQtyOnHandDCT
+    ##AxdCaseWebDetailDCT
+    ##AxdCaseCategoryDetailDCT
+    ##AxdsmmLeadPrioritiesDCT
+    ##AxdVendVendRequestSignupDCT
+    ##AxdEcoResCategoryDocumentDCT
+    ##AxdDOCommercePriceDiscDCT
+    ##AxdBankStmtDCT
+    #// <GLS>
+    ##AxdIntrastatReportDCT
+    #// </GLS>
+    ##AxdBudgetPlanDCT
+    #// <GCN>
+    ##AxdTaxImportLinesForAIF_CNDCT
+    ##AxdTaxExportLinesForAIF_CNDCT
+    #// </GCN>
+    ##AxdRoutesDCT
+    ##AxdPayrollEarningsImportDCT
+    ##AxdCustECollectionLetterDCT
+    ##AxdRetailCatAttribDCT
+    ##AxdHcmWorkerImportDCT
+    ##AxdBudgetPlanOfficeAddinDCT
+    #// <GCN>
+    ##AxdTaxIntgrExportDocData_CNDCT
+    #// </GCN>
+    #// <GJP>
+    ##AxdAssetDepRateExpImp_JPDCT
+    ##AxdAssetUndepBalanceExpImp_JPDCT
+    #// </GJP>
+    ##AxdDMFExeStatusDCT
+    ##AxdDMFProcessGrpDCT
+    ##AxdBankPositivePayDCT
+    ##AxdConnItemSvcDCT
+    ##AxdConnEmployeesDCT
+    ##AxdConnInvoiceDCT
+    ##AxdConnCustomerOrgDCT
+    ##AxdConnExchRateDCT
+    ##AxdProjCategoryDCT
+    ##AxdProjInformationDCT
+    ##AxdProjQuotationDCT
+    ##AxdProjQuotationLineDCT
+    ##AxdProjectDocumentDCT
+    ##AxdProjContractDCT
+    ##AxdPayrollPositivePayDCT
+    ##AxdJAEELedgerJournalDCT
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{C650EDA7-A0D3-4635-A894-DC85243EA7FD}
+  ENDPROPERTIES
+  
+
+***Element: END

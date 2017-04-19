@@ -1,0 +1,33 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEEjemploAssertion descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEEjemploAssertion
+    PROPERTIES
+      Name                #JAEEEjemploAssertion
+      Origin              #{63085607-A5CF-49B0-BAF6-258CA118E803}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class JAEEEjemploAssertion
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #copyRecord
+        #public void copyRecord(Common _common)
+        #{
+        #    Debug::assert(_common.RecId != 0);
+        #
+        #    // ...
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

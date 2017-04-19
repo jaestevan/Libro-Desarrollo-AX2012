@@ -1,0 +1,72 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_EjemploQueryValues descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_EjemploQueryValues
+    #static void JAEE_Libro_5_EjemploQueryValues(Args _args)
+    #{
+    #    Query                   q    = new Query();
+    #    QueryBuildDataSource    qbds = q.addDataSource(tableNum(VendInvoiceJour));
+    #    QueryFilter             qf;
+    #
+    #    // Facturas de compra
+    #    VendInvoiceJour         vendInvJr;
+    #
+    #    // Filtro: Cuenta de facturación (Proveedor)
+    #    qf = q.addQueryFilter(qbds, fieldStr(VendInvoiceJour, InvoiceAccount));
+    #
+    #    // La forma sencilla de aplicar un filtro
+    #    qf.value('CN-001');
+    #
+    #    // ... es una forma abreviada de
+    #    qf.value(queryValue('CN-001'));
+    #
+    #    // ... que es una forma abreviada de
+    #    qf.value(SysQuery::value('CN-001'));
+    #
+    #
+    #    // Para eliminar un filtro podemos utilizar una cadena vacía
+    #    qf.value('');
+    #
+    #    // ... pero la función dedicada es mas clara!
+    #    qf.value(SysQuery::valueEmptyString());
+    #
+    #    // ... y más todavía si queremos filtrar lo contrario. Que
+    #    // el rango NO este VACÍO
+    #    qf.value(SysQuery::valueNotEmptyString());
+    #
+    #    // EXPRESIONES
+    #
+    #    // Filtro: En realidad da igual el campo que se elija, pero es necesario
+    #    //   utilizar uno cualquiera para añadir el rango.
+    #    qf = q.addQueryFilter(qbds, fieldStr(VendInvoiceJour, DataAreaId));
+    #
+    #    qf.value(strFmt("CreatedBy = %1", curUserId()));
+    #
+    #    qf.value(strFmt("%1 == %2 && %3 == %4",
+    #                fieldStr(VendInvoiceJour, CreatedBy),
+    #                curUserId(),
+    #                fieldStr(VendInvoiceJour, CreatedDateTime),
+    #                DateTimeUtil::utcNow()));
+    #
+    #    qf.value(strFmt("(%1.%2 == %1.%3) || (%1.%4 <= %1.%5 && %1.%4 >= %1.%6)",
+    #                q.dataSourceTable(tableNum(VendInvoiceJour)).name(),    // %1
+    #                fieldStr(VendInvoiceJour, CreatedBy),                   // %2
+    #                curUserId(),                                            // %3
+    #                fieldStr(VendInvoiceJour, CreatedDateTime),             // %4
+    #                DateTimeUtil::utcNow(),                                 // %5
+    #                DateTimeUtil::addDays(DateTimeUtil::utcNow(), -30)));   // %6
+    #}
+    #
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{A1BE3AC6-899E-4143-9A38-2D2E944CEDBD}
+  ENDPROPERTIES
+  
+
+***Element: END

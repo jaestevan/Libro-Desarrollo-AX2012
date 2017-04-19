@@ -1,0 +1,33 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEESalesTableEventHandler descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEESalesTableEventHandler
+    PROPERTIES
+      Name                #JAEESalesTableEventHandler
+      Origin              #{8F43788C-2615-4E33-B537-E0D5A1F0C0AC}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class JAEESalesTableEventHandler
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #printSalesOrder
+        #public static void printSalesOrder(XppPrePostArgs _args)
+        #{
+        #    SalesTable      salesTable = _args.getThis();
+        #
+        #    info(strFmt("Imprimiendo el pedido %1!", salesTable.SalesId));
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

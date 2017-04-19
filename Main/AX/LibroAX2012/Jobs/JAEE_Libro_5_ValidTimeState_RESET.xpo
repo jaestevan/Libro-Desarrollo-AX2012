@@ -1,0 +1,26 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_ValidTimeState_RESET descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_ValidTimeState_RESET
+    #static void JAEE_Libro_5_ValidTimeState_RESET(Args _args)
+    #{
+    #    date fromDate   = dateNull(),
+    #         toDate     = dateMax();    // 31/12/2154
+    #
+    #    JAEETablaEjemploValidTimeState  ejemplo;
+    #
+    #    delete_from ejemplo;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{CB711B97-9E33-4837-98F3-92F8B0C5EF50}
+  ENDPROPERTIES
+  
+
+***Element: END

@@ -1,0 +1,123 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : JAEETablaEjemploXpp unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #JAEETablaEjemploXpp
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #JAEETablaEjemploXpp
+      Label               #Tabla de ejemplo
+      TitleField2         #Name
+      TableContents       #Base data
+      CacheLookup         #NotInTTS
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #SurrogateKey
+      ClusterIndex        #SurrogateKey
+      ReplacementKey      #NumIdx
+      Origin              #{A47E30A8-9165-49A0-8C84-117EC6816343}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #Name
+        STRING
+        PROPERTIES
+          Name                #Name
+          Table               #JAEETablaEjemploXpp
+          Origin              #{8CF29609-F27E-40E1-8B72-CE15CBED68F3}
+          ExtendedDataType    #Name
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #Num
+        STRING
+        PROPERTIES
+          Name                #Num
+          Table               #JAEETablaEjemploXpp
+          Origin              #{0F64EDC0-7DF7-427B-B578-00B2DC770CC7}
+          ExtendedDataType    #Num
+          StringSize          #20
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Num
+        ENDGROUPFIELDS
+      ENDGROUP
+    ENDGROUPS
+    
+    INDICES
+      #NumIdx
+      PROPERTIES
+        Name                #NumIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{9D2926C4-17D1-486C-8B43-1C268640D311}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #Num
+      ENDINDEXFIELDS
+      
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+    ENDREFERENCES
+    
+    DELETEACTIONS
+    ENDDELETEACTIONS
+    
+    METHODS
+      SOURCE #validateWrite
+        #public boolean validateWrite()
+        #{
+        #    boolean ret;
+        #
+        #    ret = super();
+        #
+        #    if (ret)
+        #    {
+        #        if (!this.Num)
+        #            ret = checkFailed("Debe indicar un Código.");
+        #
+        #        if (strLen(this.Name) < 5)
+        #            ret = checkFailed("El Nombre es demasiado corto.");
+        #    }
+        #
+        #    return ret;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #find
+        #static JAEETablaEjemploXpp find(Num _num, boolean _forUpdate = false)
+        #{
+        #    JAEETablaEjemploXpp ejemploXpp;
+        #
+        #    if (_num)
+        #    {
+        #        if (_forUpdate)
+        #            ejemploXpp.selectForUpdate(_forUpdate);
+        #
+        #        select firstOnly ejemploXpp
+        #            where ejemploXpp.Num == _num;
+        #    }
+        #
+        #    return ejemploXpp;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: END

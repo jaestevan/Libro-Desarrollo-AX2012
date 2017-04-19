@@ -1,0 +1,29 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_ClasesInterfaces descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_ClasesInterfaces
+    #static void JAEE_Libro_4_ClasesInterfaces(Args _args)
+    #{
+    #    JAEEEjemploAbstractClass    abstractClass;
+    #    JAEEEjemploClass            ejemploClass;
+    #
+    #    // ERROR. No se puede instanciar una clase abstracta
+    #    //abstractClass = new JAEEEjemploAbstractClass();
+    #
+    #    // CORRECTO
+    #    ejemploClass = new JAEEEjemploClass();
+    #    print ejemploClass.name();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{561DD29D-029C-4EC4-978F-DF4216C6179A}
+  ENDPROPERTIES
+  
+
+***Element: END

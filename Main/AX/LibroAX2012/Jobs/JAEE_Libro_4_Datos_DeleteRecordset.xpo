@@ -1,0 +1,24 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_DeleteRecordset descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_DeleteRecordset
+    #static void JAEE_Libro_4_Datos_DeleteRecordset(Args _args)
+    #{
+    #    JAEETablaEjemploXpp     tablaEjemplo;
+    #
+    #    delete_from tablaEjemplo
+    #      where tablaEjemplo.Num like '*+';
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{D7D69370-8E72-43F1-B8C5-C0BB03CBB6A0}
+  ENDPROPERTIES
+  
+
+***Element: END

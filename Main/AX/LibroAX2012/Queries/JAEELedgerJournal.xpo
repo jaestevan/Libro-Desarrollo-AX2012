@@ -1,0 +1,86 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: QUE
+
+; Microsoft Dynamics AX Query: JAEELedgerJournal descargados
+; --------------------------------------------------------------------------------
+VERSION 31
+
+QUERY #JAEELedgerJournal
+  PROPERTIES
+    Name                #JAEELedgerJournal
+    Version             #13
+    NextUniqueId        #1002
+    Origin              #{EE579AC8-E967-4B31-9321-9C4B0A1F8BB0}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #public class QueryRun extends ObjectRun
+      #{
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  BLOCKS
+    BLOCK #LedgerJournalTable
+      PROPERTIES
+        Name                #LedgerJournalTable
+        Table               #LedgerJournalTable
+        UniqueId            #1000
+        FetchMode           #1:1
+      ENDPROPERTIES
+      
+      FIELDLIST
+        PROPERTIES
+        ENDPROPERTIES
+        
+      ENDFIELDLIST
+      SORTING
+      ENDSORTING
+      LINES
+      ENDLINES
+      BLOCKS
+        BLOCK #LedgerJournalTrans
+          PROPERTIES
+            Name                #LedgerJournalTrans
+            Table               #LedgerJournalTrans
+            UniqueId            #1001
+            JoinMode            #OuterJoin
+          ENDPROPERTIES
+          
+          FIELDLIST
+            PROPERTIES
+            ENDPROPERTIES
+            
+          ENDFIELDLIST
+          SORTING
+          ENDSORTING
+          LINES
+          ENDLINES
+          BLOCKS
+          ENDBLOCKS
+          ASSOCIATIONS
+            ASSOCIATION
+              JOINDATASOURCE #LedgerJournalTable
+              MASTERFIELD  #JournalNum
+              DETAILSFIELD #JournalNum
+          ENDASSOCIATIONS
+        ENDBLOCK
+      ENDBLOCKS
+      GROUPBY
+      ENDGROUPBY
+      HAVING
+      ENDHAVING
+      ORDERBY
+      ENDORDERBY
+    ENDBLOCK
+  ENDBLOCKS
+  DEPENDENTS
+  ENDDEPENDENTS
+  COMPOSITEQUERIES
+  ENDCOMPOSITEQUERIES
+ENDQUERY
+
+
+***Element: END

@@ -1,0 +1,37 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_9_Informes_Controller unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_9_Informes_Controller
+    #static void JAEE_Libro_9_Informes_Controller(Args _args)
+    #{
+    #    SrsReportRunController      controller = new SrsReportRunController();
+    #    SRSPrintDestinationSettings settings;
+    #
+    #    // Indicar qué informe y diseño se debe imprimir
+    #    controller.parmReportName(ssrsReportStr(JAEEEjemploBusinessLogic, AutoDesign));
+    #
+    #    // Obtiene la configuración desde el contrato ya que el usuario puede
+    #    // modificarla mediante el diálogo.
+    #    settings = controller.parmReportContract().parmPrintSettings();
+    #    settings.printMediumType(SRSPrintMediumType::File);
+    #    settings.fileFormat(SRSReportFileFormat::PDF);
+    #    settings.fileName("c:\ejemplo.pdf");
+    #    settings.overwriteFile(true);
+    #
+    #    // Oculta el diálogo, el fichero se guarda sin preguntar parámetros al usuario
+    #    controller.parmShowDialog(false);
+    #    controller.startOperation();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{53C5B171-C326-40A8-BFB9-100DE3A943EF}
+  ENDPROPERTIES
+  
+
+***Element: END

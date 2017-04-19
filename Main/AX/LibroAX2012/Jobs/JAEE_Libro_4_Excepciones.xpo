@@ -1,0 +1,40 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Excepciones descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Excepciones
+    #static void JAEE_Libro_4_Excepciones(Args _args)
+    #{
+    #    try
+    #    {
+    #        ttsBegin;
+    #
+    #        try
+    #        {
+    #            // Error dentro de la transacción
+    #            throw Exception::Error;
+    #        }
+    #        catch
+    #        {
+    #            error("Dentro");
+    #        }
+    #
+    #        ttsCommit;
+    #    }
+    #    catch
+    #    {
+    #        error("Fuera");
+    #    }
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{9132DFF1-6962-4113-A3C7-9B4145319CCB}
+  ENDPROPERTIES
+  
+
+***Element: END

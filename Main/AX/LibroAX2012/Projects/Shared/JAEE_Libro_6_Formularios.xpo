@@ -1,0 +1,165 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_6_Formularios unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_6_Formularios
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_6_Formularios
+    Origin              #{03860E9B-1F08-4245-9489-E73EB128E43A}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #Datos
+      PROPERTIES
+        Name                #Datos
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 40
+        NODETYPE 209
+        NAME #JAEEMantenimientoTipos
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 44
+        NODETYPE 204
+        NAME #JAEECamiones
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 44
+        NODETYPE 204
+        NAME #JAEEMantenimiento
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 20
+        NODETYPE 330
+        NAME #JAEECamionesQuery
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Formularios
+      PROPERTIES
+        Name                #Formularios
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEECamiones
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 1
+        NODETYPE 296
+        NAME #JAEECamiones
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEEMantenimiento
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 1
+        NODETYPE 296
+        NAME #JAEEMantenimiento
+      ENDNODE
+      GROUP #EjecutarFormularios
+        PROPERTIES
+          Name                #EjecutarFormularios
+          ProjectGroupType    #Jobs
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 5
+          NODETYPE 215
+          NAME #JAEE_Libro_6_EjecutarFormXpp
+        ENDNODE
+        ENDGROUP
+        
+      ENDGROUP
+      
+    GROUP #Paginas
+      PROPERTIES
+        Name                #Paginas
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEEListPagePlantilla
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Controles
+      PROPERTIES
+        Name                #Controles
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEEControles_FastTabs
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEEControles_IndexTabs
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #JAEEControles_VerticalTab_TOC
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Dialogos
+      PROPERTIES
+        Name                #Dialogos
+        ProjectGroupType    #Jobs
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_6_Dialogos
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

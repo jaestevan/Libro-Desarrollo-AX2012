@@ -1,0 +1,28 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_ValidTimeState_QUERY descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_ValidTimeState_QUERY
+    #static void JAEE_Libro_5_ValidTimeState_QUERY(Args _args)
+    #{
+    #    utcDateTime     ahora = DateTimeUtil::getSystemDateTime();
+    #    Query           query;
+    #
+    #    query = new Query();
+    #    query.validTimeStateAsOfDateTime(ahora);
+    #
+    #    query.addDataSource(tableNum(JAEETablaEjemploValidTimeState));
+    #    //query...
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{987829AB-E052-4C68-B7DC-E13E93E4981B}
+  ENDPROPERTIES
+  
+
+***Element: END

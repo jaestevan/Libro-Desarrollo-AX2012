@@ -1,0 +1,55 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_EjemploQuery descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_EjemploQuery
+    #static void JAEE_Libro_5_EjemploQuery(Args _args)
+    #{
+    #    Query                   query;
+    #    QueryRun                queryRun;
+    #    QueryBuildDataSource    qbds;
+    #    QueryHavingFilter       qhf;
+    #
+    #    SalesTable              salesTable;
+    #
+    #    query   = new Query();
+    #    qbds    = query.addDataSource(tableNum(SalesTable));
+    #
+    #    // Having sólo tiene sentido en select con agregaciones
+    #    // Configuramos una agregación COUNT(RecId) agrupada
+    #    // por el campo CustAccount
+    #    qbds.addSelectionField(fieldNum(SalesTable, RecId),
+    #                            SelectionField::Count);
+    #    qbds.orderMode(OrderMode::GroupBy);
+    #    qbds.addGroupByField(fieldNum(SalesTable, CustAccount));
+    #
+    #    // Sólo muestra los que el COUNT sea mayor de 10
+    #    qhf = query.addHavingFilter(qbds,
+    #                                fieldStr(SalesTable, RecId),
+    #                                AggregateFunction::Count);
+    #    qhf.value('>10');
+    #
+    #    // Ejecutamos la query mediante un QueryRun
+    #    queryRun = new QueryRun(query);
+    #    while (queryRun.next())
+    #    {
+    #        // Las tablas que componen los DataSource se pueden
+    #        // recuperar en cada iteración
+    #        salesTable = queryRun.get(tableNum(salesTable));
+    #
+    #        // Y utilizarlas normalmente
+    #        info(strFmt("%1, %2", salesTable.CustAccount, salesTable.RecId));
+    #    }
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{8698B08C-38E2-46C4-88EC-7E671FF8A9D1}
+  ENDPROPERTIES
+  
+
+***Element: END

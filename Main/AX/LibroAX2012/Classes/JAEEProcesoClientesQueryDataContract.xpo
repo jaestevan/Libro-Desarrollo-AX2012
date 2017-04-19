@@ -1,0 +1,115 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesoClientesQueryDataContract descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesoClientesQueryDataContract
+    PROPERTIES
+      Name                #JAEEProcesoClientesQueryDataContract
+      Origin              #{7A73434A-ABE4-4F85-BD6A-02836D399A19}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[DataContractAttribute,
+        # SysOperationGroupAttribute('Fechas', 'Rango de fechas', '1'),
+        # SysOperationGroupAttribute('Enteros', 'Valores numéricos', '2'),
+        # SysOperationContractProcessingAttribute(classStr(JAEEProcesoClientesQueryUIBuilder))]
+        #public class JAEEProcesoClientesQueryDataContract
+        #implements SysOperationValidatable,
+        #           SysOperationInitializable
+        #{
+        #    FromDate        desdeFecha;
+        #    ToDate          hastaFecha;
+        #    int             entero;
+        #
+        #    str             packedQuery;
+        #}
+      ENDSOURCE
+      SOURCE #getQuery
+        #public Query getQuery()
+        #{
+        #    return new Query(SysOperationHelper::base64Decode(packedQuery));
+        #}
+      ENDSOURCE
+      SOURCE #initialize
+        #// Si no se implementa este método no es necesario
+        #// eL interfaz SysOperationInitializable
+        #public void initialize()
+        #{
+        #    this.parmHastaFecha(systemDateGet());
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #protected void new()
+        #{
+        #
+        #}
+      ENDSOURCE
+      SOURCE #parmDesdeFecha
+        #[DataMemberAttribute,
+        # SysOperationGroupMemberAttribute('Fechas')]
+        #public FromDate parmDesdeFecha(FromDate _desdeFecha = desdeFecha)
+        #{
+        #    desdeFecha = _desdeFecha;
+        #    return desdeFecha;
+        #}
+      ENDSOURCE
+      SOURCE #parmEntero
+        #[DataMemberAttribute,
+        # SysOperationLabelAttribute('Número'),
+        # SysOperationHelpTextAttribute('Escriba un número'),
+        # SysOperationGroupMemberAttribute('Enteros'),
+        # SysOperationDisplayOrderAttribute('1')]
+        #public int parmEntero(int _entero = entero)
+        #{
+        #    entero = _entero;
+        #    return entero;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #parmHastaFecha
+        #[DataMemberAttribute,
+        # SysOperationGroupMemberAttribute('Fechas')]
+        #public ToDate parmHastaFecha(ToDate _hastaFecha = hastaFecha)
+        #{
+        #    hastaFecha = _hastaFecha;
+        #    return hastaFecha;
+        #}
+      ENDSOURCE
+      SOURCE #parmPackedQuery
+        #[DataMemberAttribute,
+        # AifQueryTypeAttribute('_packedQuery', queryStr(CustTAble))]
+        #public str parmPackedQuery(str _packedQuery = packedQuery)
+        #{
+        #    packedQuery = _packedQuery;
+        #    return packedQuery;
+        #}
+      ENDSOURCE
+      SOURCE #validate
+        #// Si no se implementa este método no es necesario
+        #// eL interfaz SysOperationValidatable
+        #public boolean validate()
+        #{
+        #    boolean ret = true;
+        #
+        #    if (desdeFecha > hastaFecha)
+        #        ret = checkFailed("Rango no válido.");
+        #
+        #    return ret;
+        #}
+      ENDSOURCE
+      SOURCE #construct
+        #public static JAEEProcesoClientesQueryDataContract construct()
+        #{
+        #    return new JAEEProcesoClientesQueryDataContract();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

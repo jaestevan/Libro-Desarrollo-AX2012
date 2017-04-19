@@ -1,0 +1,83 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_7_SysOperationFramework unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_7_SysOperationFramework
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_7_SysOperationFramework
+    Origin              #{0D0F76EB-77DC-4EEB-AEFF-0440A0F0AAE6}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #SIMPLE
+      PROPERTIES
+        Name                #SIMPLE
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 2
+        NODETYPE 296
+        NAME #JAEEProcesoClientesController
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEProcesoClientesController
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEProcesoClientesDataContract
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #COMPLICADO
+      PROPERTIES
+        Name                #COMPLICADO
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 2
+        NODETYPE 296
+        NAME #JAEEProcesoClientesQueryController
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEProcesoClientesQueryController
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEProcesoClientesQueryDataContract
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEProcesoClientesQueryUIBuilder
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

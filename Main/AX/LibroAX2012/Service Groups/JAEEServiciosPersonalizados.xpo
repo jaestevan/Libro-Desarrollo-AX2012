@@ -1,0 +1,29 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: SVG
+
+; Microsoft Dynamics AX SERVICEGROUP : JAEEServiciosPersonalizados unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  SERVICEGROUP #JAEEServiciosPersonalizados
+    PROPERTIES
+      Name                #JAEEServiciosPersonalizados
+      Description         #Servicios personalizados de ejemplo
+      AutoDeploy          #Yes
+      Origin              #{55AAE999-63F5-414B-8C01-AECA0729C134}
+    ENDPROPERTIES
+    
+    SERVICENODEREFERENCE #JAEERegistrarAlbaranService
+      PROPERTIES
+        Name                #JAEERegistrarAlbaranService
+        Service             #JAEERegistrarAlbaranService
+      ENDPROPERTIES
+      
+    ENDSERVICENODEREFERENCE
+    
+ENDSERVICEGROUP
+
+
+***Element: END

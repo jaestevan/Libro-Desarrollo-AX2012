@@ -1,0 +1,44 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_6_Dialogos descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_6_Dialogos
+    #static void JAEE_Libro_6_Dialogos(Args _args)
+    #{
+    #    /*if (Box::yesNoCancel("¿Desea continuar?", DialogButton::No) == DialogButton::Yes)
+    #    {
+    #        // Sí!
+    #    }*/
+    #
+    #    Dialog          dialog;
+    #    DialogField     dfCliente;
+    #
+    #    dialog = new Dialog("Seleccione un cliente");
+    #    dialog.addGroup("Grupo de campos");
+    #    dialog.addText("Seleccione un cliente para el proceso");
+    #    dfCliente = dialog.addField(extendedTypeStr(CustAccount));
+    #
+    #    if (dialog.run())
+    #    {
+    #        // Sï se ha aceptado el diálogo y se han pasado
+    #        // las validaciones.
+    #        if (dialog.closedOk())
+    #        {
+    #            info(strFmt("Elegido cliente: %1", dfCliente.value()));
+    #        }
+    #    }
+    #    else
+    #        info("Diálogo cancelado");
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{FCF7FFE0-8DBE-4219-AC62-86AFEBAC7906}
+  ENDPROPERTIES
+  
+
+***Element: END

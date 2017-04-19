@@ -1,0 +1,28 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_InfoLog_Prefix descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_InfoLog_Prefix
+    #static void JAEE_Libro_4_InfoLog_Prefix(Args _args)
+    #{
+    #    setprefix(funcname());
+    #
+    #    info("Nivel 1\tMensaje 1");
+    #    info("Nivel 1\tMensaje 2");
+    #    info("Nivel 2\tMensaje 3");
+    #
+    #    print getPrefix();
+    #    pause;
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{73F9409A-B3DC-43AA-A3FF-0CA1F5C1C9B9}
+  ENDPROPERTIES
+  
+
+***Element: END

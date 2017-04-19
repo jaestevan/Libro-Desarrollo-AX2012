@@ -1,0 +1,129 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : JAEEMantenimiento unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #JAEEMantenimiento
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #JAEEMantenimiento
+      Label               #Mantenimiento
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #SurrogateKey
+      ClusterIndex        #SurrogateKey
+      Origin              #{051CB54D-E89C-4742-B118-AF86D8EBAFA4}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #CamionId
+        INT64
+        PROPERTIES
+          Name                #CamionId
+          Table               #JAEEMantenimiento
+          Origin              #{7F1C6068-3537-426A-901D-195341E44EFC}
+          ExtendedDataType    #JAEECamionId
+        ENDPROPERTIES
+        
+      FIELD #CostAmount
+        REAL
+        PROPERTIES
+          Name                #CostAmount
+          Table               #JAEEMantenimiento
+          Origin              #{AE2512B5-8EE0-439C-88BC-EAD7D1588B09}
+          ExtendedDataType    #CostAmount
+        ENDPROPERTIES
+        
+      FIELD #Description
+        STRING
+        PROPERTIES
+          Name                #Description
+          Table               #JAEEMantenimiento
+          Origin              #{822368C1-0388-4D05-8334-CA592AD2D489}
+          ExtendedDataType    #Description
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #Kilometros
+        INT
+        PROPERTIES
+          Name                #Kilometros
+          Table               #JAEEMantenimiento
+          Origin              #{674B1B4C-75C7-4291-A0EF-17534D2D0F7E}
+        ENDPROPERTIES
+        
+      FIELD #PurchId
+        STRING
+        PROPERTIES
+          Name                #PurchId
+          Table               #JAEEMantenimiento
+          Origin              #{6DBDF39B-228E-4A55-91A4-4BC9940CE2DF}
+          ExtendedDataType    #PurchId
+          StringSize          #20
+        ENDPROPERTIES
+        
+      FIELD #Tipo
+        ENUM
+        PROPERTIES
+          Name                #Tipo
+          Table               #JAEEMantenimiento
+          Origin              #{B1AC3970-82B2-424F-BC55-6306E3B42C2B}
+          EnumType            #JAEEMantenimientoTipos
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+    ENDGROUPS
+    
+    INDICES
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+      REFERENCE #JAEECamiones
+        PROPERTIES
+          Name                #JAEECamiones
+          Table               #JAEECamiones
+          UseDefaultRoleNames #Yes
+          CreateNavigationPropertyMethods           #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE PKFK
+          PROPERTIES
+            Field               #CamionId
+            RelatedField        #RecId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
+      REFERENCE #PurchTable
+        PROPERTIES
+          Name                #PurchTable
+          Table               #PurchTable
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE PKFK
+          PROPERTIES
+            Field               #PurchId
+            RelatedField        #PurchId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
+    ENDREFERENCES
+    
+    DELETEACTIONS
+    ENDDELETEACTIONS
+    
+    METHODS
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: END

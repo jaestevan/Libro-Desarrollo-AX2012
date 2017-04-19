@@ -1,0 +1,44 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_RecordInsertList descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_RecordInsertList
+    #static void JAEE_Libro_4_Datos_RecordInsertList(Args _args)
+    #{
+    #    JAEETablaEjemploXpp     ejemplo;
+    #    RecordInsertList        rilist;
+    #
+    #    rilist = new RecordInsertList(ejemplo.TableId,
+    #                                    false, // skipInsertMethod,
+    #                                    false, // skipDatabaseLog,
+    #                                    false, // skipEvents,
+    #                                    false, // skipAosValidation,
+    #                                    false  // skipRLSValidation
+    #                                 );
+    #
+    #    ejemplo.clear();
+    #    ejemplo.initValue();
+    #    ejemplo.Num = "100001";
+    #    ejemplo.Name = "Primer registro masivo";
+    #    rilist.add(ejemplo);
+    #
+    #    ejemplo.clear();
+    #    ejemplo.initValue();
+    #    ejemplo.Num = "100002";
+    #    ejemplo.Name = "Segundo registro masivo";
+    #    rilist.add(ejemplo);
+    #
+    #    rilist.insertDatabase();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{A4246B38-8F38-44DC-B808-DC072D01BBF6}
+  ENDPROPERTIES
+  
+
+***Element: END

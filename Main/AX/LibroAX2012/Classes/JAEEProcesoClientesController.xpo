@@ -1,0 +1,62 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesoClientesController descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesoClientesController
+    PROPERTIES
+      Name                #JAEEProcesoClientesController
+      Extends             #SysOperationServiceController
+      Origin              #{41E37964-E47E-469A-ACEA-233A3455CD91}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class JAEEProcesoClientesController
+        #extends SysOperationServiceController
+        #{
+        #
+        #}
+      ENDSOURCE
+      SOURCE #ejecutarProceso
+        #public void ejecutarProceso(JAEEProcesoClientesDataContract _procesoDC)
+        #{
+        #    FromDate    fromDate;
+        #    ToDate      toDate;
+        #
+        #    fromDate = _procesoDC.parmDesdeFecha();
+        #    toDate   = _procesoDC.parmHastaFecha();
+        #
+        #    // ... aquí podemos hacer algo útil!
+        #
+        #    info(strFmt("%1..%2", fromDate, toDate));
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #public void new()
+        #{
+        #    super();
+        #
+        #    this.parmClassName(classStr(JAEEProcesoClientesController));
+        #    this.parmMethodName(methodStr(JAEEProcesoClientesController, ejecutarProceso));
+        #    this.parmDialogCaption("Ejemplo proceso de clientes");
+        #    //this.parmExecutionMode(SysOperationExecutionMode::Synchronous);
+        #}
+      ENDSOURCE
+      SOURCE #main
+        #public static void main(Args _args)
+        #{
+        #    JAEEProcesoClientesController   proceso;
+        #
+        #    proceso = new JAEEProcesoClientesController();
+        #    proceso.startOperation();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

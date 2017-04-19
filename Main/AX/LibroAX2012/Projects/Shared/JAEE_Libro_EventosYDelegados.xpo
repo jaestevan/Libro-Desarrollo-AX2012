@@ -1,0 +1,33 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_EventosYDelegados unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_EventosYDelegados
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_EventosYDelegados
+    Origin              #{2E39691F-0754-416C-ACA4-CCF0AC5E76C5}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 45
+      NODETYPE 329
+      NAME #JAEESalesTableEventHandler
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 44
+      NODETYPE 204
+      NAME #SalesTable
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

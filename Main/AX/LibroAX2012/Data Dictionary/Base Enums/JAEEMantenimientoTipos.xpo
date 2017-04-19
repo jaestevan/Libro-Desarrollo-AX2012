@@ -1,0 +1,51 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : JAEEMantenimientoTipos unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #JAEEMantenimientoTipos
+    PROPERTIES
+      Name                #JAEEMantenimientoTipos
+      Label               #Tipo de Mantenimiento
+      UseEnumValue        #Yes
+      Origin              #{0EAEE298-A4F5-4B66-8A1B-E1F8DD15E616}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #All
+      PROPERTIES
+        Name                #All
+        Label               #@SYS104520
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #Preventivo
+      PROPERTIES
+        Name                #Preventivo
+        Label               #Preventivo
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #Averias
+      PROPERTIES
+        Name                #Averias
+        Label               #Averías
+        EnumValue           #2
+      ENDPROPERTIES
+      
+      #Accidentes
+      PROPERTIES
+        Name                #Accidentes
+        Label               #Accidentes
+        EnumValue           #3
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

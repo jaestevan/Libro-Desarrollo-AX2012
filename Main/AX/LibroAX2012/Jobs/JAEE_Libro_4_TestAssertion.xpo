@@ -1,0 +1,23 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_TestAssertion descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_TestAssertion
+    #static void JAEE_Libro_4_TestAssertion(Args _args)
+    #{
+    #    Common  common;
+    #
+    #    new JAEEEjemploAssertion().copyRecord(common);
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{8A4D6B9F-1A0E-42E4-985F-051FECD0864E}
+  ENDPROPERTIES
+  
+
+***Element: END

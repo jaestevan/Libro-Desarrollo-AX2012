@@ -1,0 +1,23 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : JAEEEjemploQuery unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #JAEEEjemploQuery
+    Type: 2
+    PROPERTIES
+      Name                #JAEEEjemploQuery
+      ObjectType          #SSRSReport
+      Object              #JAEEEjemploQuery
+      ReportDesign        #AutoDesign
+      Origin              #{0DF07F5F-23CF-49C8-81A0-CE614AD8A06B}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

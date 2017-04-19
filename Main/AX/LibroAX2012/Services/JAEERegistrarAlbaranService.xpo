@@ -1,0 +1,48 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: SVC
+
+; Microsoft Dynamics AX SERVICE : JAEERegistrarAlbaranService unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  SERVICE #JAEERegistrarAlbaranService
+    PROPERTIES
+      Name                #JAEERegistrarAlbaranService
+      Namespace           #JAEERegistrarAlbaranService
+      Class               #JAEERegistrarAlbaranService
+      Description         #Registrar albaranes
+      Origin              #{2316A38F-A758-4F96-BABE-CF40914E54A3}
+    ENDPROPERTIES
+    
+    OPERATIONS
+      OPERATION #registrar
+        PROPERTIES
+          Name                #registrar
+          Method              #registrar
+        ENDPROPERTIES
+        
+        PERMISSIONSET #Permissions
+          PROPERTIES
+          ENDPROPERTIES
+          
+          TABLES #Tables
+          ENDTABLES
+          
+        SERVERMETHODS #Server Methods
+        ENDSERVERMETHODS
+        
+      ASSOCIATEDCODEPERMISSIONS #Associated Code Permissions
+      ENDASSOCIATEDCODEPERMISSIONS
+      
+  ENDPERMISSIONSET
+  
+ENDOPERATION
+
+ENDOPERATIONS
+
+ENDSERVICE
+
+
+***Element: END

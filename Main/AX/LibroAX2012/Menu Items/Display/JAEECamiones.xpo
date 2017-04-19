@@ -1,0 +1,21 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : JAEECamiones unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #JAEECamiones
+    Type: 1
+    PROPERTIES
+      Name                #JAEECamiones
+      Object              #JAEECamiones
+      Origin              #{6C12F5F4-FCDB-4C6C-A3D7-E5CEB73B058A}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

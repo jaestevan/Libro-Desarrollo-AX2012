@@ -1,0 +1,71 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_5_EjemploQuery_Having descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_5_EjemploQuery_Having
+    #static void JAEE_Libro_5_EjemploQuery_Having(Args _args)
+    #{
+    #    // Estas son las abreviaturas habituales en el
+    #    // uso de objetos Query, debido a su uso repetitivo
+    #    Query                   query;
+    #    QueryRun                queryRun;
+    #    QueryBuildDataSource    qbdsCust,
+    #                            qbdsSales;
+    #
+    #    // Posibles maneras de filtrar
+    #    QueryBuildRange         qbr;
+    #    QueryFilter             qf;
+    #    QueryHavingFilter       qhf;
+    #
+    #    // Tablas incluidas en la consulta
+    #    SalesTable              salesTable;
+    #
+    #
+    #    // Si se pasa como parámetro una Query del AOT, el objeto
+    #    // se inializará con todas las propiedades de ésta.
+    #    query = new Query();
+    #
+    #    // Añado la primera tabla a la Query como DataSource (Clientes)
+    #    qbdsCust = query.addDataSource(tableNum(CustTable));
+    #
+    #    // A la primera tabla, añado otra tabla como DataSource (Pedidos)
+    #    qbdsSales = qbdsCust.addDataSource(tableNum(SalesTable));
+    #
+    #    // Configuramos la relación manualmente (no sería necesario)
+    #    qbdsSales.relations(true);
+    #    qbdsSales.joinMode(JoinMode::OuterJoin);
+    #    qbdsSales.addLink(fieldNum(CustTable, AccountNum),
+    #                      fieldNum(SalesTable, CustAccount));
+    #
+    #    // Podemos modificar la ordenación por defecto!
+    #    qbdsSales.addSortField(fieldNum(SalesTable, CustAccount),
+    #                           SortOrder::Descending);
+    #
+    #    // Filtramos el total de pedidos-clientes
+    #    qf = query.addQueryFilter(qbdsSales, fieldStr(SalesTable, CustAccount));
+    #    qf.value(SysQuery::valueLike('US-*'));
+    #
+    #    // Ejecutamos la query mediante un QueryRun
+    #    queryRun = new QueryRun(query);
+    #    while (queryRun.next())
+    #    {
+    #        // Las tablas que componen los DataSource se pueden
+    #        // recuperar en cada iteración
+    #        salesTable = queryRun.get(tableNum(salesTable));
+    #
+    #        // Y utilizarlas normalmente
+    #        info(strFmt("%1, %2", salesTable.SalesId, salesTable.CustAccount));
+    #    }
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{62930FB0-E541-4AD0-8F87-36C9091C275D}
+  ENDPROPERTIES
+  
+
+***Element: END

@@ -1,0 +1,43 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_FuncionLocal descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_FuncionLocal
+    #public void JAEE_Libro_4_FuncionLocal(Args _args)
+    #{
+    #    // Declaraciones (variables + funciones)
+    #
+    #    CustTable   custTable;
+    #    int i;
+    #
+    #    // Funciones al final de la declaración
+    #    Name name()
+    #    {
+    #        // La función local tiene acceso a las
+    #        // variables de su función contenedora
+    #        return custTable.name();
+    #    }
+    #
+    #    // Cuando empieza el código ya no se permiten
+    #    // más declaraciones...
+    #
+    #    custTable = CustTable::find('CT-001');
+    #
+    #    print name(); // llamada a la función local
+    #    pause;
+    #    // ...
+    #
+    #}
+    #
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{17463F29-D754-4A00-BF8F-C08ACFC27EDC}
+  ENDPROPERTIES
+  
+
+***Element: END

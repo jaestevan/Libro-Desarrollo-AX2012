@@ -1,0 +1,20 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: MCR
+
+; Microsoft Dynamics AX Macro: AxdJAEELedgerJournalDCT descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #AxdJAEELedgerJournalDCT
+    ##define.JAEELedgerJournal('JAEELedgerJournal')
+    ##define.JAEELedgerJournal_LedgerJournalTable('JAEELedgerJournal.LedgerJournalTable')
+    ##define.JAEELedgerJournal_LedgerJournalTrans('JAEELedgerJournal.LedgerJournalTrans')
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{41ED1AFA-458C-4584-9E69-8907BDE63A55}
+  ENDPROPERTIES
+  
+
+***Element: END

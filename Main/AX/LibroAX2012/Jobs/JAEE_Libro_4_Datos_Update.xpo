@@ -1,0 +1,36 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_Update descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_Update
+    #static void JAEE_Libro_4_Datos_Update(Args _args)
+    #{
+    #    JAEETablaEjemploXpp ejemplo;
+    #
+    #    ttsBegin;
+    #
+    #    select firstOnly forUpdate ejemplo
+    #        where ejemplo.Num == "E101";
+    #
+    #    ejemplo.Name = "José Antonio";
+    #
+    #    if (ejemplo.validateWrite())
+    #        ejemplo.update();
+    #    else
+    #        throw Exception::Error;
+    #
+    #    ttsCommit;
+    #}
+    #
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{80A6E289-1B80-47DB-99C6-FCAFBE1BB385}
+  ENDPROPERTIES
+  
+
+***Element: END

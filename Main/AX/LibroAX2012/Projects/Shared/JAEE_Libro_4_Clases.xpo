@@ -1,0 +1,71 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_4_Clases unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_4_Clases
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_4_Clases
+    Origin              #{369FCF4D-6ACF-4431-AD4E-49A69B8EAF8B}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #Ejemplo1
+      PROPERTIES
+        Name                #Ejemplo1
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_ClasesInterfaces
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEIEjemplo
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEEjemploAbstractClass
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEEjemploClass
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Ejemplo2
+      PROPERTIES
+        Name                #Ejemplo2
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        NODETYPE 215
+        NAME #JAEE_Libro_4_FuncionLocal
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

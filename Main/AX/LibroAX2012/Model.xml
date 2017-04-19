@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelManifest SchemaVersion="1.9" ModelFileVersion="18" ElementCount="215" ModelBuildVersion="">
+  <Name>Libro AX 2012</Name>
+  <DisplayName>Libro AX2012</DisplayName>
+  <Description>Modelo de ejemplo del libro sobre desarrollo en Microsoft Dynamics AX 2012 por @jaestevan</Description>
+  <Publisher>José Antonio Estevan</Publisher>
+  <Signed>false</Signed>
+  <Category>Standard</Category>
+  <InstallMode>Standard</InstallMode>
+  <Version>0.1.0.0</Version>
+  <Layer>Usr</Layer>
+  <DependencyState />
+</ModelManifest>

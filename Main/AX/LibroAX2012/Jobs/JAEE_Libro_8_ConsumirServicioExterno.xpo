@@ -1,0 +1,69 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_8_ConsumirServicioExterno unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_8_ConsumirServicioExterno
+    #static void JAEE_Libro_8_ConsumirServicioExterno(Args _args)
+    #{
+    #    #define.ServiceURL('http://www.webservicex.net/globalweather.asmx')
+    #    #define.CLRType('JAEE.AX.Libro.Servicios.WSRef.GlobalWeatherSoapClient')
+    #
+    #    JAEE.AX.Libro.Servicios.WSRef.GlobalWeatherSoapClient   cli;
+    #    //     Proyecto VS     | Ref. Serv.|    Tipo
+    #
+    #    System.Type                                             type;
+    #    System.ServiceModel.Description.ServiceEndpoint         endpoint;
+    #    System.ServiceModel.EndpointAddress                     endpointAddr;
+    #
+    #    System.Exception                                        ex;
+    #    str                                                     xml;
+    #
+    #    try
+    #    {
+    #        // Este paso es obligatorio para que el endpoint de AIF se genere correctamente
+    #        type = CLRInterop::getType(#CLRType);
+    #        cli  = AifUtil::createServiceClient(type);
+    #
+    #        // Este paso nos permite guardar la URL del servicio en una
+    #        // tabla de configuración o similar.
+    #        endpointAddr = new System.ServiceModel.EndpointAddress(#ServiceURL);
+    #        endpoint     = cli.get_Endpoint();
+    #        endpoint.set_Address(endpointAddr);
+    #
+    #        // LLamada al servicio
+    #        xml = cli.GetWeather("Alicante", "Spain");
+    #
+    #        // Mostrar respuesta
+    #        info(xml);
+    #    }
+    #    catch (Exception::CLRError)
+    #    {
+    #        ex = ClrInterop::getLastException();
+    #        if (ex != null)
+    #        {
+    #            info(ex.get_Message());
+    #            ex = ex.get_InnerException();
+    #            if (ex != null)
+    #                error(ex.ToString());
+    #        }
+    #    }
+    #    catch (Exception::Internal)
+    #    {
+    #        ex = ClrInterop::getLastException();
+    #        if (ex)
+    #            info(ex.ToString());
+    #    }
+    #
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{B6F0704F-F39C-4CC6-9F19-F40D809C344E}
+  ENDPROPERTIES
+  
+
+***Element: END

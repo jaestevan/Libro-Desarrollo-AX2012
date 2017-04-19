@@ -1,0 +1,76 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesoClientesQueryController descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesoClientesQueryController
+    PROPERTIES
+      Name                #JAEEProcesoClientesQueryController
+      Extends             #SysOperationServiceController
+      Origin              #{E917A3FB-C8D8-4F9B-BE31-5AB647928107}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #afterOperation
+        #protected void afterOperation(SysOperationExecutionMode _executionMode, AifAsyncResult _asyncResult)
+        #{
+        #    super(_executionMode, _asyncResult);
+        #
+        #    info(strFmt("%1", this.getServiceOperation().name()));
+        #}
+      ENDSOURCE
+      SOURCE #classDeclaration
+        #class JAEEProcesoClientesQueryController
+        #extends SysOperationServiceController
+        #{
+        #
+        #}
+      ENDSOURCE
+      SOURCE #ejecutarProceso
+        #public void ejecutarProceso(JAEEProcesoClientesQueryDataContract _procesoDC)
+        #{
+        #    Query       query;
+        #    QueryRun    queryRun;
+        #
+        #    // El contrato trae todos los datos necesarios
+        #    FromDate    fromDate = _procesoDC.parmDesdeFecha();
+        #    ToDate      toDate   = _procesoDC.parmHastaFecha();
+        #
+        #    // Recepción de la Query desde el diálogo
+        #    query    = _procesoDC.getQuery();
+        #    queryRun = new QueryRun(query);
+        #
+        #    while (queryRun.next())
+        #    {
+        #        // ... aquí hacemos algo útil!
+        #    }
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #public void new()
+        #{
+        #    super();
+        #
+        #    this.parmClassName(classStr(JAEEProcesoClientesQueryController));
+        #    this.parmMethodName(methodStr(JAEEProcesoClientesQueryController, ejecutarProceso));
+        #    this.parmDialogCaption("Ejemplo proceso de clientes con consulta");
+        #    this.parmExecutionMode(SysOperationExecutionMode::ReliableAsynchronous);
+        #}
+      ENDSOURCE
+      SOURCE #main
+        #public static void main(Args _args)
+        #{
+        #    JAEEProcesoClientesQueryController  proceso;
+        #
+        #    proceso = new JAEEProcesoClientesQueryController();
+        #    proceso.startOperation();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

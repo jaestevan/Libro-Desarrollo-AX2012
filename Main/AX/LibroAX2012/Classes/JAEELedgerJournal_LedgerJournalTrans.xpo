@@ -1,0 +1,3573 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEELedgerJournal_LedgerJournalTrans descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEELedgerJournal_LedgerJournalTrans
+    PROPERTIES
+      Name                #JAEELedgerJournal_LedgerJournalTrans
+      Extends             #AfStronglyTypedDataContainer
+      Origin              #{0A076295-7656-4004-8EE5-EA93B32328A4}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #/// <summary>
+        #///    The <c>JAEELedgerJournal_LedgerJournalTrans</c> class is the data object class that is exposed through the <c>JAEELedgerJournalService</c> class.
+        #/// </summary>
+        ##AxdJAEELedgerJournalDCT
+        #[AifDataContainerTypeAttribute(#JAEELedgerJournal_LedgerJournalTrans)]
+        #class JAEELedgerJournal_LedgerJournalTrans extends AfStronglyTypedDataContainer
+        #{
+        #    #define.Voucher_CN('Voucher_CN')
+        #    #define.Voucher('Voucher')
+        #    #define.VendTransId('VendTransId')
+        #    #define.VendInvoiceDeclaration_IS('VendInvoiceDeclaration_IS')
+        #    #define.VATTaxAgentVendAccount_RU('VATTaxAgentVendAccount_RU')
+        #    #define.VATPaymRefRecId_RU('VATPaymRefRecId_RU')
+        #    #define.VATOperationCode_RU('VATOperationCode_RU')
+        #    #define.VATOnPayment_RU('VATOnPayment_RU')
+        #    #define.VATNumJournal('VATNumJournal')
+        #    #define.VATGoodsType_IN('VATGoodsType_IN')
+        #    #define.VatDueDate_W('VatDueDate_W')
+        #    #define.Txt('Txt')
+        #    #define.TransferredTo('TransferredTo')
+        #    #define.TransferredOn('TransferredOn')
+        #    #define.TransferredBy('TransferredBy')
+        #    #define.Transferred('Transferred')
+        #    #define.TransferCurrency_RU('TransferCurrency_RU')
+        #    #define.Transfer('Transfer')
+        #    #define.TransDate('TransDate')
+        #    #define.TransactionType('TransactionType')
+        #    #define.TDSGroup_IN('TDSGroup_IN')
+        #    #define.TCSGroup_IN('TCSGroup_IN')
+        #    #define.TaxWithholdItemGroupHeading_TH('TaxWithholdItemGroupHeading_TH')
+        #    #define.TaxWithholdGroup('TaxWithholdGroup')
+        #    #define.TaxWithholdCode_IN('TaxWithholdCode_IN')
+        #    #define.TaxWithholdCalculate_TH('TaxWithholdCalculate_TH')
+        #    #define.TaxWithholdAlternateVendorAcct_TH('TaxWithholdAlternateVendorAcct_TH')
+        #    #define.TaxSetoffVoucher_IN('TaxSetoffVoucher_IN')
+        #    #define.TaxPeriodPaymentCode_PL('TaxPeriodPaymentCode_PL')
+        #    #define.TaxItemGroup('TaxItemGroup')
+        #    #define.TaxGroup('TaxGroup')
+        #    #define.TaxDirectionControl('TaxDirectionControl')
+        #    #define.TaxCode('TaxCode')
+        #    #define.TaxBase_W('TaxBase_W')
+        #    #define.Tax1099StateAmount('Tax1099StateAmount')
+        #    #define.Tax1099State('Tax1099State')
+        #    #define.Tax1099Fields('Tax1099Fields')
+        #    #define.Tax1099Amount('Tax1099Amount')
+        #    #define.SoftwareDeclReceived_IN('SoftwareDeclReceived_IN')
+        #    #define.SettleVoucher('SettleVoucher')
+        #    #define.SalesTaxFormTypes_IN('SalesTaxFormTypes_IN')
+        #    #define.ReverseEntry('ReverseEntry')
+        #    #define.ReverseDate('ReverseDate')
+        #    #define.RemitteeCurrency('RemitteeCurrency')
+        #    #define.RemittanceLocation('RemittanceLocation')
+        #    #define.RemittanceAddress('RemittanceAddress')
+        #    #define.RemainAmount('RemainAmount')
+        #    #define.ReleaseDateComment('ReleaseDateComment')
+        #    #define.ReleaseDate('ReleaseDate')
+        #    #define.RefCopyReverse_CN('RefCopyReverse_CN')
+        #    #define.RecVersion('RecVersion')
+        #    #define.RecId('RecId')
+        #    #define.ReceiptDate_W('ReceiptDate_W')
+        #    #define.RCashPayTransType('RCashPayTransType')
+        #    #define.RCashDocRepresType('RCashDocRepresType')
+        #    #define.RCashDocRepresPersonId('RCashDocRepresPersonId')
+        #    #define.Qty('Qty')
+        #    #define.PurchLedgerPosting('PurchLedgerPosting')
+        #    #define.PurchIdRange('PurchIdRange')
+        #    #define.Price('Price')
+        #    #define.Prepayment('Prepayment')
+        #    #define.PostingProfile('PostingProfile')
+        #    #define.PoolRecId('PoolRecId')
+        #    #define.PaymSpec('PaymSpec')
+        #    #define.PaymReference('PaymReference')
+        #    #define.PaymPurpose_LT('PaymPurpose_LT')
+        #    #define.PaymMode('PaymMode')
+        #    #define.PaymInstruction4('PaymInstruction4')
+        #    #define.PaymInstruction3('PaymInstruction3')
+        #    #define.PaymInstruction2('PaymInstruction2')
+        #    #define.PaymInstruction1('PaymInstruction1')
+        #    #define.PaymId('PaymId')
+        #    #define.PaymentStatus('PaymentStatus')
+        #    #define.PaymentSequenceNum('PaymentSequenceNum')
+        #    #define.PaymentPriority_LT('PaymentPriority_LT')
+        #    #define.PaymentNotes('PaymentNotes')
+        #    #define.PaymentAccount('PaymentAccount')
+        #    #define.Payment('Payment')
+        #    #define.OperationType_MX('OperationType_MX')
+        #    #define.OffsetTxt('OffsetTxt')
+        #    #define.OffsetPostingProfile_RU('OffsetPostingProfile_RU')
+        #    #define.OffsetLedgerDimension('OffsetLedgerDimension')
+        #    #define.OffsetDefaultDimension('OffsetDefaultDimension')
+        #    #define.OffsetCompany('OffsetCompany')
+        #    #define.OffsetAgreementCompany_RU('OffsetAgreementCompany_RU')
+        #    #define.OffsetAccountType('OffsetAccountType')
+        #    #define.OffsetAccountAgreementId_RU('OffsetAccountAgreementId_RU')
+        #    #define.NonRecoverablePercent_IN('NonRecoverablePercent_IN')
+        #    #define.NegInstId('NegInstId')
+        #    #define.NatureOfAssessee_IN('NatureOfAssessee_IN')
+        #    #define.MaximumRetailPrice_IN('MaximumRetailPrice_IN')
+        #    #define.MarkupCode_RU('MarkupCode_RU')
+        #    #define.MarkedInvoice('MarkedInvoice')
+        #    #define.LoadingDate('LoadingDate')
+        #    #define.Listcode('Listcode')
+        #    #define.LineNum('LineNum')
+        #    #define.LedgerVoucherType_CN('LedgerVoucherType_CN')
+        #    #define.LedgerJournalDlvDate_ES('LedgerJournalDlvDate_ES')
+        #    #define.LedgerDimension('LedgerDimension')
+        #    #define.LastTransferred('LastTransferred')
+        #    #define.JournalNum('JournalNum')
+        #    #define.InvoiceReleaseDate('InvoiceReleaseDate')
+        #    #define.Invoice('Invoice')
+        #    #define.IntraComVATDueDate_W('IntraComVATDueDate_W')
+        #    #define.IntBank_LV('IntBank_LV')
+        #    #define.InformByTelex_LT('InformByTelex_LT')
+        #    #define.InformByPhone_LT('InformByPhone_LT')
+        #    #define.ImportDate('ImportDate')
+        #    #define.GTAServiceCategory_IN('GTAServiceCategory_IN')
+        #    #define.GSTHSTTaxType_CA('GSTHSTTaxType_CA')
+        #    #define.FurtherPostingType('FurtherPostingType')
+        #    #define.FurtherPostingRecId('FurtherPostingRecId')
+        #    #define.FreqValue('FreqValue')
+        #    #define.FreqCode('FreqCode')
+        #    #define.ForeignVoucher('ForeignVoucher')
+        #    #define.ForeignCompany('ForeignCompany')
+        #    #define.ForeignBankFee_LT('ForeignBankFee_LT')
+        #    #define.FileCreated('FileCreated')
+        #    #define.ExciseType_IN('ExciseType_IN')
+        #    #define.ExciseTariffCodes_IN('ExciseTariffCodes_IN')
+        #    #define.ExciseRecordType_IN('ExciseRecordType_IN')
+        #    #define.ExchRateSecond('ExchRateSecond')
+        #    #define.ExchRate('ExchRate')
+        #    #define.EUSalesList('EUSalesList')
+        #    #define.ErrorCodePayment('ErrorCodePayment')
+        #    #define.EnterpriseNumber('EnterpriseNumber')
+        #    #define.Due('Due')
+        #    #define.DocumentNum('DocumentNum')
+        #    #define.DocumentDate('DocumentDate')
+        #    #define.DefaultDimension('DefaultDimension')
+        #    #define.DebitCurrencyCode_LT('DebitCurrencyCode_LT')
+        #    #define.DateCashDisc('DateCashDisc')
+        #    #define.CustVendNegInstProtestReason('CustVendNegInstProtestReason')
+        #    #define.CustVendName_PL('CustVendName_PL')
+        #    #define.CustVendBankAccountId('CustVendBankAccountId')
+        #    #define.CustVendAccount_PL('CustVendAccount_PL')
+        #    #define.CustomsTariffDirection_IN('CustomsTariffDirection_IN')
+        #    #define.CustomsTariffCodeTable_IN('CustomsTariffCodeTable_IN')
+        #    #define.CustomsDuty_IN('CustomsDuty_IN')
+        #    #define.CustFactureAutoCreate_RU('CustFactureAutoCreate_RU')
+        #    #define.CustEinvoicePaymTransNum('CustEinvoicePaymTransNum')
+        #    #define.CustEinvoicePaymSectionNum('CustEinvoicePaymSectionNum')
+        #    #define.CustEinvoicePaymDeliveryNum('CustEinvoicePaymDeliveryNum')
+        #    #define.CurrencyCode('CurrencyCode')
+        #    #define.CorrectionType_RU('CorrectionType_RU')
+        #    #define.CorrectedInvoiceId_RU('CorrectedInvoiceId_RU')
+        #    #define.CorrectedInvoiceDate_RU('CorrectedInvoiceDate_RU')
+        #    #define.Correct_RU('Correct_RU')
+        #    #define.ConsignmentNoteNum_IN('ConsignmentNoteNum_IN')
+        #    #define.CompanyLocation_IN('CompanyLocation_IN')
+        #    #define.Company('Company')
+        #    #define.CashReceiptNum_LV('CashReceiptNum_LV')
+        #    #define.CashDiscPercent('CashDiscPercent')
+        #    #define.CashDiscCode('CashDiscCode')
+        #    #define.CashDiscBaseDate('CashDiscBaseDate')
+        #    #define.CashDiscAmount('CashDiscAmount')
+        #    #define.Cancel('Cancel')
+        #    #define.BudgetSourceLedgerEntryUnposted('BudgetSourceLedgerEntryUnposted')
+        #    #define.BankVendAccountId_RU('BankVendAccountId_RU')
+        #    #define.BankTransType('BankTransType')
+        #    #define.BankSpecAccountId_RU('BankSpecAccountId_RU')
+        #    #define.BankRespWorkerId_RU('BankRespWorkerId_RU')
+        #    #define.BankRemittanceType('BankRemittanceType')
+        #    #define.BankRemittanceFileId('BankRemittanceFileId')
+        #    #define.BankReconcileAccountAtPost('BankReconcileAccountAtPost')
+        #    #define.BankPromissoryNoteNum('BankPromissoryNoteNum')
+        #    #define.BankPrintAccountNum_RU('BankPrintAccountNum_RU')
+        #    #define.BankPaymentRegistrationNum_LV('BankPaymentRegistrationNum_LV')
+        #    #define.BankNegInstRecipientName('BankNegInstRecipientName')
+        #    #define.BankDepositVoucher('BankDepositVoucher')
+        #    #define.BankDepositNum('BankDepositNum')
+        #    #define.BankCurrencyTransferLog_RU('BankCurrencyTransferLog_RU')
+        #    #define.BankCurrencyDealCourse_RU('BankCurrencyDealCourse_RU')
+        #    #define.BankCommAccountId_RU('BankCommAccountId_RU')
+        #    #define.BankClientDocumentTypeId_RU('BankClientDocumentTypeId_RU')
+        #    #define.BankChequeNum('BankChequeNum')
+        #    #define.BankCentralBankTransTypeCur_RU('BankCentralBankTransTypeCur_RU')
+        #    #define.BankCentralBankPurposeText('BankCentralBankPurposeText')
+        #    #define.BankCentralBankPurposeCode('BankCentralBankPurposeCode')
+        #    #define.BankBillOfExchangeNum('BankBillOfExchangeNum')
+        #    #define.BankAgreementExt_RU('BankAgreementExt_RU')
+        #    #define.BankAccountId('BankAccountId')
+        #    #define.Attachments_CN('Attachments_CN')
+        #    #define.AssessableValue_IN('AssessableValue_IN')
+        #    #define.Approver('Approver')
+        #    #define.Approved('Approved')
+        #    #define.AnnouncementNum_RU('AnnouncementNum_RU')
+        #    #define.AmountCurDebit('AmountCurDebit')
+        #    #define.AmountCurCredit('AmountCurCredit')
+        #    #define.AgreementCompany_RU('AgreementCompany_RU')
+        #    #define.Addressing_PL('Addressing_PL')
+        #    #define.AcknowledgementDate('AcknowledgementDate')
+        #    #define.AccountType('AccountType')
+        #    #define.AccountAgreementId_RU('AccountAgreementId_RU')
+        #
+        #}
+        #
+      ENDSOURCE
+      SOURCE #createCustomsTariffCodeTable_IN
+        #public CustomsTariffCodeTableKey_IN createCustomsTariffCodeTable_IN()
+        #{
+        #    return this.get_NewContainer(#CustomsTariffCodeTable_IN);
+        #}
+      ENDSOURCE
+      SOURCE #createDefaultDimension
+        #public AifDimensionAttributeValueSet createDefaultDimension()
+        #{
+        #    return this.get_NewContainer(#DefaultDimension);
+        #}
+      ENDSOURCE
+      SOURCE #createLedgerDimension
+        #public AifMultiTypeAccount createLedgerDimension()
+        #{
+        #    return this.get_NewContainer(#LedgerDimension);
+        #}
+      ENDSOURCE
+      SOURCE #createOffsetDefaultDimension
+        #public AifDimensionAttributeValueSet createOffsetDefaultDimension()
+        #{
+        #    return this.get_NewContainer(#OffsetDefaultDimension);
+        #}
+      ENDSOURCE
+      SOURCE #createOffsetLedgerDimension
+        #public AifMultiTypeAccount createOffsetLedgerDimension()
+        #{
+        #    return this.get_NewContainer(#OffsetLedgerDimension);
+        #}
+      ENDSOURCE
+      SOURCE #createRemittanceAddress
+        #public LogisticsPostalAddressKey createRemittanceAddress()
+        #{
+        #    return this.get_NewContainer(#RemittanceAddress);
+        #}
+      ENDSOURCE
+      SOURCE #createTax1099Fields
+        #public Tax1099FieldsKey createTax1099Fields()
+        #{
+        #    return this.get_NewContainer(#Tax1099Fields);
+        #}
+      ENDSOURCE
+      SOURCE #existsAccountAgreementId_RU
+        #public boolean existsAccountAgreementId_RU()
+        #{
+        #    return this.exists(#AccountAgreementId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsAccountType
+        #public boolean existsAccountType()
+        #{
+        #    return this.exists(#AccountType);
+        #}
+      ENDSOURCE
+      SOURCE #existsAcknowledgementDate
+        #public boolean existsAcknowledgementDate()
+        #{
+        #    return this.exists(#AcknowledgementDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsAddressing_PL
+        #public boolean existsAddressing_PL()
+        #{
+        #    return this.exists(#Addressing_PL);
+        #}
+      ENDSOURCE
+      SOURCE #existsAgreementCompany_RU
+        #public boolean existsAgreementCompany_RU()
+        #{
+        #    return this.exists(#AgreementCompany_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsAmountCurCredit
+        #public boolean existsAmountCurCredit()
+        #{
+        #    return this.exists(#AmountCurCredit);
+        #}
+      ENDSOURCE
+      SOURCE #existsAmountCurDebit
+        #public boolean existsAmountCurDebit()
+        #{
+        #    return this.exists(#AmountCurDebit);
+        #}
+      ENDSOURCE
+      SOURCE #existsAnnouncementNum_RU
+        #public boolean existsAnnouncementNum_RU()
+        #{
+        #    return this.exists(#AnnouncementNum_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsApproved
+        #public boolean existsApproved()
+        #{
+        #    return this.exists(#Approved);
+        #}
+      ENDSOURCE
+      SOURCE #existsApprover
+        #public boolean existsApprover()
+        #{
+        #    return this.exists(#Approver);
+        #}
+      ENDSOURCE
+      SOURCE #existsAssessableValue_IN
+        #public boolean existsAssessableValue_IN()
+        #{
+        #    return this.exists(#AssessableValue_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsAttachments_CN
+        #public boolean existsAttachments_CN()
+        #{
+        #    return this.exists(#Attachments_CN);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankAccountId
+        #public boolean existsBankAccountId()
+        #{
+        #    return this.exists(#BankAccountId);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankAgreementExt_RU
+        #public boolean existsBankAgreementExt_RU()
+        #{
+        #    return this.exists(#BankAgreementExt_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankBillOfExchangeNum
+        #public boolean existsBankBillOfExchangeNum()
+        #{
+        #    return this.exists(#BankBillOfExchangeNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankCentralBankPurposeCode
+        #public boolean existsBankCentralBankPurposeCode()
+        #{
+        #    return this.exists(#BankCentralBankPurposeCode);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankCentralBankPurposeText
+        #public boolean existsBankCentralBankPurposeText()
+        #{
+        #    return this.exists(#BankCentralBankPurposeText);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankCentralBankTransTypeCur_RU
+        #public boolean existsBankCentralBankTransTypeCur_RU()
+        #{
+        #    return this.exists(#BankCentralBankTransTypeCur_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankChequeNum
+        #public boolean existsBankChequeNum()
+        #{
+        #    return this.exists(#BankChequeNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankClientDocumentTypeId_RU
+        #public boolean existsBankClientDocumentTypeId_RU()
+        #{
+        #    return this.exists(#BankClientDocumentTypeId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankCommAccountId_RU
+        #public boolean existsBankCommAccountId_RU()
+        #{
+        #    return this.exists(#BankCommAccountId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankCurrencyDealCourse_RU
+        #public boolean existsBankCurrencyDealCourse_RU()
+        #{
+        #    return this.exists(#BankCurrencyDealCourse_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankCurrencyTransferLog_RU
+        #public boolean existsBankCurrencyTransferLog_RU()
+        #{
+        #    return this.exists(#BankCurrencyTransferLog_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankDepositNum
+        #public boolean existsBankDepositNum()
+        #{
+        #    return this.exists(#BankDepositNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankDepositVoucher
+        #public boolean existsBankDepositVoucher()
+        #{
+        #    return this.exists(#BankDepositVoucher);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankNegInstRecipientName
+        #public boolean existsBankNegInstRecipientName()
+        #{
+        #    return this.exists(#BankNegInstRecipientName);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankPaymentRegistrationNum_LV
+        #public boolean existsBankPaymentRegistrationNum_LV()
+        #{
+        #    return this.exists(#BankPaymentRegistrationNum_LV);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankPrintAccountNum_RU
+        #public boolean existsBankPrintAccountNum_RU()
+        #{
+        #    return this.exists(#BankPrintAccountNum_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankPromissoryNoteNum
+        #public boolean existsBankPromissoryNoteNum()
+        #{
+        #    return this.exists(#BankPromissoryNoteNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankReconcileAccountAtPost
+        #public boolean existsBankReconcileAccountAtPost()
+        #{
+        #    return this.exists(#BankReconcileAccountAtPost);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankRemittanceFileId
+        #public boolean existsBankRemittanceFileId()
+        #{
+        #    return this.exists(#BankRemittanceFileId);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankRemittanceType
+        #public boolean existsBankRemittanceType()
+        #{
+        #    return this.exists(#BankRemittanceType);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankRespWorkerId_RU
+        #public boolean existsBankRespWorkerId_RU()
+        #{
+        #    return this.exists(#BankRespWorkerId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankSpecAccountId_RU
+        #public boolean existsBankSpecAccountId_RU()
+        #{
+        #    return this.exists(#BankSpecAccountId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankTransType
+        #public boolean existsBankTransType()
+        #{
+        #    return this.exists(#BankTransType);
+        #}
+      ENDSOURCE
+      SOURCE #existsBankVendAccountId_RU
+        #public boolean existsBankVendAccountId_RU()
+        #{
+        #    return this.exists(#BankVendAccountId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsBudgetSourceLedgerEntryUnposted
+        #public boolean existsBudgetSourceLedgerEntryUnposted()
+        #{
+        #    return this.exists(#BudgetSourceLedgerEntryUnposted);
+        #}
+      ENDSOURCE
+      SOURCE #existsCancel
+        #public boolean existsCancel()
+        #{
+        #    return this.exists(#Cancel);
+        #}
+      ENDSOURCE
+      SOURCE #existsCashDiscAmount
+        #public boolean existsCashDiscAmount()
+        #{
+        #    return this.exists(#CashDiscAmount);
+        #}
+      ENDSOURCE
+      SOURCE #existsCashDiscBaseDate
+        #public boolean existsCashDiscBaseDate()
+        #{
+        #    return this.exists(#CashDiscBaseDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsCashDiscCode
+        #public boolean existsCashDiscCode()
+        #{
+        #    return this.exists(#CashDiscCode);
+        #}
+      ENDSOURCE
+      SOURCE #existsCashDiscPercent
+        #public boolean existsCashDiscPercent()
+        #{
+        #    return this.exists(#CashDiscPercent);
+        #}
+      ENDSOURCE
+      SOURCE #existsCashReceiptNum_LV
+        #public boolean existsCashReceiptNum_LV()
+        #{
+        #    return this.exists(#CashReceiptNum_LV);
+        #}
+      ENDSOURCE
+      SOURCE #existsCompany
+        #public boolean existsCompany()
+        #{
+        #    return this.exists(#Company);
+        #}
+      ENDSOURCE
+      SOURCE #existsCompanyLocation_IN
+        #public boolean existsCompanyLocation_IN()
+        #{
+        #    return this.exists(#CompanyLocation_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsConsignmentNoteNum_IN
+        #public boolean existsConsignmentNoteNum_IN()
+        #{
+        #    return this.exists(#ConsignmentNoteNum_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsCorrect_RU
+        #public boolean existsCorrect_RU()
+        #{
+        #    return this.exists(#Correct_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsCorrectedInvoiceDate_RU
+        #public boolean existsCorrectedInvoiceDate_RU()
+        #{
+        #    return this.exists(#CorrectedInvoiceDate_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsCorrectedInvoiceId_RU
+        #public boolean existsCorrectedInvoiceId_RU()
+        #{
+        #    return this.exists(#CorrectedInvoiceId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsCorrectionType_RU
+        #public boolean existsCorrectionType_RU()
+        #{
+        #    return this.exists(#CorrectionType_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsCurrencyCode
+        #public boolean existsCurrencyCode()
+        #{
+        #    return this.exists(#CurrencyCode);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustEinvoicePaymDeliveryNum
+        #public boolean existsCustEinvoicePaymDeliveryNum()
+        #{
+        #    return this.exists(#CustEinvoicePaymDeliveryNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustEinvoicePaymSectionNum
+        #public boolean existsCustEinvoicePaymSectionNum()
+        #{
+        #    return this.exists(#CustEinvoicePaymSectionNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustEinvoicePaymTransNum
+        #public boolean existsCustEinvoicePaymTransNum()
+        #{
+        #    return this.exists(#CustEinvoicePaymTransNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustFactureAutoCreate_RU
+        #public boolean existsCustFactureAutoCreate_RU()
+        #{
+        #    return this.exists(#CustFactureAutoCreate_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustomsDuty_IN
+        #public boolean existsCustomsDuty_IN()
+        #{
+        #    return this.exists(#CustomsDuty_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustomsTariffCodeTable_IN
+        #public boolean existsCustomsTariffCodeTable_IN()
+        #{
+        #    return this.exists(#CustomsTariffCodeTable_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustomsTariffDirection_IN
+        #public boolean existsCustomsTariffDirection_IN()
+        #{
+        #    return this.exists(#CustomsTariffDirection_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustVendAccount_PL
+        #public boolean existsCustVendAccount_PL()
+        #{
+        #    return this.exists(#CustVendAccount_PL);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustVendBankAccountId
+        #public boolean existsCustVendBankAccountId()
+        #{
+        #    return this.exists(#CustVendBankAccountId);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustVendName_PL
+        #public boolean existsCustVendName_PL()
+        #{
+        #    return this.exists(#CustVendName_PL);
+        #}
+      ENDSOURCE
+      SOURCE #existsCustVendNegInstProtestReason
+        #public boolean existsCustVendNegInstProtestReason()
+        #{
+        #    return this.exists(#CustVendNegInstProtestReason);
+        #}
+      ENDSOURCE
+      SOURCE #existsDateCashDisc
+        #public boolean existsDateCashDisc()
+        #{
+        #    return this.exists(#DateCashDisc);
+        #}
+      ENDSOURCE
+      SOURCE #existsDebitCurrencyCode_LT
+        #public boolean existsDebitCurrencyCode_LT()
+        #{
+        #    return this.exists(#DebitCurrencyCode_LT);
+        #}
+      ENDSOURCE
+      SOURCE #existsDefaultDimension
+        #public boolean existsDefaultDimension()
+        #{
+        #    return this.exists(#DefaultDimension);
+        #}
+      ENDSOURCE
+      SOURCE #existsDocumentDate
+        #public boolean existsDocumentDate()
+        #{
+        #    return this.exists(#DocumentDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsDocumentNum
+        #public boolean existsDocumentNum()
+        #{
+        #    return this.exists(#DocumentNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsDue
+        #public boolean existsDue()
+        #{
+        #    return this.exists(#Due);
+        #}
+      ENDSOURCE
+      SOURCE #existsEnterpriseNumber
+        #public boolean existsEnterpriseNumber()
+        #{
+        #    return this.exists(#EnterpriseNumber);
+        #}
+      ENDSOURCE
+      SOURCE #existsErrorCodePayment
+        #public boolean existsErrorCodePayment()
+        #{
+        #    return this.exists(#ErrorCodePayment);
+        #}
+      ENDSOURCE
+      SOURCE #existsEUSalesList
+        #public boolean existsEUSalesList()
+        #{
+        #    return this.exists(#EUSalesList);
+        #}
+      ENDSOURCE
+      SOURCE #existsExchRate
+        #public boolean existsExchRate()
+        #{
+        #    return this.exists(#ExchRate);
+        #}
+      ENDSOURCE
+      SOURCE #existsExchRateSecond
+        #public boolean existsExchRateSecond()
+        #{
+        #    return this.exists(#ExchRateSecond);
+        #}
+      ENDSOURCE
+      SOURCE #existsExciseRecordType_IN
+        #public boolean existsExciseRecordType_IN()
+        #{
+        #    return this.exists(#ExciseRecordType_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsExciseTariffCodes_IN
+        #public boolean existsExciseTariffCodes_IN()
+        #{
+        #    return this.exists(#ExciseTariffCodes_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsExciseType_IN
+        #public boolean existsExciseType_IN()
+        #{
+        #    return this.exists(#ExciseType_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsFileCreated
+        #public boolean existsFileCreated()
+        #{
+        #    return this.exists(#FileCreated);
+        #}
+      ENDSOURCE
+      SOURCE #existsForeignBankFee_LT
+        #public boolean existsForeignBankFee_LT()
+        #{
+        #    return this.exists(#ForeignBankFee_LT);
+        #}
+      ENDSOURCE
+      SOURCE #existsForeignCompany
+        #public boolean existsForeignCompany()
+        #{
+        #    return this.exists(#ForeignCompany);
+        #}
+      ENDSOURCE
+      SOURCE #existsForeignVoucher
+        #public boolean existsForeignVoucher()
+        #{
+        #    return this.exists(#ForeignVoucher);
+        #}
+      ENDSOURCE
+      SOURCE #existsFreqCode
+        #public boolean existsFreqCode()
+        #{
+        #    return this.exists(#FreqCode);
+        #}
+      ENDSOURCE
+      SOURCE #existsFreqValue
+        #public boolean existsFreqValue()
+        #{
+        #    return this.exists(#FreqValue);
+        #}
+      ENDSOURCE
+      SOURCE #existsFurtherPostingRecId
+        #public boolean existsFurtherPostingRecId()
+        #{
+        #    return this.exists(#FurtherPostingRecId);
+        #}
+      ENDSOURCE
+      SOURCE #existsFurtherPostingType
+        #public boolean existsFurtherPostingType()
+        #{
+        #    return this.exists(#FurtherPostingType);
+        #}
+      ENDSOURCE
+      SOURCE #existsGSTHSTTaxType_CA
+        #public boolean existsGSTHSTTaxType_CA()
+        #{
+        #    return this.exists(#GSTHSTTaxType_CA);
+        #}
+      ENDSOURCE
+      SOURCE #existsGTAServiceCategory_IN
+        #public boolean existsGTAServiceCategory_IN()
+        #{
+        #    return this.exists(#GTAServiceCategory_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsImportDate
+        #public boolean existsImportDate()
+        #{
+        #    return this.exists(#ImportDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsInformByPhone_LT
+        #public boolean existsInformByPhone_LT()
+        #{
+        #    return this.exists(#InformByPhone_LT);
+        #}
+      ENDSOURCE
+      SOURCE #existsInformByTelex_LT
+        #public boolean existsInformByTelex_LT()
+        #{
+        #    return this.exists(#InformByTelex_LT);
+        #}
+      ENDSOURCE
+      SOURCE #existsIntBank_LV
+        #public boolean existsIntBank_LV()
+        #{
+        #    return this.exists(#IntBank_LV);
+        #}
+      ENDSOURCE
+      SOURCE #existsIntraComVATDueDate_W
+        #public boolean existsIntraComVATDueDate_W()
+        #{
+        #    return this.exists(#IntraComVATDueDate_W);
+        #}
+      ENDSOURCE
+      SOURCE #existsInvoice
+        #public boolean existsInvoice()
+        #{
+        #    return this.exists(#Invoice);
+        #}
+      ENDSOURCE
+      SOURCE #existsInvoiceReleaseDate
+        #public boolean existsInvoiceReleaseDate()
+        #{
+        #    return this.exists(#InvoiceReleaseDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsJournalNum
+        #public boolean existsJournalNum()
+        #{
+        #    return this.exists(#JournalNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsLastTransferred
+        #public boolean existsLastTransferred()
+        #{
+        #    return this.exists(#LastTransferred);
+        #}
+      ENDSOURCE
+      SOURCE #existsLedgerDimension
+        #public boolean existsLedgerDimension()
+        #{
+        #    return this.exists(#LedgerDimension);
+        #}
+      ENDSOURCE
+      SOURCE #existsLedgerJournalDlvDate_ES
+        #public boolean existsLedgerJournalDlvDate_ES()
+        #{
+        #    return this.exists(#LedgerJournalDlvDate_ES);
+        #}
+      ENDSOURCE
+      SOURCE #existsLedgerVoucherType_CN
+        #public boolean existsLedgerVoucherType_CN()
+        #{
+        #    return this.exists(#LedgerVoucherType_CN);
+        #}
+      ENDSOURCE
+      SOURCE #existsLineNum
+        #public boolean existsLineNum()
+        #{
+        #    return this.exists(#LineNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsListcode
+        #public boolean existsListcode()
+        #{
+        #    return this.exists(#Listcode);
+        #}
+      ENDSOURCE
+      SOURCE #existsLoadingDate
+        #public boolean existsLoadingDate()
+        #{
+        #    return this.exists(#LoadingDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsMarkedInvoice
+        #public boolean existsMarkedInvoice()
+        #{
+        #    return this.exists(#MarkedInvoice);
+        #}
+      ENDSOURCE
+      SOURCE #existsMarkupCode_RU
+        #public boolean existsMarkupCode_RU()
+        #{
+        #    return this.exists(#MarkupCode_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsMaximumRetailPrice_IN
+        #public boolean existsMaximumRetailPrice_IN()
+        #{
+        #    return this.exists(#MaximumRetailPrice_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsNatureOfAssessee_IN
+        #public boolean existsNatureOfAssessee_IN()
+        #{
+        #    return this.exists(#NatureOfAssessee_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsNegInstId
+        #public boolean existsNegInstId()
+        #{
+        #    return this.exists(#NegInstId);
+        #}
+      ENDSOURCE
+      SOURCE #existsNonRecoverablePercent_IN
+        #public boolean existsNonRecoverablePercent_IN()
+        #{
+        #    return this.exists(#NonRecoverablePercent_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetAccountAgreementId_RU
+        #public boolean existsOffsetAccountAgreementId_RU()
+        #{
+        #    return this.exists(#OffsetAccountAgreementId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetAccountType
+        #public boolean existsOffsetAccountType()
+        #{
+        #    return this.exists(#OffsetAccountType);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetAgreementCompany_RU
+        #public boolean existsOffsetAgreementCompany_RU()
+        #{
+        #    return this.exists(#OffsetAgreementCompany_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetCompany
+        #public boolean existsOffsetCompany()
+        #{
+        #    return this.exists(#OffsetCompany);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetDefaultDimension
+        #public boolean existsOffsetDefaultDimension()
+        #{
+        #    return this.exists(#OffsetDefaultDimension);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetLedgerDimension
+        #public boolean existsOffsetLedgerDimension()
+        #{
+        #    return this.exists(#OffsetLedgerDimension);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetPostingProfile_RU
+        #public boolean existsOffsetPostingProfile_RU()
+        #{
+        #    return this.exists(#OffsetPostingProfile_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsOffsetTxt
+        #public boolean existsOffsetTxt()
+        #{
+        #    return this.exists(#OffsetTxt);
+        #}
+      ENDSOURCE
+      SOURCE #existsOperationType_MX
+        #public boolean existsOperationType_MX()
+        #{
+        #    return this.exists(#OperationType_MX);
+        #}
+      ENDSOURCE
+      SOURCE #existsPayment
+        #public boolean existsPayment()
+        #{
+        #    return this.exists(#Payment);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymentAccount
+        #public boolean existsPaymentAccount()
+        #{
+        #    return this.exists(#PaymentAccount);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymentNotes
+        #public boolean existsPaymentNotes()
+        #{
+        #    return this.exists(#PaymentNotes);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymentPriority_LT
+        #public boolean existsPaymentPriority_LT()
+        #{
+        #    return this.exists(#PaymentPriority_LT);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymentSequenceNum
+        #public boolean existsPaymentSequenceNum()
+        #{
+        #    return this.exists(#PaymentSequenceNum);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymentStatus
+        #public boolean existsPaymentStatus()
+        #{
+        #    return this.exists(#PaymentStatus);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymId
+        #public boolean existsPaymId()
+        #{
+        #    return this.exists(#PaymId);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymInstruction1
+        #public boolean existsPaymInstruction1()
+        #{
+        #    return this.exists(#PaymInstruction1);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymInstruction2
+        #public boolean existsPaymInstruction2()
+        #{
+        #    return this.exists(#PaymInstruction2);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymInstruction3
+        #public boolean existsPaymInstruction3()
+        #{
+        #    return this.exists(#PaymInstruction3);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymInstruction4
+        #public boolean existsPaymInstruction4()
+        #{
+        #    return this.exists(#PaymInstruction4);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymMode
+        #public boolean existsPaymMode()
+        #{
+        #    return this.exists(#PaymMode);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymPurpose_LT
+        #public boolean existsPaymPurpose_LT()
+        #{
+        #    return this.exists(#PaymPurpose_LT);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymReference
+        #public boolean existsPaymReference()
+        #{
+        #    return this.exists(#PaymReference);
+        #}
+      ENDSOURCE
+      SOURCE #existsPaymSpec
+        #public boolean existsPaymSpec()
+        #{
+        #    return this.exists(#PaymSpec);
+        #}
+      ENDSOURCE
+      SOURCE #existsPoolRecId
+        #public boolean existsPoolRecId()
+        #{
+        #    return this.exists(#PoolRecId);
+        #}
+      ENDSOURCE
+      SOURCE #existsPostingProfile
+        #public boolean existsPostingProfile()
+        #{
+        #    return this.exists(#PostingProfile);
+        #}
+      ENDSOURCE
+      SOURCE #existsPrepayment
+        #public boolean existsPrepayment()
+        #{
+        #    return this.exists(#Prepayment);
+        #}
+      ENDSOURCE
+      SOURCE #existsPrice
+        #public boolean existsPrice()
+        #{
+        #    return this.exists(#Price);
+        #}
+      ENDSOURCE
+      SOURCE #existsPurchIdRange
+        #public boolean existsPurchIdRange()
+        #{
+        #    return this.exists(#PurchIdRange);
+        #}
+      ENDSOURCE
+      SOURCE #existsPurchLedgerPosting
+        #public boolean existsPurchLedgerPosting()
+        #{
+        #    return this.exists(#PurchLedgerPosting);
+        #}
+      ENDSOURCE
+      SOURCE #existsQty
+        #public boolean existsQty()
+        #{
+        #    return this.exists(#Qty);
+        #}
+      ENDSOURCE
+      SOURCE #existsRCashDocRepresPersonId
+        #public boolean existsRCashDocRepresPersonId()
+        #{
+        #    return this.exists(#RCashDocRepresPersonId);
+        #}
+      ENDSOURCE
+      SOURCE #existsRCashDocRepresType
+        #public boolean existsRCashDocRepresType()
+        #{
+        #    return this.exists(#RCashDocRepresType);
+        #}
+      ENDSOURCE
+      SOURCE #existsRCashPayTransType
+        #public boolean existsRCashPayTransType()
+        #{
+        #    return this.exists(#RCashPayTransType);
+        #}
+      ENDSOURCE
+      SOURCE #existsReceiptDate_W
+        #public boolean existsReceiptDate_W()
+        #{
+        #    return this.exists(#ReceiptDate_W);
+        #}
+      ENDSOURCE
+      SOURCE #existsRecId
+        #public boolean existsRecId()
+        #{
+        #    return this.exists(#RecId);
+        #}
+      ENDSOURCE
+      SOURCE #existsRecVersion
+        #public boolean existsRecVersion()
+        #{
+        #    return this.exists(#RecVersion);
+        #}
+      ENDSOURCE
+      SOURCE #existsRefCopyReverse_CN
+        #public boolean existsRefCopyReverse_CN()
+        #{
+        #    return this.exists(#RefCopyReverse_CN);
+        #}
+      ENDSOURCE
+      SOURCE #existsReleaseDate
+        #public boolean existsReleaseDate()
+        #{
+        #    return this.exists(#ReleaseDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsReleaseDateComment
+        #public boolean existsReleaseDateComment()
+        #{
+        #    return this.exists(#ReleaseDateComment);
+        #}
+      ENDSOURCE
+      SOURCE #existsRemainAmount
+        #public boolean existsRemainAmount()
+        #{
+        #    return this.exists(#RemainAmount);
+        #}
+      ENDSOURCE
+      SOURCE #existsRemittanceAddress
+        #public boolean existsRemittanceAddress()
+        #{
+        #    return this.exists(#RemittanceAddress);
+        #}
+      ENDSOURCE
+      SOURCE #existsRemittanceLocation
+        #public boolean existsRemittanceLocation()
+        #{
+        #    return this.exists(#RemittanceLocation);
+        #}
+      ENDSOURCE
+      SOURCE #existsRemitteeCurrency
+        #public boolean existsRemitteeCurrency()
+        #{
+        #    return this.exists(#RemitteeCurrency);
+        #}
+      ENDSOURCE
+      SOURCE #existsReverseDate
+        #public boolean existsReverseDate()
+        #{
+        #    return this.exists(#ReverseDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsReverseEntry
+        #public boolean existsReverseEntry()
+        #{
+        #    return this.exists(#ReverseEntry);
+        #}
+      ENDSOURCE
+      SOURCE #existsSalesTaxFormTypes_IN
+        #public boolean existsSalesTaxFormTypes_IN()
+        #{
+        #    return this.exists(#SalesTaxFormTypes_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsSettleVoucher
+        #public boolean existsSettleVoucher()
+        #{
+        #    return this.exists(#SettleVoucher);
+        #}
+      ENDSOURCE
+      SOURCE #existsSoftwareDeclReceived_IN
+        #public boolean existsSoftwareDeclReceived_IN()
+        #{
+        #    return this.exists(#SoftwareDeclReceived_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsTax1099Amount
+        #public boolean existsTax1099Amount()
+        #{
+        #    return this.exists(#Tax1099Amount);
+        #}
+      ENDSOURCE
+      SOURCE #existsTax1099Fields
+        #public boolean existsTax1099Fields()
+        #{
+        #    return this.exists(#Tax1099Fields);
+        #}
+      ENDSOURCE
+      SOURCE #existsTax1099State
+        #public boolean existsTax1099State()
+        #{
+        #    return this.exists(#Tax1099State);
+        #}
+      ENDSOURCE
+      SOURCE #existsTax1099StateAmount
+        #public boolean existsTax1099StateAmount()
+        #{
+        #    return this.exists(#Tax1099StateAmount);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxBase_W
+        #public boolean existsTaxBase_W()
+        #{
+        #    return this.exists(#TaxBase_W);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxCode
+        #public boolean existsTaxCode()
+        #{
+        #    return this.exists(#TaxCode);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxDirectionControl
+        #public boolean existsTaxDirectionControl()
+        #{
+        #    return this.exists(#TaxDirectionControl);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxGroup
+        #public boolean existsTaxGroup()
+        #{
+        #    return this.exists(#TaxGroup);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxItemGroup
+        #public boolean existsTaxItemGroup()
+        #{
+        #    return this.exists(#TaxItemGroup);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxPeriodPaymentCode_PL
+        #public boolean existsTaxPeriodPaymentCode_PL()
+        #{
+        #    return this.exists(#TaxPeriodPaymentCode_PL);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxSetoffVoucher_IN
+        #public boolean existsTaxSetoffVoucher_IN()
+        #{
+        #    return this.exists(#TaxSetoffVoucher_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxWithholdAlternateVendorAcct_TH
+        #public boolean existsTaxWithholdAlternateVendorAcct_TH()
+        #{
+        #    return this.exists(#TaxWithholdAlternateVendorAcct_TH);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxWithholdCalculate_TH
+        #public boolean existsTaxWithholdCalculate_TH()
+        #{
+        #    return this.exists(#TaxWithholdCalculate_TH);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxWithholdCode_IN
+        #public boolean existsTaxWithholdCode_IN()
+        #{
+        #    return this.exists(#TaxWithholdCode_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxWithholdGroup
+        #public boolean existsTaxWithholdGroup()
+        #{
+        #    return this.exists(#TaxWithholdGroup);
+        #}
+      ENDSOURCE
+      SOURCE #existsTaxWithholdItemGroupHeading_TH
+        #public boolean existsTaxWithholdItemGroupHeading_TH()
+        #{
+        #    return this.exists(#TaxWithholdItemGroupHeading_TH);
+        #}
+      ENDSOURCE
+      SOURCE #existsTCSGroup_IN
+        #public boolean existsTCSGroup_IN()
+        #{
+        #    return this.exists(#TCSGroup_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsTDSGroup_IN
+        #public boolean existsTDSGroup_IN()
+        #{
+        #    return this.exists(#TDSGroup_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransactionType
+        #public boolean existsTransactionType()
+        #{
+        #    return this.exists(#TransactionType);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransDate
+        #public boolean existsTransDate()
+        #{
+        #    return this.exists(#TransDate);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransfer
+        #public boolean existsTransfer()
+        #{
+        #    return this.exists(#Transfer);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransferCurrency_RU
+        #public boolean existsTransferCurrency_RU()
+        #{
+        #    return this.exists(#TransferCurrency_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransferred
+        #public boolean existsTransferred()
+        #{
+        #    return this.exists(#Transferred);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransferredBy
+        #public boolean existsTransferredBy()
+        #{
+        #    return this.exists(#TransferredBy);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransferredOn
+        #public boolean existsTransferredOn()
+        #{
+        #    return this.exists(#TransferredOn);
+        #}
+      ENDSOURCE
+      SOURCE #existsTransferredTo
+        #public boolean existsTransferredTo()
+        #{
+        #    return this.exists(#TransferredTo);
+        #}
+      ENDSOURCE
+      SOURCE #existsTxt
+        #public boolean existsTxt()
+        #{
+        #    return this.exists(#Txt);
+        #}
+      ENDSOURCE
+      SOURCE #existsVatDueDate_W
+        #public boolean existsVatDueDate_W()
+        #{
+        #    return this.exists(#VatDueDate_W);
+        #}
+      ENDSOURCE
+      SOURCE #existsVATGoodsType_IN
+        #public boolean existsVATGoodsType_IN()
+        #{
+        #    return this.exists(#VATGoodsType_IN);
+        #}
+      ENDSOURCE
+      SOURCE #existsVATNumJournal
+        #public boolean existsVATNumJournal()
+        #{
+        #    return this.exists(#VATNumJournal);
+        #}
+      ENDSOURCE
+      SOURCE #existsVATOnPayment_RU
+        #public boolean existsVATOnPayment_RU()
+        #{
+        #    return this.exists(#VATOnPayment_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsVATOperationCode_RU
+        #public boolean existsVATOperationCode_RU()
+        #{
+        #    return this.exists(#VATOperationCode_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsVATPaymRefRecId_RU
+        #public boolean existsVATPaymRefRecId_RU()
+        #{
+        #    return this.exists(#VATPaymRefRecId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsVATTaxAgentVendAccount_RU
+        #public boolean existsVATTaxAgentVendAccount_RU()
+        #{
+        #    return this.exists(#VATTaxAgentVendAccount_RU);
+        #}
+      ENDSOURCE
+      SOURCE #existsVendInvoiceDeclaration_IS
+        #public boolean existsVendInvoiceDeclaration_IS()
+        #{
+        #    return this.exists(#VendInvoiceDeclaration_IS);
+        #}
+      ENDSOURCE
+      SOURCE #existsVendTransId
+        #public boolean existsVendTransId()
+        #{
+        #    return this.exists(#VendTransId);
+        #}
+      ENDSOURCE
+      SOURCE #existsVoucher
+        #public boolean existsVoucher()
+        #{
+        #    return this.exists(#Voucher);
+        #}
+      ENDSOURCE
+      SOURCE #existsVoucher_CN
+        #public boolean existsVoucher_CN()
+        #{
+        #    return this.exists(#Voucher_CN);
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #public void new()
+        #{
+        #    super();
+        #}
+      ENDSOURCE
+      SOURCE #parmAccountAgreementId_RU
+        #public AgreementId_RU parmAccountAgreementId_RU(AgreementId_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AccountAgreementId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AccountAgreementId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmAccountType
+        #public LedgerJournalACType parmAccountType(LedgerJournalACType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AccountType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AccountType);
+        #}
+      ENDSOURCE
+      SOURCE #parmAcknowledgementDate
+        #public AcknowledgementDate parmAcknowledgementDate(AcknowledgementDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AcknowledgementDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AcknowledgementDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmAddressing_PL
+        #public Addressing parmAddressing_PL(Addressing _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Addressing_PL, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Addressing_PL);
+        #}
+      ENDSOURCE
+      SOURCE #parmAgreementCompany_RU
+        #public AgreementCompany_RU parmAgreementCompany_RU(AgreementCompany_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AgreementCompany_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AgreementCompany_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmAmountCurCredit
+        #public AmountCurCredit parmAmountCurCredit(AmountCurCredit _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AmountCurCredit, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AmountCurCredit);
+        #}
+      ENDSOURCE
+      SOURCE #parmAmountCurDebit
+        #public AmountCurDebit parmAmountCurDebit(AmountCurDebit _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AmountCurDebit, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AmountCurDebit);
+        #}
+      ENDSOURCE
+      SOURCE #parmAnnouncementNum_RU
+        #public BankCashDueAnnouncement_RU parmAnnouncementNum_RU(BankCashDueAnnouncement_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AnnouncementNum_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AnnouncementNum_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmApproved
+        #public Approved parmApproved(Approved _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Approved, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Approved);
+        #}
+      ENDSOURCE
+      SOURCE #parmApprover
+        #public HcmPersonnelNumberId parmApprover(HcmPersonnelNumberId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Approver, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Approver);
+        #}
+      ENDSOURCE
+      SOURCE #parmAssessableValue_IN
+        #public AmountCur parmAssessableValue_IN(AmountCur _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#AssessableValue_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#AssessableValue_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmAttachments_CN
+        #public Counter parmAttachments_CN(Counter _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Attachments_CN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Attachments_CN);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankAccountId
+        #public CompanyBankAccountId parmBankAccountId(CompanyBankAccountId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankAccountId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankAccountId);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankAgreementExt_RU
+        #public AgreementId_RU parmBankAgreementExt_RU(AgreementId_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankAgreementExt_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankAgreementExt_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankBillOfExchangeNum
+        #public BankBillOfExchangeNum parmBankBillOfExchangeNum(BankBillOfExchangeNum _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankBillOfExchangeNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankBillOfExchangeNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankCentralBankPurposeCode
+        #public BankCentralBankPurposeCode parmBankCentralBankPurposeCode(BankCentralBankPurposeCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankCentralBankPurposeCode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankCentralBankPurposeCode);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankCentralBankPurposeText
+        #public BankCentralBankPurposeText parmBankCentralBankPurposeText(BankCentralBankPurposeText _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankCentralBankPurposeText, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankCentralBankPurposeText);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankCentralBankTransTypeCur_RU
+        #public BankCentralBankTransTypeCur_RU parmBankCentralBankTransTypeCur_RU(BankCentralBankTransTypeCur_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankCentralBankTransTypeCur_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankCentralBankTransTypeCur_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankChequeNum
+        #public BankChequeNum parmBankChequeNum(BankChequeNum _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankChequeNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankChequeNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankClientDocumentTypeId_RU
+        #public BankClientDocumentTypeId_RU parmBankClientDocumentTypeId_RU(BankClientDocumentTypeId_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankClientDocumentTypeId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankClientDocumentTypeId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankCommAccountId_RU
+        #public CompanyBankAccountId parmBankCommAccountId_RU(CompanyBankAccountId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankCommAccountId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankCommAccountId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankCurrencyDealCourse_RU
+        #public BankCurrencyDealCourse_RU parmBankCurrencyDealCourse_RU(BankCurrencyDealCourse_RU _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankCurrencyDealCourse_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankCurrencyDealCourse_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankCurrencyTransferLog_RU
+        #public BankCurrencyTransferId_RU parmBankCurrencyTransferLog_RU(BankCurrencyTransferId_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankCurrencyTransferLog_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankCurrencyTransferLog_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankDepositNum
+        #public BankDepositNum parmBankDepositNum(BankDepositNum _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankDepositNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankDepositNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankDepositVoucher
+        #public BankDepositVoucher parmBankDepositVoucher(BankDepositVoucher _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankDepositVoucher, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankDepositVoucher);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankNegInstRecipientName
+        #public BankNegInstRecipientName parmBankNegInstRecipientName(BankNegInstRecipientName _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankNegInstRecipientName, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankNegInstRecipientName);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankPaymentRegistrationNum_LV
+        #public LvBankPaymentRegistrationNum parmBankPaymentRegistrationNum_LV(LvBankPaymentRegistrationNum _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankPaymentRegistrationNum_LV, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankPaymentRegistrationNum_LV);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankPrintAccountNum_RU
+        #public LedgerJournalAC parmBankPrintAccountNum_RU(LedgerJournalAC _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankPrintAccountNum_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankPrintAccountNum_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankPromissoryNoteNum
+        #public BankPromissoryNoteNum parmBankPromissoryNoteNum(BankPromissoryNoteNum _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankPromissoryNoteNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankPromissoryNoteNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankReconcileAccountAtPost
+        #public NoYes parmBankReconcileAccountAtPost(NoYes _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankReconcileAccountAtPost, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankReconcileAccountAtPost);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankRemittanceFileId
+        #public BankRemittanceFileId parmBankRemittanceFileId(BankRemittanceFileId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankRemittanceFileId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankRemittanceFileId);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankRemittanceType
+        #public BankRemittanceType parmBankRemittanceType(BankRemittanceType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankRemittanceType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankRemittanceType);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankRespWorkerId_RU
+        #public HcmPersonnelNumberId parmBankRespWorkerId_RU(HcmPersonnelNumberId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankRespWorkerId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankRespWorkerId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankSpecAccountId_RU
+        #public CompanyBankAccountId parmBankSpecAccountId_RU(CompanyBankAccountId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankSpecAccountId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankSpecAccountId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankTransType
+        #public BankTransactionType parmBankTransType(BankTransactionType _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankTransType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankTransType);
+        #}
+      ENDSOURCE
+      SOURCE #parmBankVendAccountId_RU
+        #public VendAccount parmBankVendAccountId_RU(VendAccount _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BankVendAccountId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BankVendAccountId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmBudgetSourceLedgerEntryUnposted
+        #public RefRecId parmBudgetSourceLedgerEntryUnposted(RefRecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#BudgetSourceLedgerEntryUnposted, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#BudgetSourceLedgerEntryUnposted);
+        #}
+      ENDSOURCE
+      SOURCE #parmCancel
+        #public Cancelled parmCancel(Cancelled _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Cancel, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Cancel);
+        #}
+      ENDSOURCE
+      SOURCE #parmCashDiscAmount
+        #public DiscAmount parmCashDiscAmount(DiscAmount _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CashDiscAmount, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CashDiscAmount);
+        #}
+      ENDSOURCE
+      SOURCE #parmCashDiscBaseDate
+        #public CashDiscBaseDate parmCashDiscBaseDate(CashDiscBaseDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CashDiscBaseDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CashDiscBaseDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmCashDiscCode
+        #public CashDiscCode parmCashDiscCode(CashDiscCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CashDiscCode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CashDiscCode);
+        #}
+      ENDSOURCE
+      SOURCE #parmCashDiscPercent
+        #public DiscPct parmCashDiscPercent(DiscPct _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CashDiscPercent, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CashDiscPercent);
+        #}
+      ENDSOURCE
+      SOURCE #parmCashReceiptNum_LV
+        #public LvCashReceiptNumber parmCashReceiptNum_LV(LvCashReceiptNumber _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CashReceiptNum_LV, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CashReceiptNum_LV);
+        #}
+      ENDSOURCE
+      SOURCE #parmCompany
+        #public SelectableDataArea parmCompany(SelectableDataArea _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Company, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Company);
+        #}
+      ENDSOURCE
+      SOURCE #parmCompanyLocation_IN
+        #public LogisticsLocationId parmCompanyLocation_IN(LogisticsLocationId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CompanyLocation_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CompanyLocation_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmConsignmentNoteNum_IN
+        #public ConsignmentNum_IN parmConsignmentNoteNum_IN(ConsignmentNum_IN _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ConsignmentNoteNum_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ConsignmentNoteNum_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmCorrect_RU
+        #public Correct_RU parmCorrect_RU(Correct_RU _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Correct_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Correct_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmCorrectedInvoiceDate_RU
+        #public CorrectedInvoiceDate_RU parmCorrectedInvoiceDate_RU(CorrectedInvoiceDate_RU _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CorrectedInvoiceDate_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CorrectedInvoiceDate_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmCorrectedInvoiceId_RU
+        #public CorrectedInvoiceId_RU parmCorrectedInvoiceId_RU(CorrectedInvoiceId_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CorrectedInvoiceId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CorrectedInvoiceId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmCorrectionType_RU
+        #public FactureCorrectionType_RU parmCorrectionType_RU(FactureCorrectionType_RU _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CorrectionType_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CorrectionType_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmCurrencyCode
+        #public CurrencyCode parmCurrencyCode(CurrencyCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CurrencyCode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CurrencyCode);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustEinvoicePaymDeliveryNum
+        #public CustEinvoicePaymDeliveryNum parmCustEinvoicePaymDeliveryNum(CustEinvoicePaymDeliveryNum _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustEinvoicePaymDeliveryNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustEinvoicePaymDeliveryNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustEinvoicePaymSectionNum
+        #public CustEinvoicePaymSectionNum parmCustEinvoicePaymSectionNum(CustEinvoicePaymSectionNum _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustEinvoicePaymSectionNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustEinvoicePaymSectionNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustEinvoicePaymTransNum
+        #public CustEinvoicePaymTransNum parmCustEinvoicePaymTransNum(CustEinvoicePaymTransNum _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustEinvoicePaymTransNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustEinvoicePaymTransNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustFactureAutoCreate_RU
+        #public CustFactureAutoCreate_RU parmCustFactureAutoCreate_RU(CustFactureAutoCreate_RU _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustFactureAutoCreate_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustFactureAutoCreate_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustomsDuty_IN
+        #public CustomsAmount_IN parmCustomsDuty_IN(CustomsAmount_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustomsDuty_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustomsDuty_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustomsTariffCodeTable_IN
+        #public CustomsTariffCodeTableKey_IN parmCustomsTariffCodeTable_IN(CustomsTariffCodeTableKey_IN _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#CustomsTariffCodeTable_IN, _value);
+        #    }
+        #
+        #    return this.get_Container(#CustomsTariffCodeTable_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustomsTariffDirection_IN
+        #public Direction_IN parmCustomsTariffDirection_IN(Direction_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustomsTariffDirection_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustomsTariffDirection_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustVendAccount_PL
+        #public PlCustVendAccount parmCustVendAccount_PL(PlCustVendAccount _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustVendAccount_PL, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustVendAccount_PL);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustVendBankAccountId
+        #public BankAccountID parmCustVendBankAccountId(BankAccountID _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustVendBankAccountId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustVendBankAccountId);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustVendName_PL
+        #public PlCustVendName parmCustVendName_PL(PlCustVendName _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustVendName_PL, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustVendName_PL);
+        #}
+      ENDSOURCE
+      SOURCE #parmCustVendNegInstProtestReason
+        #public CustVendNegInstProtestReason parmCustVendNegInstProtestReason(CustVendNegInstProtestReason _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#CustVendNegInstProtestReason, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#CustVendNegInstProtestReason);
+        #}
+      ENDSOURCE
+      SOURCE #parmDateCashDisc
+        #public TransDate parmDateCashDisc(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#DateCashDisc, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#DateCashDisc);
+        #}
+      ENDSOURCE
+      SOURCE #parmDebitCurrencyCode_LT
+        #public LtDebitCurrencyCode parmDebitCurrencyCode_LT(LtDebitCurrencyCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#DebitCurrencyCode_LT, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#DebitCurrencyCode_LT);
+        #}
+      ENDSOURCE
+      SOURCE #parmDefaultDimension
+        #public AifDimensionAttributeValueSet parmDefaultDimension(AifDimensionAttributeValueSet _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#DefaultDimension, _value);
+        #    }
+        #
+        #    return this.get_Container(#DefaultDimension);
+        #}
+      ENDSOURCE
+      SOURCE #parmDocumentDate
+        #public DocumentDate parmDocumentDate(DocumentDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#DocumentDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#DocumentDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmDocumentNum
+        #public DocumentNum parmDocumentNum(DocumentNum _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#DocumentNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#DocumentNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmDue
+        #public DueDate parmDue(DueDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Due, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Due);
+        #}
+      ENDSOURCE
+      SOURCE #parmEnterpriseNumber
+        #public TaxEnterpriseNumber parmEnterpriseNumber(TaxEnterpriseNumber _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#EnterpriseNumber, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#EnterpriseNumber);
+        #}
+      ENDSOURCE
+      SOURCE #parmErrorCodePayment
+        #public ErrorCodePayment parmErrorCodePayment(ErrorCodePayment _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ErrorCodePayment, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ErrorCodePayment);
+        #}
+      ENDSOURCE
+      SOURCE #parmEUSalesList
+        #public ListDispatchId parmEUSalesList(ListDispatchId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#EUSalesList, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#EUSalesList);
+        #}
+      ENDSOURCE
+      SOURCE #parmExchRate
+        #public ExchRate parmExchRate(ExchRate _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ExchRate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ExchRate);
+        #}
+      ENDSOURCE
+      SOURCE #parmExchRateSecond
+        #public ExchrateSecondary parmExchRateSecond(ExchrateSecondary _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ExchRateSecond, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ExchRateSecond);
+        #}
+      ENDSOURCE
+      SOURCE #parmExciseRecordType_IN
+        #public ExciseRecordType_IN parmExciseRecordType_IN(ExciseRecordType_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ExciseRecordType_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ExciseRecordType_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmExciseTariffCodes_IN
+        #public TariffCode_IN parmExciseTariffCodes_IN(TariffCode_IN _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ExciseTariffCodes_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ExciseTariffCodes_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmExciseType_IN
+        #public ExciseType_IN parmExciseType_IN(ExciseType_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ExciseType_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ExciseType_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmFileCreated
+        #public TransDate parmFileCreated(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#FileCreated, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#FileCreated);
+        #}
+      ENDSOURCE
+      SOURCE #parmForeignBankFee_LT
+        #public LTForeignBankFee parmForeignBankFee_LT(LTForeignBankFee _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ForeignBankFee_LT, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ForeignBankFee_LT);
+        #}
+      ENDSOURCE
+      SOURCE #parmForeignCompany
+        #public SelectableDataArea parmForeignCompany(SelectableDataArea _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ForeignCompany, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ForeignCompany);
+        #}
+      ENDSOURCE
+      SOURCE #parmForeignVoucher
+        #public Voucher parmForeignVoucher(Voucher _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ForeignVoucher, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ForeignVoucher);
+        #}
+      ENDSOURCE
+      SOURCE #parmFreqCode
+        #public PeriodUnit parmFreqCode(PeriodUnit _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#FreqCode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#FreqCode);
+        #}
+      ENDSOURCE
+      SOURCE #parmFreqValue
+        #public Freq parmFreqValue(Freq _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#FreqValue, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#FreqValue);
+        #}
+      ENDSOURCE
+      SOURCE #parmFurtherPostingRecId
+        #public LedgerJournalTransRefRecId parmFurtherPostingRecId(LedgerJournalTransRefRecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#FurtherPostingRecId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#FurtherPostingRecId);
+        #}
+      ENDSOURCE
+      SOURCE #parmFurtherPostingType
+        #public FurtherPostingType parmFurtherPostingType(FurtherPostingType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#FurtherPostingType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#FurtherPostingType);
+        #}
+      ENDSOURCE
+      SOURCE #parmGSTHSTTaxType_CA
+        #public GSTHSTTaxType_CA parmGSTHSTTaxType_CA(GSTHSTTaxType_CA _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#GSTHSTTaxType_CA, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#GSTHSTTaxType_CA);
+        #}
+      ENDSOURCE
+      SOURCE #parmGTAServiceCategory_IN
+        #public GTAServiceCategory_IN parmGTAServiceCategory_IN(GTAServiceCategory_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#GTAServiceCategory_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#GTAServiceCategory_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmImportDate
+        #public TransDate parmImportDate(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ImportDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ImportDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmInformByPhone_LT
+        #public LTInformByPhone parmInformByPhone_LT(LTInformByPhone _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#InformByPhone_LT, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#InformByPhone_LT);
+        #}
+      ENDSOURCE
+      SOURCE #parmInformByTelex_LT
+        #public LTInformByTelex parmInformByTelex_LT(LTInformByTelex _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#InformByTelex_LT, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#InformByTelex_LT);
+        #}
+      ENDSOURCE
+      SOURCE #parmIntBank_LV
+        #public CompanyBankAccountId parmIntBank_LV(CompanyBankAccountId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#IntBank_LV, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#IntBank_LV);
+        #}
+      ENDSOURCE
+      SOURCE #parmIntraComVATDueDate_W
+        #public IntraComVATDueDate_W parmIntraComVATDueDate_W(IntraComVATDueDate_W _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#IntraComVATDueDate_W, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#IntraComVATDueDate_W);
+        #}
+      ENDSOURCE
+      SOURCE #parmInvoice
+        #public InvoiceId parmInvoice(InvoiceId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Invoice, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Invoice);
+        #}
+      ENDSOURCE
+      SOURCE #parmInvoiceReleaseDate
+        #public InvoiceReleaseDate parmInvoiceReleaseDate(InvoiceReleaseDate _value = utcDateTimeNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#InvoiceReleaseDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#InvoiceReleaseDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmJournalNum
+        #public LedgerJournalId parmJournalNum(LedgerJournalId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#JournalNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#JournalNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmLastTransferred
+        #public LastTransferred parmLastTransferred(LastTransferred _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#LastTransferred, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#LastTransferred);
+        #}
+      ENDSOURCE
+      SOURCE #parmLedgerDimension
+        #public AifMultiTypeAccount parmLedgerDimension(AifMultiTypeAccount _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#LedgerDimension, _value);
+        #    }
+        #
+        #    return this.get_Container(#LedgerDimension);
+        #}
+      ENDSOURCE
+      SOURCE #parmLedgerJournalDlvDate_ES
+        #public LedgerJournalDlvDate_ES parmLedgerJournalDlvDate_ES(LedgerJournalDlvDate_ES _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#LedgerJournalDlvDate_ES, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#LedgerJournalDlvDate_ES);
+        #}
+      ENDSOURCE
+      SOURCE #parmLedgerVoucherType_CN
+        #public LedgerVoucherTypeId_CN parmLedgerVoucherType_CN(LedgerVoucherTypeId_CN _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#LedgerVoucherType_CN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#LedgerVoucherType_CN);
+        #}
+      ENDSOURCE
+      SOURCE #parmLineNum
+        #public LineNum parmLineNum(LineNum _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#LineNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#LineNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmListcode
+        #public ListcodeId parmListcode(ListcodeId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Listcode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Listcode);
+        #}
+      ENDSOURCE
+      SOURCE #parmLoadingDate
+        #public TransDate parmLoadingDate(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#LoadingDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#LoadingDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmMarkedInvoice
+        #public InvoiceId parmMarkedInvoice(InvoiceId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#MarkedInvoice, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#MarkedInvoice);
+        #}
+      ENDSOURCE
+      SOURCE #parmMarkupCode_RU
+        #public MarkupCodeVend_RU parmMarkupCode_RU(MarkupCodeVend_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#MarkupCode_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#MarkupCode_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmMaximumRetailPrice_IN
+        #public AmountCur parmMaximumRetailPrice_IN(AmountCur _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#MaximumRetailPrice_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#MaximumRetailPrice_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmNatureOfAssessee_IN
+        #public NatureOfAssessee_IN parmNatureOfAssessee_IN(NatureOfAssessee_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#NatureOfAssessee_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#NatureOfAssessee_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmNegInstId
+        #public CustVendNegInstId parmNegInstId(CustVendNegInstId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#NegInstId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#NegInstId);
+        #}
+      ENDSOURCE
+      SOURCE #parmNonRecoverablePercent_IN
+        #public Percent parmNonRecoverablePercent_IN(Percent _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#NonRecoverablePercent_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#NonRecoverablePercent_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetAccountAgreementId_RU
+        #public AgreementId_RU parmOffsetAccountAgreementId_RU(AgreementId_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OffsetAccountAgreementId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OffsetAccountAgreementId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetAccountType
+        #public LedgerJournalACType parmOffsetAccountType(LedgerJournalACType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OffsetAccountType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OffsetAccountType);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetAgreementCompany_RU
+        #public AgreementCompany_RU parmOffsetAgreementCompany_RU(AgreementCompany_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OffsetAgreementCompany_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OffsetAgreementCompany_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetCompany
+        #public SelectableDataArea parmOffsetCompany(SelectableDataArea _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OffsetCompany, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OffsetCompany);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetDefaultDimension
+        #public AifDimensionAttributeValueSet parmOffsetDefaultDimension(AifDimensionAttributeValueSet _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#OffsetDefaultDimension, _value);
+        #    }
+        #
+        #    return this.get_Container(#OffsetDefaultDimension);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetLedgerDimension
+        #public AifMultiTypeAccount parmOffsetLedgerDimension(AifMultiTypeAccount _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#OffsetLedgerDimension, _value);
+        #    }
+        #
+        #    return this.get_Container(#OffsetLedgerDimension);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetPostingProfile_RU
+        #public PostingProfile parmOffsetPostingProfile_RU(PostingProfile _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OffsetPostingProfile_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OffsetPostingProfile_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmOffsetTxt
+        #public LedgerJournalTransTxt parmOffsetTxt(LedgerJournalTransTxt _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OffsetTxt, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OffsetTxt);
+        #}
+      ENDSOURCE
+      SOURCE #parmOperationType_MX
+        #public VendorOperationType_MX parmOperationType_MX(VendorOperationType_MX _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#OperationType_MX, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#OperationType_MX);
+        #}
+      ENDSOURCE
+      SOURCE #parmPayment
+        #public PaymTermId parmPayment(PaymTermId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Payment, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Payment);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymentAccount
+        #public CompanyBankAccountId parmPaymentAccount(CompanyBankAccountId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymentAccount, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymentAccount);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymentNotes
+        #public PaymNote parmPaymentNotes(PaymNote _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymentNotes, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymentNotes);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymentPriority_LT
+        #public LTPaymentPriority parmPaymentPriority_LT(LTPaymentPriority _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymentPriority_LT, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymentPriority_LT);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymentSequenceNum
+        #public PaymentSequenceNum parmPaymentSequenceNum(PaymentSequenceNum _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymentSequenceNum, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymentSequenceNum);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymentStatus
+        #public CustVendPaymStatus parmPaymentStatus(CustVendPaymStatus _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymentStatus, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymentStatus);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymId
+        #public PaymId parmPaymId(PaymId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymId);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymInstruction1
+        #public PaymInstructionId parmPaymInstruction1(PaymInstructionId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymInstruction1, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymInstruction1);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymInstruction2
+        #public PaymInstructionId parmPaymInstruction2(PaymInstructionId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymInstruction2, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymInstruction2);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymInstruction3
+        #public PaymInstructionId parmPaymInstruction3(PaymInstructionId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymInstruction3, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymInstruction3);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymInstruction4
+        #public PaymInstructionId parmPaymInstruction4(PaymInstructionId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymInstruction4, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymInstruction4);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymMode
+        #public PaymMode parmPaymMode(PaymMode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymMode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymMode);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymPurpose_LT
+        #public LtPaymentPurpose parmPaymPurpose_LT(LtPaymentPurpose _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymPurpose_LT, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymPurpose_LT);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymReference
+        #public PaymReference parmPaymReference(PaymReference _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymReference, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymReference);
+        #}
+      ENDSOURCE
+      SOURCE #parmPaymSpec
+        #public PaymSpec parmPaymSpec(PaymSpec _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PaymSpec, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PaymSpec);
+        #}
+      ENDSOURCE
+      SOURCE #parmPoolRecId
+        #public LedgerJournalTransRefRecId parmPoolRecId(LedgerJournalTransRefRecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PoolRecId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PoolRecId);
+        #}
+      ENDSOURCE
+      SOURCE #parmPostingProfile
+        #public PostingProfile parmPostingProfile(PostingProfile _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PostingProfile, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PostingProfile);
+        #}
+      ENDSOURCE
+      SOURCE #parmPrepayment
+        #public NoYes parmPrepayment(NoYes _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Prepayment, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Prepayment);
+        #}
+      ENDSOURCE
+      SOURCE #parmPrice
+        #public Price parmPrice(Price _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Price, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Price);
+        #}
+      ENDSOURCE
+      SOURCE #parmPurchIdRange
+        #public PurchIdRange parmPurchIdRange(PurchIdRange _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PurchIdRange, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PurchIdRange);
+        #}
+      ENDSOURCE
+      SOURCE #parmPurchLedgerPosting
+        #public PurchLedgerPosting parmPurchLedgerPosting(PurchLedgerPosting _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#PurchLedgerPosting, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#PurchLedgerPosting);
+        #}
+      ENDSOURCE
+      SOURCE #parmQty
+        #public QtyStatistical parmQty(QtyStatistical _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Qty, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Qty);
+        #}
+      ENDSOURCE
+      SOURCE #parmRCashDocRepresPersonId
+        #public RCashDocRepresPersonId parmRCashDocRepresPersonId(RCashDocRepresPersonId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RCashDocRepresPersonId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RCashDocRepresPersonId);
+        #}
+      ENDSOURCE
+      SOURCE #parmRCashDocRepresType
+        #public RCashDocRepresType parmRCashDocRepresType(RCashDocRepresType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RCashDocRepresType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RCashDocRepresType);
+        #}
+      ENDSOURCE
+      SOURCE #parmRCashPayTransType
+        #public RCashPayLedgerTransType parmRCashPayTransType(RCashPayLedgerTransType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RCashPayTransType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RCashPayTransType);
+        #}
+      ENDSOURCE
+      SOURCE #parmReceiptDate_W
+        #public PurchReceiptDate_W parmReceiptDate_W(PurchReceiptDate_W _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ReceiptDate_W, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ReceiptDate_W);
+        #}
+      ENDSOURCE
+      SOURCE #parmRecId
+        #public RecId parmRecId(RecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RecId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RecId);
+        #}
+      ENDSOURCE
+      SOURCE #parmRecVersion
+        #public RecVersion parmRecVersion(RecVersion _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RecVersion, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RecVersion);
+        #}
+      ENDSOURCE
+      SOURCE #parmRefCopyReverse_CN
+        #public RefRecId parmRefCopyReverse_CN(RefRecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RefCopyReverse_CN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RefCopyReverse_CN);
+        #}
+      ENDSOURCE
+      SOURCE #parmReleaseDate
+        #public PostReleaseDate parmReleaseDate(PostReleaseDate _value = utcDateTimeNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ReleaseDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ReleaseDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmReleaseDateComment
+        #public ReleaseDateComment parmReleaseDateComment(ReleaseDateComment _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ReleaseDateComment, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ReleaseDateComment);
+        #}
+      ENDSOURCE
+      SOURCE #parmRemainAmount
+        #public Amount parmRemainAmount(Amount _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RemainAmount, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RemainAmount);
+        #}
+      ENDSOURCE
+      SOURCE #parmRemittanceAddress
+        #public LogisticsPostalAddressKey parmRemittanceAddress(LogisticsPostalAddressKey _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#RemittanceAddress, _value);
+        #    }
+        #
+        #    return this.get_Container(#RemittanceAddress);
+        #}
+      ENDSOURCE
+      SOURCE #parmRemittanceLocation
+        #public LogisticsLocationId parmRemittanceLocation(LogisticsLocationId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RemittanceLocation, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RemittanceLocation);
+        #}
+      ENDSOURCE
+      SOURCE #parmRemitteeCurrency
+        #public CurrencyCode parmRemitteeCurrency(CurrencyCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#RemitteeCurrency, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#RemitteeCurrency);
+        #}
+      ENDSOURCE
+      SOURCE #parmReverseDate
+        #public TransDate parmReverseDate(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ReverseDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ReverseDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmReverseEntry
+        #public NoYes parmReverseEntry(NoYes _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#ReverseEntry, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#ReverseEntry);
+        #}
+      ENDSOURCE
+      SOURCE #parmSalesTaxFormTypes_IN
+        #public FormType_IN parmSalesTaxFormTypes_IN(FormType_IN _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#SalesTaxFormTypes_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#SalesTaxFormTypes_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmSettleVoucher
+        #public SettlementType parmSettleVoucher(SettlementType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#SettleVoucher, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#SettleVoucher);
+        #}
+      ENDSOURCE
+      SOURCE #parmSoftwareDeclReceived_IN
+        #public SoftwareDeclReceived_IN parmSoftwareDeclReceived_IN(SoftwareDeclReceived_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#SoftwareDeclReceived_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#SoftwareDeclReceived_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmTax1099Amount
+        #public Tax1099Amount parmTax1099Amount(Tax1099Amount _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Tax1099Amount, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Tax1099Amount);
+        #}
+      ENDSOURCE
+      SOURCE #parmTax1099Fields
+        #public Tax1099FieldsKey parmTax1099Fields(Tax1099FieldsKey _value = null)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Container(#Tax1099Fields, _value);
+        #    }
+        #
+        #    return this.get_Container(#Tax1099Fields);
+        #}
+      ENDSOURCE
+      SOURCE #parmTax1099State
+        #public Tax1099State parmTax1099State(Tax1099State _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Tax1099State, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Tax1099State);
+        #}
+      ENDSOURCE
+      SOURCE #parmTax1099StateAmount
+        #public Tax1099StateAmount parmTax1099StateAmount(Tax1099StateAmount _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Tax1099StateAmount, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Tax1099StateAmount);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxBase_W
+        #public TaxBase_W parmTaxBase_W(TaxBase_W _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxBase_W, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxBase_W);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxCode
+        #public TaxCode parmTaxCode(TaxCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxCode, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxCode);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxDirectionControl
+        #public NoYes parmTaxDirectionControl(NoYes _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxDirectionControl, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxDirectionControl);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxGroup
+        #public TaxGroupJournal parmTaxGroup(TaxGroupJournal _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxGroup, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxGroup);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxItemGroup
+        #public TaxGroupJournal parmTaxItemGroup(TaxGroupJournal _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxItemGroup, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxItemGroup);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxPeriodPaymentCode_PL
+        #public PlTaxPeriodPaymentCode parmTaxPeriodPaymentCode_PL(PlTaxPeriodPaymentCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxPeriodPaymentCode_PL, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxPeriodPaymentCode_PL);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxSetoffVoucher_IN
+        #public Voucher parmTaxSetoffVoucher_IN(Voucher _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxSetoffVoucher_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxSetoffVoucher_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxWithholdAlternateVendorAcct_TH
+        #public TaxWithholdAlternateVendorAcct_TH parmTaxWithholdAlternateVendorAcct_TH(TaxWithholdAlternateVendorAcct_TH _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxWithholdAlternateVendorAcct_TH, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxWithholdAlternateVendorAcct_TH);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxWithholdCalculate_TH
+        #public TaxWithholdCalculate_TH parmTaxWithholdCalculate_TH(TaxWithholdCalculate_TH _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxWithholdCalculate_TH, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxWithholdCalculate_TH);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxWithholdCode_IN
+        #public TaxWithholdCode parmTaxWithholdCode_IN(TaxWithholdCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxWithholdCode_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxWithholdCode_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxWithholdGroup
+        #public TaxWithholdGroup parmTaxWithholdGroup(TaxWithholdGroup _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxWithholdGroup, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxWithholdGroup);
+        #}
+      ENDSOURCE
+      SOURCE #parmTaxWithholdItemGroupHeading_TH
+        #public TaxWithholdItemGroup_TH parmTaxWithholdItemGroupHeading_TH(TaxWithholdItemGroup_TH _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TaxWithholdItemGroupHeading_TH, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TaxWithholdItemGroupHeading_TH);
+        #}
+      ENDSOURCE
+      SOURCE #parmTCSGroup_IN
+        #public TaxWithholdGroup parmTCSGroup_IN(TaxWithholdGroup _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TCSGroup_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TCSGroup_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmTDSGroup_IN
+        #public TaxWithholdGroup parmTDSGroup_IN(TaxWithholdGroup _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TDSGroup_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TDSGroup_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransactionType
+        #public LedgerTransType parmTransactionType(LedgerTransType _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TransactionType, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TransactionType);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransDate
+        #public TransDate parmTransDate(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TransDate, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TransDate);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransfer
+        #public NoYes parmTransfer(NoYes _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Transfer, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Transfer);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransferCurrency_RU
+        #public CurrencyCode parmTransferCurrency_RU(CurrencyCode _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TransferCurrency_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TransferCurrency_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransferred
+        #public NoYes parmTransferred(NoYes _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Transferred, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Transferred);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransferredBy
+        #public UserId parmTransferredBy(UserId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TransferredBy, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TransferredBy);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransferredOn
+        #public TransDate parmTransferredOn(TransDate _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TransferredOn, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TransferredOn);
+        #}
+      ENDSOURCE
+      SOURCE #parmTransferredTo
+        #public LedgerJournalId parmTransferredTo(LedgerJournalId _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#TransferredTo, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#TransferredTo);
+        #}
+      ENDSOURCE
+      SOURCE #parmTxt
+        #public LedgerJournalTransTxt parmTxt(LedgerJournalTransTxt _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Txt, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Txt);
+        #}
+      ENDSOURCE
+      SOURCE #parmVatDueDate_W
+        #public VatDueDate_W parmVatDueDate_W(VatDueDate_W _value = dateNull())
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VatDueDate_W, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VatDueDate_W);
+        #}
+      ENDSOURCE
+      SOURCE #parmVATGoodsType_IN
+        #public VATGoodsType_IN parmVATGoodsType_IN(VATGoodsType_IN _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VATGoodsType_IN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VATGoodsType_IN);
+        #}
+      ENDSOURCE
+      SOURCE #parmVATNumJournal
+        #public VATNumJournal parmVATNumJournal(VATNumJournal _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VATNumJournal, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VATNumJournal);
+        #}
+      ENDSOURCE
+      SOURCE #parmVATOnPayment_RU
+        #public VATOnPayment_RU parmVATOnPayment_RU(VATOnPayment_RU _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VATOnPayment_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VATOnPayment_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmVATOperationCode_RU
+        #public VATOperationCode_RU parmVATOperationCode_RU(VATOperationCode_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VATOperationCode_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VATOperationCode_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmVATPaymRefRecId_RU
+        #public RefRecId parmVATPaymRefRecId_RU(RefRecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VATPaymRefRecId_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VATPaymRefRecId_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmVATTaxAgentVendAccount_RU
+        #public VATTaxAgentVendAccount_RU parmVATTaxAgentVendAccount_RU(VATTaxAgentVendAccount_RU _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VATTaxAgentVendAccount_RU, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VATTaxAgentVendAccount_RU);
+        #}
+      ENDSOURCE
+      SOURCE #parmVendInvoiceDeclaration_IS
+        #public InvoiceSlipDeclarationId_IS parmVendInvoiceDeclaration_IS(InvoiceSlipDeclarationId_IS _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VendInvoiceDeclaration_IS, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VendInvoiceDeclaration_IS);
+        #}
+      ENDSOURCE
+      SOURCE #parmVendTransId
+        #public VendTransRefRecId parmVendTransId(VendTransRefRecId _value = 0)
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#VendTransId, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#VendTransId);
+        #}
+      ENDSOURCE
+      SOURCE #parmVoucher
+        #public Voucher parmVoucher(Voucher _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Voucher, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Voucher);
+        #}
+      ENDSOURCE
+      SOURCE #parmVoucher_CN
+        #public Voucher_CN parmVoucher_CN(Voucher_CN _value = '')
+        #{
+        #    if (!prmisdefault(_value))
+        #    {
+        #        this.set_Attribute(#Voucher_CN, _value);
+        #    }
+        #
+        #    return this.get_Attribute(#Voucher_CN);
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

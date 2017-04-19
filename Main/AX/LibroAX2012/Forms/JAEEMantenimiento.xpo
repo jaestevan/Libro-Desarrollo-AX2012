@@ -1,0 +1,300 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FRM
+
+; Microsoft Dynamics AX Forms unloaded
+; --------------------------------------------------------------------------------
+FRMVERSION 12
+
+FORM #JAEEMantenimiento
+  PROPERTIES
+    Name                #JAEEMantenimiento
+    Origin              #{3334A423-3ED8-4860-BAAC-3C1081237DE1}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #// classDeclaration DEL FORMULARIO!!
+      #public class FormRun extends ObjectRun
+      #{
+      #    QueryBuildRange     qbrTipo;
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  OBJECTBANK
+    PROPERTIES
+    ENDPROPERTIES
+    
+    DATASOURCE
+      OBJECTPOOL
+        PROPERTIES
+          Name                #JAEEMantenimiento
+          Table               #JAEEMantenimiento
+        ENDPROPERTIES
+        
+        FIELDLIST
+        ENDFIELDLIST
+      ENDOBJECTPOOL
+      METHODS
+        SOURCE #editMarcarMantenimiento
+          #edit NoYes editMarcarMantenimiento(
+          #    NoYes               _set,
+          #    JAEEMantenimiento   _mantenimiento,
+          #    NoYes               _marcar)
+          #{
+          #    NoYes   ret;
+          #
+          #    if (_set)
+          #    {
+          #        // guardar el valor del control (_marcar) para poder recuperarlo más adelante
+          #        // this.setMarcar(_mantenimiento, _marcar);
+          #    }
+          #
+          #    // leer el valor para devolverlo al control
+          #    // ret = this.getMarcar(_mantenimiento);
+          #
+          #    return ret;
+          #}
+        ENDSOURCE
+        SOURCE #executeQuery
+          #public void executeQuery()
+          #{
+          #    if (FiltroTipo.selection() == JAEEMantenimientoTipos::All)
+          #        qbrTipo.value(SysQuery::valueUnlimited());
+          #    else
+          #        qbrTipo.value(queryValue(FiltroTipo.selection()));
+          #
+          #    super();
+          #}
+        ENDSOURCE
+        SOURCE #init
+          #public void init()
+          #{
+          #    super();
+          #
+          #    qbrTipo = JAEEMantenimiento_DS.queryBuildDataSource()
+          #                                  .addRange(fieldNum(JAEEMantenimiento, Tipo));
+          #}
+        ENDSOURCE
+      ENDMETHODS
+    ENDDATASOURCE
+  ENDOBJECTBANK
+  
+  REFERENCEDATASOURCES
+  ENDREFERENCEDATASOURCES
+  
+  JOINS
+  ENDJOINS
+  
+  PARTREFERENCES
+  ENDPARTREFERENCES
+  
+  DESIGN
+    PROPERTIES
+      UseCaptionFromMenuItem  #Yes
+      TitleDatasource     #JAEEMantenimiento
+    ENDPROPERTIES
+    
+    CONTAINER
+      CONTROL GRID
+        PROPERTIES
+          Name                #Grid
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1431655764
+          DataSource          #JAEEMantenimiento
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL REFERENCEGROUP
+        PROPERTIES
+          Name                #JAEEMantenimiento_JAEECamionId
+          ElementPosition     #715827882
+          HierarchyParent     #Grid
+          DataSource          #JAEEMantenimiento
+          ReferenceField      #CamionId
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMBOBOX
+        PROPERTIES
+          Name                #FiltroTipo
+          AutoDeclaration     #Yes
+          ElementPosition     #715827882
+          EnumType            #JAEEMantenimientoTipos
+        ENDPROPERTIES
+        
+        METHODS
+          SOURCE #modified
+            #public boolean modified()
+            #{
+            #    boolean ret;
+            #
+            #    ret = super();
+            #
+            #    JAEEMantenimiento_DS.executeQuery();
+            #
+            #    return ret;
+            #}
+          ENDSOURCE
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMBOBOX
+        PROPERTIES
+          Name                #JAEEMantenimiento_Tipo
+          ElementPosition     #1073741823
+          HierarchyParent     #Grid
+          DataSource          #JAEEMantenimiento
+          DataField           #Tipo
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL INTEDIT
+        PROPERTIES
+          Name                #JAEEMantenimiento_Kilometros
+          ElementPosition     #1789569705
+          HierarchyParent     #Grid
+          DataSource          #JAEEMantenimiento
+          DataField           #Kilometros
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL REALEDIT
+        PROPERTIES
+          Name                #JAEEMantenimiento_CostAmount
+          ElementPosition     #1252698793
+          HierarchyParent     #Grid
+          DataSource          #JAEEMantenimiento
+          DataField           #CostAmount
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #JAEEMantenimiento_Description
+          ElementPosition     #1163220308
+          HierarchyParent     #Grid
+          DataSource          #JAEEMantenimiento
+          DataField           #Description
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #JAEEMantenimiento_PurchId
+          ElementPosition     #1431655764
+          HierarchyParent     #Grid
+          DataSource          #JAEEMantenimiento
+          DataField           #PurchId
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+    ENDCONTAINER
+    
+  ENDDESIGN
+  
+  PERMISSIONS #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    PERMISSIONSET #Read
+      PROPERTIES
+      ENDPROPERTIES
+      
+      FORM #Controls
+      ENDFORM
+      
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Update
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Create
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Delete
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+ENDPERMISSIONS
+
+ENDFORM
+
+
+***Element: END

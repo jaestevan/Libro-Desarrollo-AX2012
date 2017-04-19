@@ -1,0 +1,97 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEELedgerJournalService descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEELedgerJournalService
+    PROPERTIES
+      Name                #JAEELedgerJournalService
+      Extends             #AifDocumentService
+      RunOn               #Server
+      Origin              #{5CAF1590-69C9-4A1E-9B23-C8B750D2B47B}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #/// <summary>
+        #///    The <c>JAEELedgerJournalService</c> class serves as the document service for the <c>JAEELedgerJournal</c> document type.
+        #/// </summary>
+        #class JAEELedgerJournalService extends AifDocumentService
+        #{
+        #
+        #}
+        #
+      ENDSOURCE
+      SOURCE #create
+        #/// <summary>
+        #///    Creates one or more data objects that are contained in a <c>JAEELedgerJournal</c> document.
+        #/// </summary>
+        #/// <param name="_jAEELedgerJournal">
+        #///    The <c>JAEELedgerJournal</c> document that contains the data objects to create.
+        #/// </param>
+        #/// <returns>
+        #///    A list of entity keys that identify the newly created objects. The entity keys appear in the order that the created objects are specified in the <c>JAEELedgerJournal</c> document.
+        #/// </returns>
+        #[AifDocumentCreateAttribute, SysEntryPointAttribute(true)]
+        #public AifEntityKeyList create(JAEELedgerJournal _jAEELedgerJournal)
+        #{
+        #    return this.createList(_jAEELedgerJournal);
+        #}
+      ENDSOURCE
+      SOURCE #find
+        #/// <summary>
+        #///    Finds data objects.
+        #/// </summary>
+        #/// <param name="_queryCriteria">
+        #///    The query criteria to use to find the data objects.
+        #/// </param>
+        #/// <returns>
+        #///    A <c>JAEELedgerJournal</c> document that contains the specified data objects.
+        #/// </returns>
+        #[AifDocumentFindAttribute, SysEntryPointAttribute(true)]
+        #public JAEELedgerJournal find(AifQueryCriteria _queryCriteria)
+        #{
+        #    JAEELedgerJournal jAEELedgerJournal = new JAEELedgerJournal();
+        #    this.findList(_queryCriteria, jAEELedgerJournal);
+        #    return jAEELedgerJournal;
+        #}
+      ENDSOURCE
+      SOURCE #new
+        #protected void new()
+        #{
+        #    ;
+        #    super();
+        #}
+      ENDSOURCE
+      SOURCE #read
+        #/// <summary>
+        #///    Reads a <c>JAEELedgerJournal</c> document that contains one or more data objects.
+        #/// </summary>
+        #/// <param name="_entityKeyList">
+        #///    A list of entity keys that identify the data objects to read.
+        #/// </param>
+        #/// <returns>
+        #///    A <c>JAEELedgerJournal</c> document that contains list of read data objects.
+        #/// </returns>
+        #[AifDocumentReadAttribute, SysEntryPointAttribute(true)]
+        #public JAEELedgerJournal read(AifEntityKeyList _entityKeyList)
+        #{
+        #    JAEELedgerJournal jAEELedgerJournal = new JAEELedgerJournal();
+        #    this.readList(_entityKeyList, jAEELedgerJournal);
+        #    return jAEELedgerJournal;
+        #}
+      ENDSOURCE
+      SOURCE #construct
+        #public static JAEELedgerJournalService construct()
+        #{
+        #    return new JAEELedgerJournalService();
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

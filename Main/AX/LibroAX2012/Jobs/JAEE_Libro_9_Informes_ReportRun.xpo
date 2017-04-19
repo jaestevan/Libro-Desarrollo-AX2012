@@ -1,0 +1,26 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_9_Informes_ReportRun unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_9_Informes_ReportRun
+    #static void JAEE_Libro_9_Informes_ReportRun(Args _args)
+    #{
+    #    SRSReportRun    reportRun;
+    #
+    #    reportRun = new SrsReportRun(ssrsReportStr(JAEEEjemploBusinessLogic, AutoDesign));
+    #    reportRun.init();
+    #    if (reportRun)
+    #        reportRun.executeReport();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{2FBD6B5D-F2EC-4DBD-B911-0722C7247A55}
+  ENDPROPERTIES
+  
+
+***Element: END

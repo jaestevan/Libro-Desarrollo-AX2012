@@ -1,0 +1,44 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEEjemploQueryRdlContract unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEEjemploQueryRdlContract
+    PROPERTIES
+      Name                #JAEEEjemploQueryRdlContract
+      Extends             #SrsReportRdlDataContract
+      Origin              #{7C19A42E-B0FB-41D3-BE7C-A66339760A73}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[DataContractAttribute,
+        # SrsReportNameAttribute(ssrsReportStr(JAEEEjemploQuery, AutoDesign)),
+        # SysOperationContractProcessingAttribute(classStr(JAEEEjemploQueryRdlUIBuilder))]
+        #class JAEEEjemploQueryRdlContract
+        #    extends SrsReportRdlDataContract
+        #    implements SysOperationValidatable
+        #{
+        #
+        #}
+      ENDSOURCE
+      SOURCE #validate
+        #public boolean validate()
+        #{
+        #    boolean ret = super();
+        #
+        #
+        #    if (this.getValue('AX_CompanyName') != 'JAEE')
+        #        ret = checkFailed("Empresa no válida");
+        #
+        #    return ret;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

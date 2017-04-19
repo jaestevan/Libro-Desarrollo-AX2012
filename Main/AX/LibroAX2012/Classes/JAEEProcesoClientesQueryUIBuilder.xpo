@@ -1,0 +1,112 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesoClientesQueryUIBuilder descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesoClientesQueryUIBuilder
+    PROPERTIES
+      Name                #JAEEProcesoClientesQueryUIBuilder
+      Extends             #SysOperationAutomaticUIBuilder
+      Origin              #{D913C027-7374-4A29-A405-67D872EB1C9E}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #build
+        #/// <summary>
+        #/// Construye el diálogo con los datos del Data Contract
+        #/// </summary>
+        #public void build()
+        #{
+        #    super();
+        #
+        #    dialog.addGroup("Nuevo grupo");
+        #
+        #    dfFechas = dialog.addField(extendedTypeStr(NoYesId), "Activar fechas");
+        #    dfLanguage = dialog.addField(extendedTypeStr(LanguageIdAll));
+        #}
+      ENDSOURCE
+      SOURCE #classDeclaration
+        #class JAEEProcesoClientesQueryUIBuilder
+        #extends SysOperationAutomaticUIBuilder
+        #{
+        #    DialogField     dfDesde, dfHasta;
+        #    DialogField     dfFechas;
+        #
+        #    DialogField     dfLanguage;
+        #}
+      ENDSOURCE
+      SOURCE #dfFechasModified
+        #public boolean dfFechasModified(FormCheckBoxControl _controlCheckBox)
+        #{
+        #    // Activar los controles de fecha creados por el
+        #    // diálogo automático.
+        #    dfDesde.enabled(_controlCheckBox.value());
+        #    dfHasta.enabled(_controlCheckBox.value());
+        #
+        #    return true;
+        #}
+      ENDSOURCE
+      SOURCE #dfLanguageLookup
+        #public void dfLanguageLookup(FormStringControl _controlString)
+        #{
+        #    SysTableLookup      sysTableLookup;
+        #
+        #    Query                   query;
+        #    QueryBuildDataSource    qbds;
+        #
+        #    query = new Query();
+        #    qbds  = query.addDataSource(tableNum(LanguageTable));
+        #    qbds.addRange(fieldNum(LanguageTable, LanguageId)).value(SysQuery::valueLike('es'));
+        #
+        #    sysTableLookup = SysTableLookup::newParameters(tableNum(LanguageTable), _controlString);
+        #    sysTableLookup.addLookupfield(fieldNum(LanguageTable, LanguageId), true);
+        #    sysTableLookup.addLookupMethod(tableMethodStr(LanguageTable, languageDescription));
+        #    sysTableLookup.parmUseLookupValue(false);
+        #    sysTableLookup.parmQuery(query);
+        #    sysTableLookup.performFormLookup();
+        #}
+      ENDSOURCE
+      SOURCE #postBuild
+        #/// <summary>
+        #/// Inicializa el diálogo despues de que se construya (despues de "build")
+        #/// </summary>
+        #public void postBuild()
+        #{
+        #    super();
+        #
+        #    // Obtener controles de los campos del contrato
+        #    dfDesde = this.bindInfo().getDialogField(
+        #                this.dataContractObject(),
+        #                methodStr(JAEEProcesoClientesQueryDataContract,
+        #                          parmDesdeFecha));
+        #
+        #    dfHasta = this.bindInfo().getDialogField(
+        #                this.dataContractObject(),
+        #                methodStr(JAEEProcesoClientesQueryDataContract,
+        #                          parmHastaFecha));
+        #
+        #    // Registrar la sobrecarga de métodos
+        #    dfFechas.registerOverrideMethod(
+        #        methodStr(FormCheckBoxControl, modified),
+        #        methodStr(JAEEProcesoClientesQueryUIBuilder, dfFechasModified),
+        #        this);
+        #
+        #    dfLanguage.registerOverrideMethod(
+        #        methodStr(FormStringControl, lookup),
+        #        methodStr(JAEEProcesoClientesQueryUIBuilder, dfLanguageLookup),
+        #        this);
+        #    dfLanguage.fieldControl().mandatory(true);
+        #
+        #    // Ejecutamos el método manualmente para activar
+        #    // los controles la primera vez.
+        #    this.dfFechasModified(dfFechas.control());
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

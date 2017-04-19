@@ -1,0 +1,39 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_4_InfologXpp unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_4_InfologXpp
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_4_InfologXpp
+    Origin              #{6DF89456-8547-4C25-9E80-697651F0C64B}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_InfoLog
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_InfoLog_Prefix
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_4_InfoLog_Prefix2
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END

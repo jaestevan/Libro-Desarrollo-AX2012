@@ -1,0 +1,35 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEESrsRdpInformeClientesDC unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEESrsRdpInformeClientesDC
+    PROPERTIES
+      Name                #JAEESrsRdpInformeClientesDC
+      Origin              #{A999013C-E79E-49AF-8DD9-BACFDABF01FA}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[DataContractAttribute]
+        #public class JAEESrsRdpInformeClientesDC
+        #{
+        #    AccountNum  accountNum;
+        #}
+      ENDSOURCE
+      SOURCE #parmAccountNum
+        #[DataMemberAttribute]
+        #public AccountNum parmAccountNum(AccountNum _accountNum = accountNum)
+        #{
+        #    accountNum = _accountNum;
+        #    return accountNum;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

@@ -1,0 +1,60 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEEProcesarLineaCompras descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEEProcesarLineaCompras
+    PROPERTIES
+      Name                #JAEEProcesarLineaCompras
+      Origin              #{24674D54-21D2-4E3D-A30E-5B36701E7F08}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #abstract class JAEEProcesarLineaCompras
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #run
+        #abstract public void run()
+        #{
+        #}
+      ENDSOURCE
+      SOURCE #construct
+        #public static JAEEProcesarLineaCompras construct(str _tipo)
+        #{
+        #    JAEETipoCompraAttribute attr = new JAEETipoCompraAttribute(_tipo);
+        #    JAEEProcesarLineaCompras procLinCom = SysExtensionAppClassFactory::getClassFromSysAttribute(classStr(JAEEProcesarLineaCompras), attr);
+        #
+        #    if (procLinCom == null)
+        #        throw error(error::missingParameter(procLinCom));
+        #
+        #    return procLinCom;
+        #}
+        #
+        #/* ANTES:
+        #
+        #public static JAEEProcesarLineaCompras construct(PurchaseType _type)
+        #{
+        #    switch (_type)
+        #    {
+        #        case PurchaseType::Purch:
+        #            return new JAEEProcesarLineaCompras_Purch();
+        #
+        #        case PurchaseType::Journal:
+        #            return new JAEEProcesarLineaCompras_Journal();
+        #    }
+        #
+        #    throw Exception::Error;
+        #}
+        #
+        #*/
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

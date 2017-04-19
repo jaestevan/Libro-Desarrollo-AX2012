@@ -1,0 +1,36 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: JAEE_Libro_4_Datos_Insert descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #JAEE_Libro_4_Datos_Insert
+    #static void JAEE_Libro_4_Datos_Insert(Args _args)
+    #{
+    #    JAEETablaEjemploXpp ejemplo;
+    #
+    #    ttsBegin;
+    #
+    #    ejemplo.clear();
+    #    ejemplo.initValue();
+    #    ejemplo.Num     = "E101";
+    #    ejemplo.Name    = "Estevan";
+    #
+    #    if (ejemplo.validateWrite())
+    #        ejemplo.insert();
+    #    else
+    #        throw Exception::Error;
+    #
+    #    ttsCommit;
+    #}
+    #
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{D98D4711-159F-427B-93BC-801F2C432297}
+  ENDPROPERTIES
+  
+
+***Element: END

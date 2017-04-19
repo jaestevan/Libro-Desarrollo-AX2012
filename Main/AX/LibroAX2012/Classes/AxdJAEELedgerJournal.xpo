@@ -1,0 +1,271 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: AxdJAEELedgerJournal descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #AxdJAEELedgerJournal
+    PROPERTIES
+      Name                #AxdJAEELedgerJournal
+      Extends             #AxdBase
+      RunOn               #Server
+      Origin              #{A31A54B7-4A32-4D00-B766-35A2397A40C8}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #class AxdJAEELedgerJournal extends AxdBase
+        #{
+        #    #define.LedgerJournalTable_DataSourceName('LedgerJournalTable')
+        #    #define.LedgerJournalTrans_DataSourceName('LedgerJournalTrans')
+        #}
+        #
+      ENDSOURCE
+      SOURCE #deleteList
+        #public AifResult deleteList(AifEntityKeyList            _aifEntityKeyList,
+        #                            AifEndpointActionPolicyInfo _actionPolicyInfo,
+        #                            AifConstraintListCollection _constraintListCollection)
+        #{
+        #    throw error(strfmt("@SYS94920"));
+        #}
+        #
+      ENDSOURCE
+      SOURCE #expandDimensions
+        #public boolean expandDimensions()
+        #{
+        #    return true;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #expandSurrogateForeignKeys
+        #public boolean expandSurrogateForeignKeys()
+        #{
+        #    return true;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #findCorrespondingAxBC
+        #public int findCorrespondingAxBC(tableId _tableId = 0)
+        #{
+        #    //TODO Add custom code here to determine which AxBC class to be used for _tableId
+        #    return classnum(AxCommon);
+        #}
+        #
+      ENDSOURCE
+      SOURCE #findEntityKeyList
+        #public AifEntityKeyList findEntityKeyList(AifQueryCriteria            _queryCriteria,
+        #                                          AifEndpointActionPolicyInfo _actionPolicyInfo)
+        #{
+        #    throw error(strfmt("@SYS94920"));
+        #}
+        #
+      ENDSOURCE
+      SOURCE #getActionList
+        #public AifActionInfoList getActionList()
+        #{
+        #    AifActionInfoList   Actions = new AifActionInfoList();
+        #    AifActionInfo       aifActionInfo;
+        #    ;
+        #    aifActionInfo = new AifActionInfo();
+        #    aifActionInfo.parmActionId(strfmt('%1%2', methodstr(AxdBase, findList), this.getName()));
+        #    aifActionInfo.parmActionType(AifActionType::QueryDocuments);
+        #    aifActionInfo.parmExternalName(aifActionInfo.parmActionId());
+        #    aifActionInfo.parmMethodName(methodstr(AxdBase, findList));
+        #    //TODO make label
+        #    aifActionInfo.parmLabel("Send  from query");
+        #    //TODO make label for description
+        #    aifActionInfo.parmDescription("Selects  through a query and sends them in an XML string.");
+        #    aifActionInfo.parmDisplayMenuItemName(menuitemdisplaystr(AifDocConfiguration));
+        #
+        #    actions.add(aifActionInfo);
+        #
+        #    aifActionInfo = new AifActionInfo();
+        #    aifActionInfo.parmActionId(strfmt('%1%2', methodstr(AxdBase, readList), this.getName()));
+        #    aifActionInfo.parmActionType(AifActionType::SendDocumentList);
+        #    aifActionInfo.parmExternalName(aifActionInfo.parmActionId());
+        #    aifActionInfo.parmMethodName(methodstr(AxdBase, readList));
+        #    //TODO make label
+        #    aifActionInfo.parmLabel("Send list of ");
+        #    //TODO make label for description
+        #    aifActionInfo.parmDescription("Sends  from the system in an XML string.");
+        #    aifActionInfo.parmDisplayMenuItemName(menuitemdisplaystr(AifDocConfiguration));
+        #
+        #    actions.add(aifActionInfo);
+        #
+        #    aifActionInfo = new AifActionInfo();
+        #    aifActionInfo.parmActionId(strfmt('%1%2', methodstr(AxdBase, createList), this.getName()));
+        #    aifActionInfo.parmActionType(AifActionType::ReceiveDocumentList);
+        #    aifActionInfo.parmExternalName(aifActionInfo.parmActionId());
+        #    aifActionInfo.parmMethodName(methodstr(AxdBase, createList));
+        #    //TODO  make label
+        #    aifActionInfo.parmLabel("Receive ");
+        #    //TODO make label for description of create list
+        #    aifActionInfo.parmDescription("Receives  in an XML string and creates them in the system.");
+        #    aifActionInfo.parmDisplayMenuItemName(menuitemdisplaystr(AifDocConfiguration));
+        #
+        #    actions.add(aifActionInfo);
+        #
+        #    return actions;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #getConstraintList
+        #public void getConstraintList(Common _curRec, AifConstraintList _constraintList)
+        #{
+        #    AifConstraint  aifConstraint = new AifConstraint();
+        #    // TODO verify right table
+        #    LedgerJournalTable    LedgerJournalTable;
+        #    ;
+        #    if (!(_curRec is LedgerJournalTable))
+        #    {
+        #         throw error(strfmt("@SYS23396",funcname()));
+        #    }
+        #    LedgerJournalTable = _curRec ;
+        #    // TODO set right constraint type
+        #    aifConstraint.parmType(AIFConstraintType::NoConstraint);
+        #    // TODO set right field for constraint id
+        #    //aifConstraint.parmId(LedgerJournalTable.IdType);
+        #    _constraintList.addConstraint(aifConstraint) ;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #getLabel
+        #public LabelString getLabel()
+        #{
+        #    //TODO Check if name is OK and create label
+        #    return "";
+        #}
+        #
+      ENDSOURCE
+      SOURCE #getQueryName
+        #public QueryName getQueryName()
+        #{
+        #    return querystr(JAEELedgerJournal);
+        #}
+        #
+      ENDSOURCE
+      SOURCE #prepareForSaveExtended
+        #public boolean prepareForSaveExtended(
+        #    AxdStack                    _axBcStack,
+        #    str                         _dataSourceName,
+        #    AxdRecordProcessingContext  _recordProcessingContext,
+        #    AxInternalBase              _childRecord)
+        #{
+        #    AxCommon axbc_LedgerJournalTable;
+        #    AxCommon axbc_LedgerJournalTrans;
+        #
+        #
+        #    //TODO: Add code here to ensure that required fields specified in the initMandatoryFieldsMap method are sent in by the service caller.
+        #
+        #    switch (_dataSourceName)
+        #    {
+        #        // ----------------------------------------------------------------------
+        #        // Process LedgerJournalTable records
+        #        // ----------------------------------------------------------------------
+        #        case #LedgerJournalTable_DataSourceName:
+        #
+        #            axbc_LedgerJournalTable = _axBcStack.top();
+        #            //TODO Put validating code for LedgerJournalTable here
+        #
+        #            switch (_recordProcessingContext)
+        #            {
+        #                // Ensure LedgerJournalTable record is saved before any of its dependent child records
+        #                case AxdRecordProcessingContext::BeforeChildRecordProcessed:
+        #                    switch (_childRecord.dataSourceName())
+        #                    {
+        #                        case #LedgerJournalTrans_DataSourceName:
+        #                            if (!axbc_LedgerJournalTable.isProcessed())
+        #                            {
+        #                                return true;
+        #                            }
+        #                            break;
+        #                    }
+        #
+        #                    return false;
+        #
+        #                // Ensure LedgerJournalTable record is saved
+        #                case AxdRecordProcessingContext::AfterAllChildRecordsProcessed:
+        #                    if (!axbc_LedgerJournalTable.isProcessed())
+        #                    {
+        #                        return true;
+        #                    }
+        #
+        #                    return false;
+        #            }
+        #
+        #            return false;
+        #
+        #        // ----------------------------------------------------------------------
+        #        // Process LedgerJournalTrans records
+        #        // ----------------------------------------------------------------------
+        #        case #LedgerJournalTrans_DataSourceName:
+        #
+        #            axbc_LedgerJournalTrans = _axBcStack.top();
+        #            //TODO Put validating code for LedgerJournalTrans here
+        #
+        #            switch (_recordProcessingContext)
+        #            {
+        #                // Propagate parent's key
+        #                case AxdRecordProcessingContext::BeforeAnyChildRecordsProcessed:
+        #                    //TODO Validate relations
+        #                    axbc_LedgerJournalTable = axbc_LedgerJournalTrans.parentAxBC();
+        #                    axbc_LedgerJournalTrans.doParm(fieldstr(LedgerJournalTrans, JournalNum), axbc_LedgerJournalTable.doParm(fieldstr(LedgerJournalTable, JournalNum)));
+        #
+        #                    return false;
+        #
+        #                // Ensure LedgerJournalTrans record is saved
+        #                case AxdRecordProcessingContext::AfterAllChildRecordsProcessed:
+        #                    if (!axbc_LedgerJournalTrans.isProcessed())
+        #                    {
+        #                        return true;
+        #                    }
+        #
+        #                    return false;
+        #            }
+        #
+        #            return false;
+        #
+        #        // ----------------------------------------------------------------------
+        #        // Unsupported data sources
+        #        // ----------------------------------------------------------------------
+        #        default:
+        #            error(strfmt("@SYS88979",classId2Name(classidget(_axBcStack.top()))));
+        #            return false;
+        #    }
+        #
+        #    return false;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #prepareForUpdateExtended
+        #public boolean prepareForUpdateExtended(
+        #    AxdStack                    _axBcStack,
+        #    str                         _dataSourceName,
+        #    AxdRecordProcessingContext  _recordProcessingContext,
+        #    AxInternalBase              _childRecord)
+        #{
+        #    return this.prepareForSaveExtended(
+        #        _axBcStack,
+        #        _dataSourceName,
+        #        _recordProcessingContext,
+        #        _childRecord);
+        #}
+        #
+      ENDSOURCE
+      SOURCE #updateList
+        #public AifResult updateList(AifEntityKeyList            _entityKeyList,
+        #                               AifDocumentXML              _xml,
+        #                               AifEndpointActionPolicyInfo _actionPolicyInfo,
+        #                               AifConstraintListCollection _constraintListcollection)
+        #{
+        #    throw error(strfmt("@SYS94920"));
+        #}
+        #
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

@@ -1,0 +1,23 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : JAEEEjemploRDP unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #JAEEEjemploRDP
+    Type: 2
+    PROPERTIES
+      Name                #JAEEEjemploRDP
+      ObjectType          #SSRSReport
+      Object              #JAEEEjemploRDP
+      ReportDesign        #AutoDesign
+      Origin              #{B603303C-1509-4A47-8239-5FE25CB66794}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

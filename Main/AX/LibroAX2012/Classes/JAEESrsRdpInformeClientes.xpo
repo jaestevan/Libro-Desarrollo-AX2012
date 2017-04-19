@@ -1,0 +1,81 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEESrsRdpInformeClientes unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEESrsRdpInformeClientes
+    PROPERTIES
+      Name                #JAEESrsRdpInformeClientes
+      Extends             #SRSReportDataProviderBase
+      RunOn               #Server
+      Origin              #{E627796A-108E-414A-931F-760F42A19F17}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[SRSReportQueryAttribute(queryStr('CustTable')),
+        # SRSReportParameterAttribute(classStr('JAEESrsRdpInformeClientesDC'))]
+        #class   JAEESrsRdpInformeClientes
+        #extends SRSReportDataProviderBase
+        #{
+        #    CustTmpAccountSum   custTmpAccount;
+        #}
+      ENDSOURCE
+      SOURCE #getCustTmpAccount
+        #[SRSReportDataSetAttribute('CustTmpAccount')]
+        #public CustTmpAccountSum getCustTmpAccount()
+        #{
+        #    select * from custTmpAccount;
+        #    return custTmpAccount;
+        #}
+      ENDSOURCE
+      SOURCE #processReport
+        #public void processReport()
+        #{
+        #    JAEESrsRdpInformeClientesDC     dataContract;
+        #
+        #    Query                   q;
+        #    QueryRun                qr;
+        #    QueryBuildDataSource    qbDs;
+        #    QueryBuildRange         qbRange;
+        #
+        #    AccountNum              accountNum;
+        #    CustTable               custTable;
+        #
+        #
+        #    q = this.parmQuery();
+        #
+        #    dataContract = this.parmDataContract();
+        #    accountNum = dataContract.parmAccountNum();
+        #
+        #    qbDs = q.dataSourceTable(tablenum(CustTable));
+        #    qbRange = qbDs.findRange(fieldnum(CustTable, AccountNum));
+        #    if (!qbRange)
+        #        qbRange = qbDs.addRange(fieldnum(CustTable, AccountNum));
+        #    qbRange.value(accountNum);
+        #
+        #    ttsbegin;
+        #
+        #    qr = new QueryRun(q);
+        #    while (qr.next())
+        #    {
+        #        custTable = qr.get(tablenum(CustTable));
+        #
+        #        custTmpAccount.clear();
+        #        custTmpAccount.AccountNum = custTable.AccountNum;
+        #        custTmpAccount.Name = custTable.name();
+        #        custTmpAccount.CurrencyCode = custTable.Currency;
+        #        custTmpAccount.insert();
+        #    }
+        #
+        #    ttscommit;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

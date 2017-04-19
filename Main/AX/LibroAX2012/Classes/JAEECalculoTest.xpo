@@ -1,0 +1,67 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: JAEECalculoTest descargados
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #JAEECalculoTest
+    PROPERTIES
+      Name                #JAEECalculoTest
+      Extends             #SysTestCase
+      Origin              #{273E6FDD-AF1C-4A5D-A353-F154C94D67B4}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #[SysTestTargetAttribute(classStr(JAEECalculo), UtilElementType::Class)]
+        #class JAEECalculoTest extends SysTestCase
+        #{
+        #    JAEECalculo     calculo_a, calculo_b;
+        #}
+      ENDSOURCE
+      SOURCE #createSuite
+        #public SysTestSuite createSuite()
+        #{
+        #    SysTestSuite ret;
+        #
+        #    ret = super();
+        #
+        #    return ret;
+        #}
+      ENDSOURCE
+      SOURCE #setUp
+        #public void setUp()
+        #{
+        #    calculo_a = new JAEECalculo(125, 5);
+        #    calculo_b = new JAEECalculo(125, 0);
+        #}
+      ENDSOURCE
+      SOURCE #testDividir
+        #[SysTestMethodAttribute]
+        #public void testDividir()
+        #{
+        #    this.assertEquals(25, calculo_a.dividir());
+        #}
+      ENDSOURCE
+      SOURCE #testDividirPor0
+        #[SysTestMethodAttribute]
+        #public void testDividirPor0()
+        #{
+        #    this.parmExceptionExpected(true, "No se puede dividir por 0");
+        #    this.assertEquals(25, calculo_b.dividir());
+        #}
+      ENDSOURCE
+      SOURCE #testSumal
+        #[SysTestMethodAttribute]
+        #public void testSumal()
+        #{
+        #    this.assertEquals(130, calculo_a.sumar());
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: END

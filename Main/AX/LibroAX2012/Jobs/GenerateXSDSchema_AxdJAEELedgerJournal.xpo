@@ -1,0 +1,30 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: GenerateXSDSchema_AxdJAEELedgerJournal descargados
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #GenerateXSDSchema_AxdJAEELedgerJournal
+    #static void GenerateXSDSchema_AxdJAEELedgerJournal(Args _args)
+    #{
+    #    AxdJAEELedgerJournal    AxdJAEELedgerJournal;
+    #    XML                 xml;
+    #    XMLDocument         xmlDocument;
+    #    ;
+    #    AxdJAEELedgerJournal = AxdBase::newClassId(classnum(AxdJAEELedgerJournal));
+    #    xml = AxdJAEELedgerJournal.getSchema();
+    #    xmlDocument = XMLDocument::newXML(xml);
+    #    //TODO Select file to write XML output to 
+    #    xmlDocument.save("c:\\XSDSchema_AxdJAEELedgerJournal.xml");
+    #}
+    #
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{3583F879-5FC6-4741-ADD8-D9F1C0867DB1}
+  ENDPROPERTIES
+  
+
+***Element: END

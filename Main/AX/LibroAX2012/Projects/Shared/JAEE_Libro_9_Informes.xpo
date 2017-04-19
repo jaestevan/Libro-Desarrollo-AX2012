@@ -1,0 +1,157 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : JAEE_Libro_9_Informes unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JAEE_Libro_9_Informes
+  SHARED
+  PROPERTIES
+    Name                #JAEE_Libro_9_Informes
+    Origin              #{54072422-CEFC-474D-B59F-0FABD88229B8}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_9_Informes_ReportRun
+    ENDNODE
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      NODETYPE 215
+      NAME #JAEE_Libro_9_Informes_Controller
+    ENDNODE
+    GROUP #MVC
+      PROPERTIES
+        Name                #MVC
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEEjemploSrsController
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #QUERY
+      PROPERTIES
+        Name                #QUERY
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 2
+        NODETYPE 296
+        NAME #JAEEEjemploQuery
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 127
+        NODETYPE 1531
+        NAME #JAEEEjemploQuery
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 85
+        NODETYPE 1439
+        NAME #JAEEEjemploQuery
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEEjemploQueryRdlContract
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEEEjemploQueryRdlUIBuilder
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #BUSINESS LOGIC
+      PROPERTIES
+        Name                #BUSINESS LOGIC
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 127
+        NODETYPE 1531
+        NAME #JAEEEjemploBusinessLogic
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 85
+        NODETYPE 1439
+        NAME #JAEEEjemploBusinessLogic
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 128
+        NODETYPE 1531
+        NAME #JAEEEjemploBusinessLogic.BusinessLogic
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #RDP
+      PROPERTIES
+        Name                #RDP
+        ProjectGroupType    #All
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 2
+        NODETYPE 296
+        NAME #JAEEEjemploRDP
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 127
+        NODETYPE 1531
+        NAME #JAEEEjemploRDP
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 85
+        NODETYPE 1439
+        NAME #JAEEEjemploRDP
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEESrsRdpInformeClientes
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        NODETYPE 329
+        NAME #JAEESrsRdpInformeClientesDC
+      ENDNODE
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END
